@@ -10,7 +10,8 @@ const i18nStrings = {
    heroHeadline: { en: "We Elevate Your Business", de: "We Elevate Your Business" },
    heroSubheadline: { en: "Performance marketing & e-commerce expertise focused on driving measurable growth for ambitious brands.", de: "Performance Marketing und E-Commerce-Kompetenz für nachhaltiges, messbares Wachstum starker Marken." },
    heroButton: { en: "Start Scaling", de: "Jetzt Skalieren" },
-   aboutTitle: { en: "Your Growth Partners", de: "Ihre<br class='br-mobile'>Wachstums-<br class='br-mobile'>partner" },
+   // --- Adjusted German Hyphenation using &shy; ---
+   aboutTitle: { en: "Your Growth Partners", de: "Ihre Wachstums&shy;partner" },
    aboutText1: { en: "elev8digital isn't just another agency. We are a dedicated duo, deeply invested in the success of our clients. We blend strategic performance marketing with meticulous e-commerce optimization.", de: "Als engagiertes Zweierteam setzen wir alles daran, unsere Kunden erfolgreich zu machen. Wir verbinden strategisches Performance Marketing mit sorgfältiger E-Commerce-Optimierung." },
    aboutText2: { en: "We focus on what matters: data-driven strategies that deliver tangible ROI. Think of us as an extension of your team – dedicated, transparent, and focused on your goals.", de: "Wir konzentrieren uns auf das Wesentliche: Datengestützte Strategien, die greifbaren ROI liefern. Betrachten Sie uns als Erweiterung Ihres Teams – engagiert, transparent und auf Ihre Ziele fokussiert." },
    aboutButton: { en: "Explore Services", de: "Leistungen Entdecken" },
@@ -70,7 +71,8 @@ const i18nStrings = {
    imprintLiabilityLinksText: { en: "Our offer includes links to external third party websites. We have no influence on the contents of those websites, therefore we cannot guarantee for those contents. Providers or administrators of linked websites are always responsible for their own contents. The linked websites had been checked for possible violations of law at the time of the establishment of the link. Illegal contents were not detected at the time of the linking. A permanent monitoring of the contents of linked websites cannot be imposed without reasonable indications that there has been a violation of law. Illegal links will be removed immediately at the time we get knowledge of them.", de: "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen." },
    imprintCopyrightTitle: { en: "Copyright", de: "Urheberrecht" },
    imprintCopyrightText: { en: "Contents and compilations published on these websites by the providers are subject to German copyright laws. Reproduction, editing, distribution as well as the use of any kind outside the scope of the copyright law require a written permission of the author or originator. Downloads and copies of these websites are permitted for private use only. The commercial use of our contents without permission of the originator is prohibited. Copyright laws of third parties are respected as long as the contents on these websites do not originate from the provider. Contributions of third parties on this site are indicated as such. However, if you notice any violations of copyright law, please inform us. Such contents will be removed immediately.", de: "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen." },
-   privacyTitle: { en: "Privacy Policy", de: "Datenschutz-<br class='br-mobile'>erklärung" },
+   // --- Adjusted German Hyphenation using &shy; ---
+   privacyTitle: { en: "Privacy Policy", de: "Datenschutz&shy;erklärung" },
    privacyGeneralTitle: { en: "1. Privacy at a Glance", de: "1. Datenschutz auf einen Blick" },
    privacyGeneralHintTitle: { en: "General Information", de: "Allgemeine Hinweise" },
    privacyGeneralHintText: { en: "The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data with which you can be personally identified. Detailed information on the subject of data protection can be found in our privacy policy listed below this text.", de: "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung." },
@@ -78,8 +80,8 @@ const i18nStrings = {
    privacyResponsiblePartyTitle: { en: "Who is responsible for data collection on this website?", de: "Wer ist verantwortlich für die Datenerfassung auf dieser Website?" },
    privacyResponsiblePartyText: { en: "Data processing on this website is carried out by the website operator. Their contact details can be found in the section 'Note on the responsible body' in this privacy policy.", de: "Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser Datenschutzerklärung entnehmen." },
    privacyHowDataCollectedTitle: { en: "How do we collect your data?", de: "Wie erfassen wir Ihre Daten?" },
-   privacyHowDataCollectedText1: { en: "On the one hand, your data is collected when you provide it to us. This can be, for example, data that you enter in a contact form.", de: "Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben." },
-   privacyHowDataCollectedText2: { en: "Other data is collected automatically or after your consent when you visit the website through our IT systems. This is primarily technical data (e.g., internet browser, operating system, or time of page access). This data is collected automatically as soon as you enter this website.", de: "Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten." },
+   privacyHowDataCollectedText1: { en: "On the one hand, your data is collected when you provide it to us. This can be, for example, data that you enter in a contact form.", de: "Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben." },
+   privacyHowDataCollectedText2: { en: "Other data is collected automatically or after your consent when you visit the website through our IT systems. This is primarily technical data (e.g., internet browser, operating system, or time of page access). This data is collected automatically as soon as you enter this website.", de: "Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten." },
    privacyDataUsageTitle: { en: "What do we use your data for?", de: "Wofür nutzen wir Ihre Daten?" },
    privacyDataUsageText1: { en: "Part of the data is collected to ensure the error-free provision of the website. Other data can be used to analyze your user behavior (if analysis tools are used, which is currently not the case here).", de: "Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden (sofern Analyse-Tools eingesetzt werden, was hier aktuell nicht der Fall ist)." },
    privacyDataRightsTitle: { en: "What rights do you have regarding your data?", de: "Welche Rechte haben Sie bezüglich Ihrer Daten?" },
@@ -93,14 +95,14 @@ const i18nStrings = {
    privacyProtectionTitle: { en: "Data Protection", de: "Datenschutz" },
    privacyProtectionText1: { en: "The operators of these pages take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this privacy policy.", de: "Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung." },
    privacyProtectionText2: { en: "When you use this website, various personal data are collected. Personal data is data with which you can be personally identified. This privacy policy explains what data we collect and what we use it for. It also explains how and for what purpose this happens.", de: "Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht." },
-   privacyProtectionText3: { en: "We would like to point out that data transmission over the Internet (e.g., when communicating by e-mail) can have security gaps. Complete protection of data against access by third parties is not possible.", de: "Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich." },
+   privacyProtectionText3: { en: "We would like to point out that data transmission over the Internet (e.g., when communicating by e-mail) can have security gaps. Complete protection of data against access by third parties is not possible.", de: "Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich." },
    privacyControllerTitle: { en: "Note on the responsible body", de: "Hinweis zur verantwortlichen Stelle" },
    privacyControllerText1: { en: "The responsible body for data processing on this website is:", de: "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:" },
-   privacyControllerText2: { en: "The responsible body is the natural or legal person who alone or jointly with others decides on the purposes and means of processing personal data (e.g., names, e-mail addresses, etc.).", de: "Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet." },
+   privacyControllerText2: { en: "The responsible body is the natural or legal person who alone or jointly with others decides on the purposes and means of processing personal data (e.g., names, e-mail addresses, etc.).", de: "Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet." },
    privacyStorageDurationTitle: { en: "Storage Duration", de: "Speicherdauer" },
-   privacyStorageDurationText: { en: "Unless a more specific storage period has been specified within this privacy policy, your personal data will remain with us until the purpose for data processing ceases to apply. If you assert a legitimate request for deletion or revoke your consent to data processing, your data will be deleted unless we have other legally permissible reasons for storing your personal data (e.g., tax or commercial law retention periods); in the latter case, deletion will take place after these reasons cease to apply.", de: "Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe." },
+   privacyStorageDurationText: { en: "Unless a more specific storage period has been specified within this privacy policy, your personal data will remain with us until the purpose for data processing ceases to apply. If you assert a legitimate request for deletion or revoke your consent to data processing, your data will be deleted unless we have other legally permissible reasons for storing your personal data (e.g., tax or commercial law retention periods); in the latter case, deletion will take place after these reasons cease to apply.", de: "Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe." },
    privacyLegalBasisTitle: { en: "Note on the legal basis for data processing on this website", de: "Hinweis zur Rechtsgrundlage der Datenverarbeitung auf dieser Website" },
-   privacyLegalBasisText: { en: "If you have consented to data processing, we process your personal data on the basis of Art. 6 Para. 1 lit. a GDPR or Art. 9 Para. 2 lit. a GDPR, if special categories of data according to Art. 9 Para. 1 GDPR are processed. In the case of explicit consent to the transfer of personal data to third countries, data processing is also based on Art. 49 Para. 1 lit. a GDPR. If you have consented to the storage of cookies or access to information on your end device (e.g., via device fingerprinting), data processing is additionally based on § 25 Para. 1 TTDSG. Consent can be revoked at any time. If your data is required for contract fulfillment or for carrying out pre-contractual measures, we process your data on the basis of Art. 6 Para. 1 lit. b GDPR. Furthermore, we process your data if it is required to fulfill a legal obligation on the basis of Art. 6 Para. 1 lit. c GDPR. Data processing may also be based on our legitimate interest according to Art. 6 Para. 1 lit. f GDPR. Information about the relevant legal basis in each individual case is provided in the following paragraphs of this privacy policy.", de: "Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im Falle einer ausdrücklichen Einwilligung in die Übertragung personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf Informationen in Ihr Endgerät (z. B. via Device-Fingerprinting) eingewilligt haben, erfolgt die Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TTDSG. Die Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, verarbeiten wir Ihre Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten, sofern diese zur Erfüllung einer rechtlichen Verpflichtung erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann ferner auf Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. Über die jeweils im Einzelfall einschlägigen Rechtsgrundlagen wird in den folgenden Absätzen dieser Datenschutzerklärung informiert." },
+   privacyLegalBasisText: { en: "If you have consented to data processing, we process your personal data on the basis of Art. 6 Para. 1 lit. a GDPR or Art. 9 Para. 2 lit. a GDPR, if special categories of data according to Art. 9 Para. 1 GDPR are processed. In the case of explicit consent to the transfer of personal data to third countries, data processing is also based on Art. 49 Para. 1 lit. a GDPR. If you have consented to the storage of cookies or access to information on your end device (e.g., via device fingerprinting), data processing is additionally based on § 25 Para. 1 TTDSG. Consent can be revoked at any time. If your data is required for contract fulfillment or for carrying out pre-contractual measures, we process your data on the basis of Art. 6 Para. 1 lit. b GDPR. Furthermore, we process your data if it is required to fulfill a legal obligation on the basis of Art. 6 Para. 1 lit. c GDPR. Data processing may also be based on our legitimate interest according to Art. 6 Para. 1 lit. f GDPR. Information about the relevant legal basis in each individual case is provided in the following paragraphs of this privacy policy.", de: "Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im Falle einer ausdrücklichen Einwilligung in die Übertragung personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf Informationen in Ihr Endgerät (z. B. via Device-Fingerprinting) eingewilligt haben, erfolgt die Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TTDSG. Die Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, verarbeiten wir Ihre Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten, sofern diese zur Erfüllung einer rechtlichen Verpflichtung erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann ferner auf Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. Über die jeweils im Einzelfall einschlägigen Rechtsgrundlagen wird in den folgenden Absätzen dieser Datenschutzerklärung informiert." },
    privacyRevocationTitle: { en: "Revocation of your consent to data processing", de: "Widerruf Ihrer Einwilligung zur Datenverarbeitung" },
    privacyRevocationText: { en: "Many data processing operations are only possible with your express consent. You can revoke consent you have already given at any time. The legality of the data processing carried out until the revocation remains unaffected by the revocation.", de: "Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt." },
    privacyComplaintRightTitle: { en: "Right to lodge a complaint with the competent supervisory authority", de: "Beschwerde­recht bei der zuständigen Aufsichts­behörde" },
@@ -122,7 +124,7 @@ const i18nStrings = {
    privacyContactFormTitle: { en: "Contact Form", de: "Kontaktformular" },
    privacyContactFormText1: { en: "If you send us inquiries via the contact form, your details from the inquiry form, including the contact details you provided there, will be stored by us for the purpose of processing the inquiry and in the event of follow-up questions.", de: "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert." },
    privacyContactFormText2: { en: "The processing of this data is based on Art. 6 Para. 1 lit. b GDPR, if your request is related to the fulfillment of a contract or is necessary for the implementation of pre-contractual measures. In all other cases, the processing is based on our legitimate interest in the effective processing of the inquiries addressed to us (Art. 6 Para. 1 lit. f GDPR) or on your consent (Art. 6 Para. 1 lit. a GDPR) if this was requested; consent can be revoked at any time.", de: "Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar." },
-   privacyContactFormText3: { en: "The data you entered in the contact form will remain with us until you request deletion, revoke your consent to storage, or the purpose for data storage no longer applies (e.g., after your request has been processed). Mandatory statutory provisions – in particular retention periods – remain unaffected.", de: "Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt." },
+   privacyContactFormText3: { en: "The data you entered in the contact form will remain with us until you request deletion, revoke your consent to storage, or the purpose for data storage no longer applies (e.g., after your request has been processed). Mandatory statutory provisions – in particular retention periods – remain unaffected.", de: "Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt." },
    privacyContactFormProcessorText: { en: "We use the Formspree service (Formspree, Inc., 1201 N Orange St STE 7171, Wilmington, DE 19801, USA) to receive and manage the data sent via the contact form. Formspree acts as our data processor. The data is forwarded to our email address via Formspree's servers. We have concluded a data processing agreement with Formspree. You can find more information about data protection at Formspree here:", de: "Für den Empfang und die Verwaltung der über das Kontaktformular gesendeten Daten nutzen wir den Dienst Formspree (Formspree, Inc., 1201 N Orange St STE 7171, Wilmington, DE 19801, USA). Formspree agiert als unser Auftragsverarbeiter. Die Daten werden über die Server von Formspree an unsere E-Mail-Adresse weitergeleitet. Wir haben mit Formspree einen Vertrag zur Auftragsverarbeitung geschlossen. Weitere Informationen zum Datenschutz bei Formspree finden Sie hier:" },
    privacyServerLogsTitle: { en: "Server Log Files", de: "Server-Log-Dateien" },
    privacyServerLogsText1: { en: "The provider of the pages (GitHub Pages) automatically collects and stores information in so-called server log files, which your browser automatically transmits to us. These are:", de: "Der Provider der Seiten (GitHub Pages) erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:" },
@@ -146,99 +148,92 @@ const i18nStrings = {
    cookieAcceptBtn: { en: "Understood", de: "Verstanden" },
 };
 
-
 // --- Helper Function to Get Dynamic Header Height ---
 function getHeaderHeight() {
    const headerElement = document.querySelector('.main-header');
-   return headerElement && headerElement.offsetHeight > 0 ? headerElement.offsetHeight : 70;
+   return headerElement && headerElement.offsetHeight > 0 ? headerElement.offsetHeight : 70; // Provide fallback
 }
 
 // --- Global Scope Functions for Modals/Popups ---
 function openModal(modalId) {
-   console.log("Attempting to open modal:", modalId);
    const modal = document.getElementById(modalId);
-   const modalOverlay = document.getElementById('modal-overlay'); // Main overlay
+   const modalOverlay = document.getElementById('modal-overlay');
 
    if (!modal || !modalOverlay) {
        console.error("Modal or modal overlay not found for ID:", modalId);
        return;
    }
-   closeCookieBanner(); // Close cookie banner first
+   closeCookieBanner(); // Close cookie banner if open
 
-   // Close nav if open
+   // Close nav if open when a modal is requested
    const mainNav = document.querySelector('.main-nav');
    if (mainNav && mainNav.classList.contains('active')) {
        const navToggle = document.getElementById('nav-toggle');
        if (navToggle) {
-            navToggle.classList.remove('active');
-            mainNav.classList.remove('active');
+           toggleNav(); // Use the function to manage state correctly
        }
    }
    modal.classList.add('active');
-   modalOverlay.classList.add('active'); // Activate main overlay for modal
+   modalOverlay.classList.add('active'); // Activate main overlay
+   modalOverlay.classList.remove('nav-open'); // Ensure overlay is clickable for modal
    modal.scrollTop = 0;
    updateBodyScrollLock();
 }
 
 function closeModal() {
-   console.log("Closing modal...");
-   const modalOverlay = document.getElementById('modal-overlay'); // Main overlay
+   const modalOverlay = document.getElementById('modal-overlay');
    const modals = document.querySelectorAll('.modal');
 
    modals.forEach(modal => modal.classList.remove('active'));
    // Deactivate main overlay ONLY if nav is also closed
    if (!isNavOpen()) {
-        if (modalOverlay) modalOverlay.classList.remove('active');
+        if (modalOverlay && modalOverlay.classList.contains('active')) {
+            modalOverlay.classList.remove('active');
+            modalOverlay.classList.remove('nav-open'); // Clean up class
+        }
    }
    updateBodyScrollLock();
 }
 
 function closeCookieBanner() {
-   console.log("Attempting to close cookie banner...");
    const banner = document.getElementById('cookie-banner');
-   const overlay = document.getElementById('cookie-overlay'); // Specific cookie overlay
+   const overlay = document.getElementById('cookie-overlay');
 
    if (banner && banner.classList.contains('active')) {
-       console.log("Cookie banner is active, removing classes.");
        banner.classList.remove('active');
-       if (overlay) overlay.classList.remove('active'); // Remove its specific overlay
-       updateBodyScrollLock(); // Recalculate scroll lock state
-   } else {
-        console.log("Cookie banner not found or not active, no need to close.");
+       if (overlay) overlay.classList.remove('active');
+       updateBodyScrollLock();
    }
 }
 
 // --- Helper Functions to Check State ---
-const isModalOpen = () => Array.from(document.querySelectorAll('.modal.active')).length > 0;
+const isModalOpen = () => document.querySelectorAll('.modal.active').length > 0;
 const isNavOpen = () => document.querySelector('.main-nav')?.classList.contains('active');
 const isCookiePopupOpen = () => document.getElementById('cookie-banner')?.classList.contains('active');
 
 // --- Central Function to Manage Body Scroll Lock ---
 function updateBodyScrollLock() {
    const body = document.body;
-   const modalOverlay = document.getElementById('modal-overlay'); // The main overlay
+   const modalOverlay = document.getElementById('modal-overlay');
 
    const shouldLockScroll = isModalOpen() || isNavOpen() || isCookiePopupOpen();
 
    if (shouldLockScroll) {
        if (!body.classList.contains('modal-open')) {
-           console.log("Locking body scroll");
-            body.classList.add('modal-open');
+           body.classList.add('modal-open');
        }
        // Ensure main overlay is active if modal or nav requires it
        if ((isModalOpen() || isNavOpen()) && modalOverlay && !modalOverlay.classList.contains('active')) {
-           console.log("Activating main overlay for modal/nav.");
            modalOverlay.classList.add('active');
        }
-   } else { // Nothing requires scroll lock
+   } else {
         if (body.classList.contains('modal-open')) {
-           console.log("Unlocking body scroll");
             body.classList.remove('modal-open');
         }
         // Deactivate main overlay if it's active and nothing needs it anymore
         if (modalOverlay && modalOverlay.classList.contains('active') && !isModalOpen() && !isNavOpen()) {
-             console.log("Deactivating main overlay.");
              modalOverlay.classList.remove('active');
+             modalOverlay.classList.remove('nav-open'); // Clean up class on final close
         }
    }
 }
@@ -246,24 +241,13 @@ function updateBodyScrollLock() {
 
 // --- Smooth Scrolling ---
 function smoothScrollToTarget(targetId) {
-   console.log(`Smooth scroll initiated for: ${targetId}`); // Renamed log
    if (!targetId || targetId === '#') return;
    const targetElement = document.getElementById(targetId.substring(1));
-
-   // *** DEBUG CHECK ***
-   if (document.body.classList.contains('modal-open')) {
-       console.warn(`smoothScrollToTarget: Body still has 'modal-open' class when trying to scroll to ${targetId}. Possible timing issue.`);
-   } else {
-       console.log(`smoothScrollToTarget: Body does NOT have 'modal-open' class. Proceeding with scroll to ${targetId}.`);
-   }
-   // *** END DEBUG CHECK ***
 
    if (targetElement) {
        const headerHeight = getHeaderHeight();
        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
        const offsetPosition = elementPosition - headerHeight;
-
-       console.log(`Scrolling to calculated position for ${targetId}: ${offsetPosition}`);
 
        window.scrollTo({
             top: offsetPosition,
@@ -274,43 +258,47 @@ function smoothScrollToTarget(targetId) {
    }
 }
 
+// --- Global variable for nav toggle function ---
+// Defined globally so it can be referenced by other functions like openModal
+let toggleNav;
+
 // --- Initialize Everything on DOMContentLoaded ---
 document.addEventListener('DOMContentLoaded', function() {
-   console.log("DOM Loaded");
 
    try {
        // --- 1. Apply Translations ---
        const userLang = navigator.language || navigator.userLanguage;
        const lang = userLang.startsWith('de') ? 'de' : 'en';
        document.documentElement.lang = lang;
-       console.log("Language set to:", lang);
-       const keysWithHTML = ['aboutTitle', 'privacyTitle', 'imprintTitle'];
+
+       const keysWithHTML = ['aboutTitle', 'privacyTitle']; // Keys needing innerHTML
+
        Object.keys(i18nStrings).forEach(key => {
            const elements = document.querySelectorAll(`[data-i18n-key="${key}"]`);
            if (!elements || elements.length === 0) return;
+
            const translation = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['en'];
            const fallback = i18nStrings[key]?.['en'];
+
            elements.forEach(element => {
-               if (translation !== undefined) {
-                   if (key === 'pageTitle') { document.title = translation; }
-                   else if (keysWithHTML.includes(key)) { element.innerHTML = translation; }
-                   else { element.textContent = translation; }
-               } else if (fallback) {
-                   if (key === 'pageTitle') { document.title = fallback; }
-                   else if (keysWithHTML.includes(key)) { element.innerHTML = fallback; }
-                   else { element.textContent = fallback; }
+               const finalTranslation = translation ?? fallback;
+               if (finalTranslation !== undefined) {
+                    if (key === 'pageTitle') {
+                       document.title = finalTranslation;
+                    } else if (keysWithHTML.includes(key)) {
+                       element.innerHTML = finalTranslation; // Use innerHTML for specific keys
+                    } else {
+                       element.textContent = finalTranslation;
+                   }
                }
            });
        });
-       console.log("Translations applied");
 
        // --- 2. Initialize Core Page Functionality ---
        initializePage();
-       console.log("Core page initialized");
 
        // --- 3. Initialize Cookie Banner ---
        initializeCookieBanner();
-       console.log("Cookie banner initialization called");
 
    } catch (error) {
        console.error("Error during DOMContentLoaded initialization:", error);
@@ -320,9 +308,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // --- Function to contain Core Page Initializations (called AFTER DOMContentLoaded) ---
 function initializePage() {
-   console.log("Running initializePage...");
    const body = document.body;
-   const modalOverlay = document.getElementById('modal-overlay'); // Main overlay
+   const modalOverlay = document.getElementById('modal-overlay');
    const navToggle = document.getElementById('nav-toggle');
    const mainNav = document.querySelector('.main-nav');
    const progressBar = document.getElementById('scroll-progress-bar');
@@ -335,33 +322,35 @@ function initializePage() {
    const counters = document.querySelectorAll('.counter-value[data-target]');
    const experienceSection = document.getElementById('experience');
 
+   // Initialize Libraries
    if (typeof feather !== 'undefined') feather.replace(); else console.warn("Feather Icons not loaded");
    if (typeof AOS !== 'undefined') AOS.init({ duration: 800, easing: 'ease-in-out-quad', once: true, offset: 50 }); else console.warn("AOS not loaded");
 
+   // Dynamic Year
    const currentYearElement = document.getElementById('current-year');
    if (currentYearElement) { currentYearElement.textContent = new Date().getFullYear(); }
 
    // --- Mobile Navigation Toggle ---
-   const toggleNav = () => {
-       console.log("Toggling nav");
-       if (!mainNav || !navToggle || !modalOverlay) {
-            console.warn("Nav elements missing for toggle"); return;
-       }
-       const isOpening = !mainNav.classList.contains('active');
-       navToggle.classList.toggle('active');
-       mainNav.classList.toggle('active');
+    // Assign the function to the globally scoped variable
+   toggleNav = () => {
+        if (!mainNav || !navToggle || !modalOverlay) return;
 
-       if (isOpening) {
-           modalOverlay.classList.add('active'); // Activate main overlay when nav opens
-           updateNavToggleIconColor(true);
-       } else {
-           // Only hide main overlay if NO modal is also open
-           if (!isModalOpen()) {
-                modalOverlay.classList.remove('active');
-           }
-           updateNavToggleIconColor(false);
-       }
-       updateBodyScrollLock(); // Recalculate scroll lock
+        const isOpening = !mainNav.classList.contains('active');
+        navToggle.classList.toggle('active');
+        mainNav.classList.toggle('active');
+
+        if (isOpening) {
+            modalOverlay.classList.add('active');
+            modalOverlay.classList.add('nav-open'); // Disable pointer events via CSS
+            updateNavToggleIconColor(true);
+        } else {
+            modalOverlay.classList.remove('nav-open'); // Re-enable pointer events
+            if (!isModalOpen()) { // Hide overlay only if no modal is open
+                 if (modalOverlay) modalOverlay.classList.remove('active');
+            }
+            updateNavToggleIconColor(false);
+        }
+        updateBodyScrollLock();
    };
 
    const updateNavToggleIconColor = (isOpen) => {
@@ -369,68 +358,50 @@ function initializePage() {
         let styleElement = document.getElementById(styleId);
         if (isOpen) {
             if (!styleElement) { styleElement = document.createElement('style'); styleElement.id = styleId; document.head.appendChild(styleElement); }
+            // CSS to make the 'X' white on dark background
             styleElement.innerHTML = `
                .nav-toggle.active span { background-color: transparent !important; }
                .nav-toggle.active span::before,
                .nav-toggle.active span::after { background-color: var(--secondary-color) !important; }
             `;
         } else {
-            if (styleElement) styleElement.remove();
+            if (styleElement) styleElement.remove(); // Clean up injected style
         }
     }
 
    if (navToggle) {
         navToggle.addEventListener('click', toggleNav);
-   } else {
-       console.warn("Nav toggle button (#nav-toggle) not found.");
-   }
+   } else { console.warn("Nav toggle button (#nav-toggle) not found."); }
 
    // --- Mobile Navigation Link Handling (Event Delegation) ---
    if (mainNav) {
-        console.log("Attaching click listener to .main-nav");
-
         mainNav.addEventListener('click', (e) => {
-            // *** Stop propagation IMMEDIATELY for any click inside the nav area ***
+            // Stop propagation upwards from nav container
             e.stopPropagation();
-            console.log("Click detected inside .main-nav target:", e.target, "- Propagation stopped.");
 
             const link = e.target.closest('a[href^="#"]');
-
             if (link) {
                 const targetId = link.hash;
-                console.log("Mobile nav link clicked (delegation confirmed):", targetId);
                 const targetElement = targetId && targetId !== '#' ? document.getElementById(targetId.substring(1)) : null;
 
                 if (targetElement) {
-                    console.log("Valid target element found:", targetId);
                     e.preventDefault(); // Prevent default jump
-
-                    // Close the nav first
                     if (isNavOpen()) {
-                        console.log("Closing nav via link click...");
-                        toggleNav();
+                        toggleNav(); // Close nav (removes .nav-open from overlay)
                     }
-
-                    // *** INCREASED TIMEOUT ***
+                    // Scroll after a delay
                     setTimeout(() => {
-                        console.log("Initiating smooth scroll (after longer delay) to:", targetId);
                         smoothScrollToTarget(targetId);
-                    }, 250); // Increased delay
-
+                    }, 250); // Delay allows nav closing animation & style changes
                 } else {
-                    console.log("Target element not found OR link was just '#' for mobile nav link:", targetId);
+                    // If link is invalid, just close nav
                     if (isNavOpen()) {
-                        console.log("Closing nav due to invalid/non-element link click.");
                         toggleNav();
                     }
                 }
-            } else {
-                console.log("Click inside .main-nav was not on a relevant link. Doing nothing.");
             }
         });
-    } else {
-        console.warn("Mobile navigation container (.main-nav) not found.");
-    }
+    } else { console.warn("Mobile navigation container (.main-nav) not found."); }
 
 
    // --- Smooth Scrolling & URL Hash Handling (for non-nav links) ---
@@ -451,7 +422,8 @@ function initializePage() {
            const hash = window.location.hash;
            const targetElement = document.getElementById(hash.substring(1));
            if (targetElement) {
-               history.replaceState(null, '', window.location.pathname + window.location.search);
+               history.replaceState(null, '', window.location.pathname + window.location.search); // Clean URL
+               // Use rAF for potentially better timing after load
                requestAnimationFrame(() => {
                    requestAnimationFrame(() => {
                        smoothScrollToTarget(hash);
@@ -467,8 +439,9 @@ function initializePage() {
        clearTimeout(resizeTimer);
        resizeTimer = setTimeout(() => {
             document.documentElement.style.scrollPaddingTop = getHeaderHeight() + 'px';
-       }, 100);
+       }, 100); // Debounce
    });
+   // Set initial padding
    document.documentElement.style.scrollPaddingTop = getHeaderHeight() + 'px';
 
    // --- Scroll Progress & Effects ---
@@ -477,30 +450,48 @@ function initializePage() {
        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
        const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
        if (progressBar) progressBar.style.width = scrollPercent + '%';
+
+       // Parallax - apply only if images exist
        const scrollFactor = 0.08;
-       applyScrollTransform(aboutImage, scrollFactor);
-       applyScrollTransform(whyUsImage, scrollFactor);
+       if (aboutImage) applyScrollTransform(aboutImage, scrollFactor);
+       if (whyUsImage) applyScrollTransform(whyUsImage, scrollFactor);
     }
    function applyScrollTransform(element, factor) {
-      if (element && isElementInViewport(element)) { const elementRect = element.getBoundingClientRect(); const viewportHeight = window.innerHeight; const centerOffset = (elementRect.top + elementRect.height / 2) - viewportHeight / 2; const translateY = -centerOffset * factor; element.style.transform = `translateY(${translateY}px)`; }
+      // Check if element is in viewport before calculating/applying transform
+      if (isElementInViewport(element)) {
+         const elementRect = element.getBoundingClientRect();
+         const viewportHeight = window.innerHeight;
+         const centerOffset = (elementRect.top + elementRect.height / 2) - viewportHeight / 2;
+         const translateY = -centerOffset * factor;
+         element.style.transform = `translateY(${translateY}px)`;
+      }
    }
    function isElementInViewport(el) {
-      if (!el) return false; const rect = el.getBoundingClientRect(); return (rect.top < window.innerHeight && rect.bottom > 0);
+      if (!el) return false;
+      const rect = el.getBoundingClientRect();
+      return (rect.top < window.innerHeight && rect.bottom > 0);
    }
+   // Optimize scroll listener
    let ticking = false;
-   window.addEventListener('scroll', () => { if (!ticking) { window.requestAnimationFrame(() => { handleScroll(); ticking = false; }); ticking = true; } });
-   // handleScroll(); // Initial call if needed
+   window.addEventListener('scroll', () => {
+       if (!ticking) {
+           window.requestAnimationFrame(() => {
+               handleScroll();
+               ticking = false;
+            });
+            ticking = true;
+        }
+   });
 
    // --- Animated Counter ---
    let countersAnimated = false;
    const animateCountersObserver = new IntersectionObserver((entries) => {
        entries.forEach(entry => {
            if (entry.isIntersecting && !countersAnimated && entry.target.id === 'experience') {
-               console.log("Animating counters");
                counters.forEach(counter => {
                    const target = +counter.getAttribute('data-target');
                    if (!isNaN(target)) { const duration = 1500; animateCounter(counter, target, duration); }
-                   else {
+                   else { // Handle text counters (like "8-Figure")
                         const textTargetKey = counter.getAttribute('data-i18n-key');
                         if(textTargetKey && i18nStrings[textTargetKey]){
                            const lang = document.documentElement.lang || 'en';
@@ -508,29 +499,32 @@ function initializePage() {
                         }
                    }
                });
-               countersAnimated = true;
-               if (experienceSection) animateCountersObserver.unobserve(experienceSection);
+               countersAnimated = true; // Animate only once
+               if (experienceSection) animateCountersObserver.unobserve(experienceSection); // Stop observing
            }
        });
-   }, { threshold: 0.3 });
+   }, { threshold: 0.3 }); // Trigger when 30% visible
+
    if (experienceSection && counters.length > 0) {
        animateCountersObserver.observe(experienceSection);
    } else if (!experienceSection) {
        console.warn("Experience section (#experience) not found for counter observer.");
    }
+
    function animateCounter(element, target, duration) {
       let start = 0;
-      const stepTime = Math.abs(Math.floor(duration / target)) || 16;
-      const increment = target > 0 ? 1 : -1;
+      const stepTime = Math.max(16, Math.abs(Math.floor(duration / target))); // Ensure stepTime > 0
+      const incrementBase = target / (duration / stepTime);
       const timer = setInterval(() => {
-          start += increment * Math.ceil(target / (duration / stepTime));
-          if ((increment > 0 && start >= target) || (increment < 0 && start <= target)) {
-              start = target;
+          start += incrementBase;
+          const currentVal = Math.ceil(start);
+
+          if ((incrementBase > 0 && currentVal >= target) || (incrementBase < 0 && currentVal <= target)) {
               element.textContent = target.toLocaleString();
-              if(element.getAttribute('data-target') === '30') element.textContent += "+";
+              if(element.getAttribute('data-target') === '30') element.textContent += "+"; // Add + for specific counter
               clearInterval(timer);
           } else {
-              element.textContent = Math.ceil(start).toLocaleString();
+              element.textContent = currentVal.toLocaleString();
               if(element.getAttribute('data-target') === '30') element.textContent += "+";
           }
       }, stepTime);
@@ -539,135 +533,108 @@ function initializePage() {
    // --- Contact Form ---
    if (contactForm && emailInput && emailHiddenInput) {
       contactForm.addEventListener('submit', function(e) {
-          emailHiddenInput.value = emailInput.value;
+          emailHiddenInput.value = emailInput.value; // Copy for _replyto
           const submitBtn = contactForm.querySelector('button[type="submit"]');
           if (submitBtn) {
                 submitBtn.disabled = true;
-                const sendingText = i18nStrings.formButtonSending?.[document.documentElement.lang] || 'Sending...';
+                const sendingText = i18nStrings.formButtonSending?.[document.documentElement.lang || 'en'] || 'Sending...';
                 submitBtn.textContent = sendingText;
           }
-          console.log("Contact form submitted, hidden email set.");
       });
    } else {
-        console.warn("Contact form elements (#contact-form, #email, #email-hidden) not found.");
+        // Only warn if the form itself is missing, not just inputs
+        if (!contactForm) console.warn("Contact form (#contact-form) not found.");
    }
 
    // --- Modal Event Listeners ---
    const openImprintLink = document.getElementById('open-imprint');
    const openPrivacyLink = document.getElementById('open-privacy');
-
    if (openImprintLink) {
        openImprintLink.addEventListener('click', (e) => { e.preventDefault(); openModal('imprint-modal'); });
    } else { console.warn("Imprint link (#open-imprint) not found"); }
-
    if (openPrivacyLink) {
        openPrivacyLink.addEventListener('click', (e) => { e.preventDefault(); openModal('privacy-modal'); });
    } else { console.warn("Privacy link (#open-privacy) not found"); }
-
+   // Attach listener to all close buttons
    closeButtons.forEach(button => { button.addEventListener('click', closeModal); });
 
    // --- Listener for the MAIN OVERLAY (#modal-overlay) ---
    if (modalOverlay) {
-        modalOverlay.addEventListener('click', () => {
-            console.log("Main overlay clicked.");
-            // *** Overlay should ONLY close MODALS ***
-            if (isModalOpen()) {
-                console.log("Closing modal via overlay click.");
-                closeModal();
-            } else {
-                 console.log("Main overlay clicked, but no modal was open. Doing nothing.");
-            }
-        });
-    } else { console.warn("Modal overlay (#modal-overlay) not found"); }
+        modalOverlay.addEventListener('click', (e) => {
+           // Ignore click if overlay is non-interactive (nav is open)
+           if (modalOverlay.classList.contains('nav-open')) {
+               return;
+           }
+           // Otherwise, handle modal closing
+           if (isModalOpen()) {
+               closeModal();
+           }
+       });
+   } else { console.warn("Modal overlay (#modal-overlay) not found"); }
 
 
    // --- Global Escape Key Handler ---
    document.addEventListener('keydown', (event) => {
        if (event.key === "Escape") {
-           console.log("Escape key pressed");
-           if (isModalOpen()) {
-               console.log("Closing modal via Escape");
-               closeModal();
-           } else if (isNavOpen()) {
-               console.log("Closing nav via Escape");
-               toggleNav();
-           } else if (isCookiePopupOpen()) {
-               console.log("Closing cookie banner via Escape (without accepting)");
-               closeCookieBanner(); // Just close, don't set consent
-           }
+           if (isModalOpen()) { closeModal(); }
+           else if (isNavOpen()) { toggleNav(); } // Use toggle function
+           else if (isCookiePopupOpen()) { closeCookieBanner(); } // Just close, don't accept
        }
    });
-
-   console.log("initializePage completed.");
 
 } // End of initializePage
 
 // --- Function to Initialize and Manage Cookie Banner Popup ---
 function initializeCookieBanner() {
-   console.log("Attempting to initialize cookie banner...");
+    const banner = document.getElementById('cookie-banner');
+    const overlay = document.getElementById('cookie-overlay');
+    const acceptButton = document.getElementById('cookie-accept');
 
-   const banner = document.getElementById('cookie-banner');
-   const overlay = document.getElementById('cookie-overlay'); // Cookie specific overlay
-   const acceptButton = document.getElementById('cookie-accept');
+    if (!banner || !overlay || !acceptButton) {
+        console.warn("One or more cookie banner elements not found. Skipping banner initialization.");
+        return;
+    }
 
-   if (!banner) { console.error("Cookie Banner (#cookie-banner) NOT FOUND."); return; }
-   if (!overlay) { console.error("Cookie Overlay (#cookie-overlay) NOT FOUND."); return; }
-   if (!acceptButton) { console.error("Cookie Accept Button (#cookie-accept) NOT FOUND."); return; }
+    const CONSENT_KEY = 'elev8_cookie_consent';
+    const CONSENT_VALUE = 'accepted';
 
-   console.log("Core cookie banner elements found.");
+    const handleConsent = () => {
+        try {
+            localStorage.setItem(CONSENT_KEY, CONSENT_VALUE);
+        } catch (e) {
+            console.error("Could not set cookie consent in localStorage:", e);
+        }
+        closeCookieBanner(); // Close UI regardless of storage success
+    }
 
-   const CONSENT_KEY = 'elev8_cookie_consent';
-   const CONSENT_VALUE = 'accepted';
-
-   const handleConsent = () => {
-       console.log("Cookie consent accepted.");
-       try {
-           localStorage.setItem(CONSENT_KEY, CONSENT_VALUE);
-           closeCookieBanner(); // Close the banner UI
-       } catch (e) {
-           console.error("Could not set cookie consent in localStorage:", e);
-           closeCookieBanner(); // Still try to close
-       }
-   }
-
-   let currentConsent = null;
+    let currentConsent = null;
     try {
-       currentConsent = localStorage.getItem(CONSENT_KEY);
-        console.log("Current cookie consent from localStorage:", currentConsent);
+        currentConsent = localStorage.getItem(CONSENT_KEY);
     } catch (e) {
         console.error("Could not read cookie consent from localStorage:", e);
     }
 
-   if (currentConsent !== CONSENT_VALUE) {
-       console.log("No valid consent found, showing banner.");
-       banner.classList.add('active');
-       overlay.classList.add('active'); // Show cookie overlay
-       updateBodyScrollLock(); // Lock scroll
+    if (currentConsent !== CONSENT_VALUE) {
+        banner.classList.add('active');
+        overlay.classList.add('active');
+        updateBodyScrollLock();
 
-       acceptButton.addEventListener('click', handleConsent);
+        acceptButton.addEventListener('click', handleConsent);
+        overlay.addEventListener('click', handleConsent); // Overlay click also accepts
 
-       const privacyLinkInBanner = document.getElementById('cookie-banner-privacy-link');
-       if (privacyLinkInBanner) {
-           console.log("Cookie banner privacy link found successfully.");
-           privacyLinkInBanner.addEventListener('click', (e) => {
-               e.preventDefault();
-               console.log("Privacy link in cookie banner clicked.");
-               closeCookieBanner(); // Close cookie banner first
-               setTimeout(() => {
-                   openModal('privacy-modal'); // Then open privacy modal
-               }, 350);
-           });
-       } else {
-           console.error("Cookie Privacy Link (#cookie-banner-privacy-link) NOT FOUND even when banner is active. Check index.html!");
-       }
+        // Attach listener for privacy link within the banner
+        const privacyLinkInBanner = document.getElementById('cookie-banner-privacy-link');
+        if (privacyLinkInBanner) {
+            privacyLinkInBanner.addEventListener('click', (e) => {
+                e.preventDefault();
+                closeCookieBanner();
+                setTimeout(() => { openModal('privacy-modal'); }, 350); // Open after delay
+            });
+        } else { console.warn("Cookie banner privacy link not found."); }
 
-       // Listener for the COOKIE OVERLAY click -> Accept consent
-       overlay.addEventListener('click', handleConsent);
-
-   } else {
-        console.log("Valid cookie consent found, banner remains hidden.");
+    } else {
+         // Ensure banner is hidden if consent already exists
         if(banner.classList.contains('active')) banner.classList.remove('active');
         if(overlay.classList.contains('active')) overlay.classList.remove('active');
-        updateBodyScrollLock(); // Ensure scroll isn't locked unnecessarily
-   }
+    }
 } // End of initializeCookieBanner

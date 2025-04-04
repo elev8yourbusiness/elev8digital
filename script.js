@@ -59,7 +59,7 @@ const i18nStrings = {
     imprintEmail: { en: "Email:", de: "E-Mail:" },
     imprintVatId: { en: "VAT ID:", de: "Umsatzsteuer-ID:" },
     imprintVatIdText: { en: "VAT identification number according to §27a VAT Act:", de: "Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:" },
-    imprintVatIdOptional: { en: "(Please enter if available)", de: "(Bitte eintragen, falls vorhanden)" },
+    // imprintVatIdOptional: { en: "(Please enter if available)", de: "(Bitte eintragen, falls vorhanden)" }, // Removed this key as text is now fixed
     imprintDisputeTitle: { en: "EU Dispute Resolution", de: "EU-Streitschlichtung" },
     imprintDisputeText1: { en: "The European Commission provides a platform for online dispute resolution (ODR):", de: "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:" },
     imprintDisputeText2: { en: "Our e-mail address can be found above in the imprint.", de: "Unsere E-Mail-Adresse finden Sie oben im Impressum." },
@@ -153,10 +153,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (element && translation !== undefined) {
             if (key === 'pageTitle') { document.title = translation; }
             else { element.textContent = translation; }
-        } else if (element && key !== 'pageTitle') {
-            element.textContent = i18nStrings[key]['en'];
-        } else if (key === 'pageTitle' && translation === undefined) {
-             document.title = i18nStrings[key]['en'];
+        } else if (element && key !== 'pageTitle' && i18nStrings[key]?.['en']) { // Check if EN exists
+            element.textContent = i18nStrings[key]['en']; // Fallback to EN if translation missing
+        } else if (key === 'pageTitle' && translation === undefined && i18nStrings[key]?.['en']) {
+             document.title = i18nStrings[key]['en']; // Fallback for title
         }
     });
 
@@ -173,146 +173,305 @@ function initializePage() {
     const currentYearElement = document.getElementById('current-year');
     if (currentYearElement) { currentYearElement.textContent = new Date().getFullYear(); }
 
-    // Mobile Navigation
+    // --- Elements ---
     const navToggle = document.getElementById('nav-toggle');
     const mainNav = document.querySelector('.main-nav');
-    const modalOverlay = document.getElementById('modal-overlay'); // The one overlay for modals and nav
+    const modalOverlay = document.getElementById('modal-overlay');
     const body = document.body;
-    const toggleNav = () => {
-        navToggle.classList.toggle('active');
-        mainNav.classList.toggle('active');
-        body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
-
-        if (mainNav.classList.contains('active')) {
-             if (modalOverlay) modalOverlay.classList.add('active');
-        } else {
-             const anyModalActive = Array.from(document.querySelectorAll('.modal')).some(m => m.classList.contains('active'));
-             if (modalOverlay && !anyModalActive) modalOverlay.classList.remove('active');
-        }
-
-        const styleId = 'nav-toggle-active-style';
-        let styleElement = document.getElementById(styleId);
-         if(mainNav.classList.contains('active')) {
-            if (!styleElement) { styleElement = document.createElement('style'); styleElement.id = styleId; document.head.appendChild(styleElement); }
-            styleElement.innerHTML = `.nav-toggle.active span { background-color: transparent !important; } .nav-toggle.active span::before, .nav-toggle.active span::after { background-color: var(--secondary-color) !important; }`;
-         } else { if(styleElement) styleElement.remove(); }
-    };
-     if (navToggle && mainNav) {
-         navToggle.addEventListener('click', toggleNav);
-     }
-
-
-    // Smooth Scrolling
-    const navLinks = document.querySelectorAll('.main-nav a[href^="#"], .logo a[href^="#"], .sticky-contact a[href^="#"]');
     const headerElement = document.querySelector('.main-header');
-    const headerHeight = headerElement ? headerElement.offsetHeight : 0;
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                 if(mainNav && mainNav.classList.contains('active') && this.closest('.main-nav')) { toggleNav(); }
-                const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                const offsetPosition = elementPosition - headerHeight;
-                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-            }
-        });
-    });
-
-    // Scroll Progress & Effects
     const progressBar = document.getElementById('scroll-progress-bar');
     const aboutImage = document.getElementById('about-img');
     const whyUsImage = document.getElementById('why-us-img');
-    function handleScroll() {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-        if(progressBar) progressBar.style.width = scrollPercent + '%';
-        const scrollFactor = 0.08;
-        applyScrollTransform(aboutImage, scrollFactor);
-        applyScrollTransform(whyUsImage, scrollFactor);
-    }
-    function applyScrollTransform(element, factor) { if (element && isElementInViewport(element)) { const elementRect = element.getBoundingClientRect(); const viewportHeight = window.innerHeight; const centerOffset = (elementRect.top + elementRect.height / 2) - viewportHeight / 2; const translateY = -centerOffset * factor; element.style.transform = `translateY(${translateY}px)`; } }
-    function isElementInViewport(el) { if (!el) return false; const rect = el.getBoundingClientRect(); return (rect.top < window.innerHeight && rect.bottom > 0); }
-    let ticking = false;
-    window.addEventListener('scroll', () => { if (!ticking) { window.requestAnimationFrame(() => { handleScroll(); ticking = false; }); ticking = true; } });
-    handleScroll();
-
-    // Animated Counter
-    const counters = document.querySelectorAll('.counter-value[data-target]');
-    let countersAnimated = false;
-    const animateCountersObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !countersAnimated && entry.target.id === 'experience') {
-                counters.forEach(counter => {
-                    const target = +counter.getAttribute('data-target');
-                    if (!isNaN(target)) { const duration = 1500; animateCounter(counter, target, duration); }
-                });
-                countersAnimated = true;
-                animateCountersObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    const experienceSection = document.getElementById('experience');
-    if (experienceSection) { animateCountersObserver.observe(experienceSection); }
-    function animateCounter(element, target, duration) { let start = 0; const increment = target / (duration / 16); const timer = setInterval(() => { start += increment; if (start >= target) { element.textContent = target + "+"; clearInterval(timer); } else { element.textContent = Math.ceil(start) + "+"; } }, 16); }
-
-    // Contact Form (Formspree Integration)
-    const contactForm = document.getElementById('contact-form');
-    const emailInput = document.getElementById('email');
-    const emailHiddenInput = document.getElementById('email-hidden');
-    if (contactForm && emailInput && emailHiddenInput) {
-        contactForm.addEventListener('submit', function(e) {
-            emailHiddenInput.value = emailInput.value;
-            console.log('Form submitting to Formspree...');
-        });
-    }
-
-    // --- Modal Logic ---
-    // const modalOverlay = document.getElementById('modal-overlay'); // Already defined above
     const modals = document.querySelectorAll('.modal');
     const imprintModal = document.getElementById('imprint-modal');
     const privacyModal = document.getElementById('privacy-modal');
     const openImprintLink = document.getElementById('open-imprint');
     const openPrivacyLink = document.getElementById('open-privacy');
     const closeButtons = document.querySelectorAll('.modal-close');
+    const contactForm = document.getElementById('contact-form');
+    const emailInput = document.getElementById('email');
+    const emailHiddenInput = document.getElementById('email-hidden');
+    const counters = document.querySelectorAll('.counter-value[data-target]');
+    const experienceSection = document.getElementById('experience');
 
+    // --- Mobile Navigation ---
+    const toggleNav = () => {
+        const isOpening = !mainNav.classList.contains('active');
+        navToggle.classList.toggle('active');
+        mainNav.classList.toggle('active');
+
+        if (isOpening) {
+            body.classList.add('nav-open');
+            modalOverlay.classList.add('active'); // Show overlay
+            updateNavToggleIconColor(true);
+        } else {
+            body.classList.remove('nav-open');
+            // Hide overlay ONLY if no modal is active
+            const anyModalActive = Array.from(modals).some(m => m.classList.contains('active'));
+            if (!anyModalActive) {
+                 modalOverlay.classList.remove('active');
+            }
+            updateNavToggleIconColor(false);
+        }
+    };
+
+    const updateNavToggleIconColor = (isOpen) => {
+         const styleId = 'nav-toggle-active-style';
+         let styleElement = document.getElementById(styleId);
+         if (isOpen) {
+             if (!styleElement) {
+                 styleElement = document.createElement('style');
+                 styleElement.id = styleId;
+                 document.head.appendChild(styleElement);
+             }
+             // Force white color for the 'X' icon when nav is open
+             styleElement.innerHTML = `
+                .nav-toggle.active span { background-color: transparent !important; }
+                .nav-toggle.active span::before,
+                .nav-toggle.active span::after { background-color: var(--secondary-color) !important; }
+             `;
+         } else {
+             if (styleElement) styleElement.remove();
+             // Reset to default (primary color) is handled by base CSS
+         }
+    }
+
+    if (navToggle && mainNav && modalOverlay) {
+         navToggle.addEventListener('click', toggleNav);
+     }
+
+    // --- Smooth Scrolling for ALL relevant links ---
+    const scrollLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])'); // Select all anchors starting with # except # itself
+
+    scrollLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            // Ensure it's a valid internal link
+            if (targetId && targetId.startsWith('#') && targetId.length > 1) {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault(); // Prevent default jump only if target exists
+
+                    // Close mobile nav if open and the click came from within the nav
+                    if (mainNav && mainNav.classList.contains('active') && this.closest('.main-nav')) {
+                        toggleNav();
+                    }
+
+                    // Use setTimeout to allow nav closing animation to start before scrolling
+                    setTimeout(() => {
+                        const headerHeight = headerElement ? headerElement.offsetHeight : 0;
+                        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                        const offsetPosition = elementPosition - headerHeight;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }, 50); // Small delay
+                }
+                 // If it's not a target on the page (like the modal links), don't prevent default
+                 // Modal opening is handled separately
+            }
+        });
+    });
+
+    // --- Scroll Progress & Effects ---
+    function handleScroll() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+        if (progressBar) {
+            progressBar.style.width = scrollPercent + '%';
+        }
+
+        // Parallax-like effect for images (Optional, can be performance intensive)
+        const scrollFactor = 0.08;
+        applyScrollTransform(aboutImage, scrollFactor);
+        applyScrollTransform(whyUsImage, scrollFactor);
+    }
+
+    function applyScrollTransform(element, factor) {
+        if (element && isElementInViewport(element)) {
+            const elementRect = element.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            // Calculate the element's center position relative to the viewport center
+            const centerOffset = (elementRect.top + elementRect.height / 2) - viewportHeight / 2;
+            // Apply translation based on the offset and factor
+            const translateY = -centerOffset * factor;
+            element.style.transform = `translateY(${translateY}px)`;
+        } else if (element) {
+             // Reset transform if not in viewport to avoid potential jumps
+             // element.style.transform = `translateY(0px)`; // Uncomment if needed
+        }
+    }
+
+    function isElementInViewport(el) {
+        if (!el) return false;
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top < window.innerHeight &&
+            rect.bottom > 0 &&
+            rect.left < window.innerWidth &&
+            rect.right > 0
+        );
+    }
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                handleScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+    handleScroll(); // Initial call
+
+    // --- Animated Counter ---
+    let countersAnimated = false;
+    const animateCountersObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Check if the experience section is intersecting and counters haven't run
+            if (entry.isIntersecting && !countersAnimated && entry.target.id === 'experience') {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    // Ensure target is a number before animating
+                    if (!isNaN(target)) {
+                        const duration = 1500; // ms
+                        animateCounter(counter, target, duration);
+                    } else {
+                         // If target is not a number (e.g., "8-Figure"), just set the text
+                         const textTarget = counter.getAttribute('data-i18n-key');
+                         if(textTarget && i18nStrings[textTarget]){
+                            const lang = document.documentElement.lang || 'en';
+                            counter.textContent = i18nStrings[textTarget][lang] || i18nStrings[textTarget]['en'];
+                         }
+                    }
+                });
+                countersAnimated = true; // Mark as animated
+                animateCountersObserver.unobserve(entry.target); // Stop observing
+            }
+        });
+    }, { threshold: 0.3 }); // Trigger when 30% visible
+
+    if (experienceSection && counters.length > 0) {
+        animateCountersObserver.observe(experienceSection);
+    }
+
+    function animateCounter(element, target, duration) {
+        let start = 0;
+        const stepTime = 16; // approx 60fps
+        const steps = duration / stepTime;
+        const increment = target / steps;
+        let currentStep = 0;
+
+        const timer = setInterval(() => {
+            start += increment;
+            currentStep++;
+
+            if (currentStep >= steps || start >= target) {
+                element.textContent = target.toLocaleString(); // Use localeString for formatting if needed
+                 if(element.getAttribute('data-target') === '30') { // Add '+' only for the years counter
+                     element.textContent += "+";
+                 }
+                clearInterval(timer);
+            } else {
+                 element.textContent = Math.ceil(start).toLocaleString();
+                 if(element.getAttribute('data-target') === '30') {
+                     element.textContent += "+";
+                 }
+            }
+        }, stepTime);
+    }
+
+    // --- Contact Form (Formspree Integration) ---
+    if (contactForm && emailInput && emailHiddenInput) {
+        contactForm.addEventListener('submit', function(e) {
+            // Copy the value from the visible email field to the hidden one
+            emailHiddenInput.value = emailInput.value;
+            // Optional: Add a submitting state to the button
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                // You might want to restore the original text later or on error
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                // Reset button state after a delay or on formspree success/error redirect
+                // Formspree usually handles redirects, so this might not be strictly needed
+                // unless you implement AJAX submission later.
+            }
+            console.log('Form submitting to Formspree...');
+            // Form submission proceeds normally
+        });
+    }
+
+    // --- Modal Logic ---
     const openModal = (modal) => {
         if (!modal || !modalOverlay) return;
         modal.classList.add('active');
         modalOverlay.classList.add('active');
-        document.body.classList.add('modal-open');
-        modal.scrollTop = 0;
+        body.classList.add('modal-open'); // Prevents background scroll
+        modal.scrollTop = 0; // Scroll modal to top
     }
 
     const closeModal = () => {
          if (!modalOverlay) return;
          let navIsOpen = mainNav && mainNav.classList.contains('active');
+
          modals.forEach(modal => modal.classList.remove('active'));
-         // Overlay nur ausblenden, wenn auch das mobile Menü zu ist
+         body.classList.remove('modal-open');
+
+         // Hide overlay ONLY if mobile nav is also closed
          if (!navIsOpen) {
             modalOverlay.classList.remove('active');
          }
-         document.body.classList.remove('modal-open');
     }
 
-    if (openImprintLink && imprintModal) { openImprintLink.addEventListener('click', (e) => { e.preventDefault(); openModal(imprintModal); }); }
-    if (openPrivacyLink && privacyModal) { openPrivacyLink.addEventListener('click', (e) => { e.preventDefault(); openModal(privacyModal); }); }
-    closeButtons.forEach(button => { button.addEventListener('click', closeModal); });
+    if (openImprintLink && imprintModal) {
+        openImprintLink.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default anchor behavior
+            openModal(imprintModal);
+        });
+    }
+    if (openPrivacyLink && privacyModal) {
+        openPrivacyLink.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default anchor behavior
+            openModal(privacyModal);
+        });
+    }
 
-     // Angepasster Listener für das EINE Overlay
+    closeButtons.forEach(button => {
+        button.addEventListener('click', closeModal);
+    });
+
+     // Close modal/nav when clicking the overlay
      if (modalOverlay) {
          modalOverlay.addEventListener('click', () => {
              const anyModalActive = Array.from(modals).some(m => m.classList.contains('active'));
+             const navIsOpen = mainNav && mainNav.classList.contains('active');
+
              if (anyModalActive) {
-                 closeModal(); // Wenn Modal offen, schließe Modal
-             } else if (mainNav && mainNav.classList.contains('active')) {
-                 toggleNav(); // Wenn nur Nav offen, schließe Nav
+                 closeModal(); // If a modal is open, close it
+             } else if (navIsOpen) {
+                 toggleNav(); // If only nav is open, close it
              }
          });
      }
 
-    document.addEventListener('keydown', (event) => { if (event.key === "Escape" && modalOverlay.classList.contains('active')) { closeModal(); } });
+    // Close modal/nav on Escape key press
+    document.addEventListener('keydown', (event) => {
+        if (event.key === "Escape") {
+            const anyModalActive = Array.from(modals).some(m => m.classList.contains('active'));
+            const navIsOpen = mainNav && mainNav.classList.contains('active');
+
+            if (anyModalActive) {
+                 closeModal();
+             } else if (navIsOpen) {
+                 toggleNav();
+             }
+        }
+    });
 
 } // End of initializePage

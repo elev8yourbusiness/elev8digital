@@ -1,4 +1,4 @@
-// --- i18n Content (mit manuellen Umbrüchen für DE) ---
+// --- i18n Content (mit überarbeiteten deutschen Texten) ---
 const i18nStrings = {
     pageTitle: { en: "elev8digital - We Elevate Your Business", de: "elev8digital - Performance Marketing & E-Commerce" },
     navHome: { en: "Home", de: "Home" },
@@ -8,11 +8,10 @@ const i18nStrings = {
     navWhyUs: { en: "Why Us", de: "Why Us" },
     navContact: { en: "Contact", de: "Kontakt" },
     heroHeadline: { en: "We Elevate Your Business", de: "We Elevate Your Business" },
-    heroSubheadline: { en: "Performance marketing & e-commerce expertise focused on driving measurable growth for ambitious brands.", de: "Performance Marketing und E-Commerce-Kompetenz für nachhaltiges, messbares Wachstum starker Marken." },
+    heroSubheadline: { en: "Performance marketing & e-commerce expertise focused on driving measurable growth for ambitious brands.", de: "Performance Marketing und E-Commerce-Kompetenz für nachhaltiges, messbares Wachstum starker Marken." }, // Revised DE
     heroButton: { en: "Start Scaling", de: "Jetzt Skalieren" },
-    // MODIFIED: Added <br> for German translation
-    aboutTitle: { en: "Your Growth Partners", de: "Ihre<br>Wachstums-<br>partner" },
-    aboutText1: { en: "elev8digital isn't just another agency. We are a dedicated duo, deeply invested in the success of our clients. We blend strategic performance marketing with meticulous e-commerce optimization.", de: "Als engagiertes Zweierteam setzen wir alles daran, unsere Kunden erfolgreich zu machen. Wir verbinden strategisches Performance Marketing mit sorgfältiger E-Commerce-Optimierung." },
+    aboutTitle: { en: "Your Growth Partners", de: "Ihre Wachstumspartner" },
+    aboutText1: { en: "elev8digital isn't just another agency. We are a dedicated duo, deeply invested in the success of our clients. We blend strategic performance marketing with meticulous e-commerce optimization.", de: "Als engagiertes Zweierteam setzen wir alles daran, unsere Kunden erfolgreich zu machen. Wir verbinden strategisches Performance Marketing mit sorgfältiger E-Commerce-Optimierung." }, // Revised DE
     aboutText2: { en: "We focus on what matters: data-driven strategies that deliver tangible ROI. Think of us as an extension of your team – dedicated, transparent, and focused on your goals.", de: "Wir konzentrieren uns auf das Wesentliche: Datengestützte Strategien, die greifbaren ROI liefern. Betrachten Sie uns als Erweiterung Ihres Teams – engagiert, transparent und auf Ihre Ziele fokussiert." },
     aboutButton: { en: "Explore Services", de: "Leistungen Entdecken" },
     servicesTitle: { en: "Core Capabilities", de: "Kernkompetenzen" },
@@ -30,7 +29,7 @@ const i18nStrings = {
     whyUsTitle: { en: "The Elev8 Advantage", de: "The Elev8 Advantage" },
     whyUsSubtitle: { en: "We combine agency-level expertise with the focus and dedication of in-house specialists.", de: "Wir kombinieren Expertise auf Agentur-Niveau mit dem Fokus und Engagement von Inhouse-Spezialisten." },
     advantage1Title: { en: "Direct Founder Involvement", de: "Direkte Betreuung durch Gründer" },
-    advantage1Text: { en: "Work directly with us – no junior account managers, ensuring deep understanding.", de: "Bei uns arbeiten Sie direkt mit erfahrenen Profis – kein Weiterreichen an Junioren, dafür echtes Verständnis und schnelle Ergebnisse." },
+    advantage1Text: { en: "Work directly with us – no junior account managers, ensuring deep understanding.", de: "Bei uns arbeiten Sie direkt mit erfahrenen Profis – kein Weiterreichen an Junioren, dafür echtes Verständnis und schnelle Ergebnisse." }, // Revised DE
     advantage2Title: { en: "Uncompromisingly Data-Driven", de: "Kompromisslos datengesteuert" },
     advantage2Text: { en: "Every decision and strategy is rooted in analytics, not guesswork.", de: "Jede Entscheidung und Strategie basiert auf Analysen, nicht auf Vermutungen." },
     advantage3Title: { en: "Bespoke Strategies", de: "Maßgeschneiderte Strategien" },
@@ -41,7 +40,7 @@ const i18nStrings = {
     advantage5Text: { en: "Clear, consistent communication and reporting are fundamental to our partnership.", de: "Klare, konsistente Kommunikation und Berichterstattung sind grundlegend für unsere Partnerschaft." },
     whyUsButton: { en: "Let's Collaborate", de: "Projekt besprechen" },
     contactTitle: { en: "Start Your Elevation", de: "Start Your Elevation" },
-    contactSubtitle: { en: "Ready to discuss how elev8digital can accelerate your growth? Fill out the form below or email us directly. We're excited to hear from you.", de: "Lassen Sie uns gemeinsam besprechen, wie elev8digital Ihr Wachstum voranbringen kann. Schreiben Sie uns direkt oder füllen Sie das Kontaktformular aus – wir freuen uns auf Ihre Nachricht!" },
+    contactSubtitle: { en: "Ready to discuss how elev8digital can accelerate your growth? Fill out the form below or email us directly. We're excited to hear from you.", de: "Lassen Sie uns gemeinsam besprechen, wie elev8digital Ihr Wachstum voranbringen kann. Schreiben Sie uns direkt oder füllen Sie das Kontaktformular aus – wir freuen uns auf Ihre Nachricht!" }, // Revised DE
     formLabelName: { en: "Name", de: "Name" },
     formLabelEmail: { en: "Email", de: "E-Mail" },
     formLabelSubject: { en: "Subject", de: "Betreff" },
@@ -51,8 +50,7 @@ const i18nStrings = {
     footerRights: { en: "All Rights Reserved.", de: "Alle Rechte vorbehalten." },
     footerImprint: { en: "Imprint", de: "Impressum" },
     footerPrivacy: { en: "Privacy Policy", de: "Datenschutz" },
-    // MODIFIED: Added <br> for German translation
-    imprintTitle: { en: "Imprint", de: "Impressum" }, // Keep Impressum title simple
+    imprintTitle: { en: "Imprint", de: "Impressum" },
     imprintDSGVO: { en: "Information according to § 5 TMG", de: "Angaben gemäß § 5 TMG" },
     imprintPartners: { en: "Represented by the partners:", de: "Vertreten durch die Gesellschafter:" },
     imprintContact: { en: "Contact:", de: "Kontakt:" },
@@ -61,6 +59,7 @@ const i18nStrings = {
     imprintEmail: { en: "Email:", de: "E-Mail:" },
     imprintVatId: { en: "VAT ID:", de: "Umsatzsteuer-ID:" },
     imprintVatIdText: { en: "VAT identification number according to §27a VAT Act:", de: "Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:" },
+    // imprintVatIdOptional: { en: "(Please enter if available)", de: "(Bitte eintragen, falls vorhanden)" }, // Removed this key as text is now fixed
     imprintDisputeTitle: { en: "EU Dispute Resolution", de: "EU-Streitschlichtung" },
     imprintDisputeText1: { en: "The European Commission provides a platform for online dispute resolution (ODR):", de: "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:" },
     imprintDisputeText2: { en: "Our e-mail address can be found above in the imprint.", de: "Unsere E-Mail-Adresse finden Sie oben im Impressum." },
@@ -71,8 +70,7 @@ const i18nStrings = {
     imprintLiabilityLinksText: { en: "Our offer includes links to external third party websites. We have no influence on the contents of those websites, therefore we cannot guarantee for those contents. Providers or administrators of linked websites are always responsible for their own contents. The linked websites had been checked for possible violations of law at the time of the establishment of the link. Illegal contents were not detected at the time of the linking. A permanent monitoring of the contents of linked websites cannot be imposed without reasonable indications that there has been a violation of law. Illegal links will be removed immediately at the time we get knowledge of them.", de: "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen." },
     imprintCopyrightTitle: { en: "Copyright", de: "Urheberrecht" },
     imprintCopyrightText: { en: "Contents and compilations published on these websites by the providers are subject to German copyright laws. Reproduction, editing, distribution as well as the use of any kind outside the scope of the copyright law require a written permission of the author or originator. Downloads and copies of these websites are permitted for private use only. The commercial use of our contents without permission of the originator is prohibited. Copyright laws of third parties are respected as long as the contents on these websites do not originate from the provider. Contributions of third parties on this site are indicated as such. However, if you notice any violations of copyright law, please inform us. Such contents will be removed immediately.", de: "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen." },
-    // MODIFIED: Added <br> for German translation
-    privacyTitle: { en: "Privacy Policy", de: "Datenschutz-<br>erklärung" },
+    privacyTitle: { en: "Privacy Policy", de: "Datenschutzerklärung" },
     privacyGeneralTitle: { en: "1. Privacy at a Glance", de: "1. Datenschutz auf einen Blick" },
     privacyGeneralHintTitle: { en: "General Information", de: "Allgemeine Hinweise" },
     privacyGeneralHintText: { en: "The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data with which you can be personally identified. Detailed information on the subject of data protection can be found in our privacy policy listed below this text.", de: "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung." },
@@ -140,20 +138,8 @@ const i18nStrings = {
     privacyCookiesText: { en: "Our internet pages use so-called 'cookies'. Cookies are small data packets and do not cause any damage to your end device. They are stored either temporarily for the duration of a session (session cookies) or permanently (permanent cookies) on your end device. Session cookies are automatically deleted after the end of your visit. Permanent cookies remain stored on your end device until you delete them yourself or an automatic deletion is carried out by your web browser. Cookies can originate from us (first-party cookies) or from third-party companies (so-called third-party cookies). Third-party cookies enable the integration of certain services from third-party companies within websites (e.g., cookies for processing payment services).", de: "Unsere Internetseiten verwenden so genannte „Cookies“. Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert. Session-Cookies werden nach Ende Ihres Besuchs automatisch gelöscht. Permanente Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese selbst löschen oder eine automatische Löschung durch Ihren Webbrowser erfolgt. Cookies können von uns (First-Party-Cookies) oder von Drittunternehmen stammen (sog. Third-Party-Cookies). Third-Party-Cookies ermöglichen die Einbindung bestimmter Dienstleistungen von Drittunternehmen innerhalb von Webseiten (z.B. Cookies zur Abwicklung von Zahlungsdienstleistungen)." },
     privacyCookiesPurposeText: { en: "Cookies have various functions. Numerous cookies are technically necessary, as certain website functions would not work without them (e.g., the shopping cart function or the display of videos). Other cookies are used to evaluate user behavior or display advertising. Cookies that are necessary to carry out the electronic communication process, to provide certain functions you desire (e.g., for the shopping cart function) or to optimize the website (e.g., cookies for measuring the web audience) (necessary cookies) are stored on the basis of Art. 6 Para. 1 lit. f GDPR, unless another legal basis is specified. The website operator has a legitimate interest in storing necessary cookies for the technically error-free and optimized provision of their services. If consent to the storage of cookies and comparable recognition technologies has been requested, processing is carried out exclusively on the basis of this consent (Art. 6 Para. 1 lit. a GDPR and § 25 Para. 1 TTDSG); consent can be revoked at any time.", de: "Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind technisch notwendig, da bestimmte Webseitenfunktionen ohne diese nicht funktionieren würden (z.B. die Warenkorbfunktion oder die Anzeige von Videos). Andere Cookies dienen dazu, das Nutzerverhalten auszuwerten oder Werbung anzuzeigen. Cookies, die zur Durchführung des elektronischen Kommunikationsvorgangs, zur Bereitstellung bestimmter, von Ihnen erwünschter Funktionen (z. B. für die Warenkorbfunktion) oder zur Optimierung der Website (z.B. Cookies zur Messung des Webpublikums) erforderlich sind (notwendige Cookies), werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert, sofern keine andere Rechtsgrundlage angegeben wird. Der Websitebetreiber hat ein berechtigtes Interesse an der Speicherung von notwendigen Cookies zur technisch fehlerfreien und optimierten Bereitstellung seiner Dienste. Sofern eine Einwilligung zur Speicherung von Cookies und vergleichbaren Wiedererkennungstechnologien abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage dieser Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG); die Einwilligung ist jederzeit widerrufbar." },
     privacyCookiesBrowserSettingsText: { en: "You can set your browser so that you are informed about the setting of cookies and only allow cookies in individual cases, exclude the acceptance of cookies for certain cases or generally, and activate the automatic deletion of cookies when closing the browser. If cookies are deactivated, the functionality of this website may be limited.", de: "Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browsers aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein." },
-    privacyCookiesWhichUsedText: { en: "Which cookies and services are used on this website can be found in this privacy policy. (Currently, no cookies are actively set by our site, except technically necessary ones by the hoster or Formspree.)", de: "Welche Cookies und Dienste auf dieser Website eingesetzt werden, können Sie dieser Datenschutzerklärung entnehmen. (Aktuell werden von unserer Seite keine Cookies aktiv gesetzt, außer technisch notwendige durch den Hoster oder Formspree.)" },
-    // Cookie Banner Translations
-    cookieBannerText: {
-        en: "This website uses technically necessary cookies. No tracking or analysis cookies are used. By using the site, you agree to this. More info:",
-        de: "Diese Website verwendet technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Mit der Nutzung der Seite stimmen Sie dem zu. Mehr Infos:"
-    },
-    cookieAcceptBtn: { en: "Understood", de: "Verstanden" },
+    privacyCookiesWhichUsedText: { en: "Which cookies and services are used on this website can be found in this privacy policy. (Currently, no cookies are actively set by our site, except technically necessary ones by the hoster or Formspree.)", de: "Welche Cookies und Dienste auf dieser Website eingesetzt werden, können Sie dieser Datenschutzerklärung entnehmen. (Aktuell werden von unserer Seite keine Cookies aktiv gesetzt, außer technisch notwendige durch den Hoster oder Formspree.)" }
 };
-
-// --- Helper Function to Get Dynamic Header Height ---
-function getHeaderHeight() {
-    const headerElement = document.querySelector('.main-header');
-    return headerElement ? headerElement.offsetHeight : 80; // Default fallback
-}
 
 // --- Language Detection and Application ---
 document.addEventListener('DOMContentLoaded', function() {
@@ -163,39 +149,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     Object.keys(i18nStrings).forEach(key => {
         const element = document.querySelector(`[data-i18n-key="${key}"]`);
-        if (!element) return; // Skip if element not found
-
         const translation = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['en']; // Fallback to EN
-        const keysWithHTML = ['aboutTitle', 'privacyTitle', 'imprintTitle']; // Keys that might contain <br>
-
-        if (translation !== undefined) {
-            if (key === 'pageTitle') {
-                document.title = translation;
-            }
-            // MODIFIED: Use innerHTML for specific keys, textContent for others
-            else if (keysWithHTML.includes(key)) {
-                 element.innerHTML = translation;
-            }
-            else {
-                element.textContent = translation;
-            }
-        } else if (i18nStrings[key]?.['en']) { // Fallback explicitly to EN
-             if (key === 'pageTitle') {
-                 document.title = i18nStrings[key]['en'];
-             } else if (keysWithHTML.includes(key)) {
-                 element.innerHTML = i18nStrings[key]['en']; // Use innerHTML even for fallback if needed
-             } else {
-                 element.textContent = i18nStrings[key]['en'];
-             }
+        if (element && translation !== undefined) {
+            if (key === 'pageTitle') { document.title = translation; }
+            else { element.textContent = translation; }
+        } else if (element && key !== 'pageTitle' && i18nStrings[key]?.['en']) { // Check if EN exists
+            element.textContent = i18nStrings[key]['en']; // Fallback to EN if translation missing
+        } else if (key === 'pageTitle' && translation === undefined && i18nStrings[key]?.['en']) {
+             document.title = i18nStrings[key]['en']; // Fallback for title
         }
     });
 
-    initializePage(); // Initialize core functionality
-    initializeCookieBanner(); // Initialize cookie banner specifically
+    initializePage(); // Initialize after translations
 });
 
 
-// --- Function to contain Core Initializations ---
+// --- Function to contain initializations ---
 function initializePage() {
     feather.replace();
     AOS.init({ duration: 800, easing: 'ease-in-out-quad', once: true, offset: 50 });
@@ -207,8 +176,9 @@ function initializePage() {
     // --- Elements ---
     const navToggle = document.getElementById('nav-toggle');
     const mainNav = document.querySelector('.main-nav');
-    const modalOverlay = document.getElementById('modal-overlay'); // Shared overlay for modals and nav
+    const modalOverlay = document.getElementById('modal-overlay');
     const body = document.body;
+    const headerElement = document.querySelector('.main-header');
     const progressBar = document.getElementById('scroll-progress-bar');
     const aboutImage = document.getElementById('about-img');
     const whyUsImage = document.getElementById('why-us-img');
@@ -224,49 +194,37 @@ function initializePage() {
     const counters = document.querySelectorAll('.counter-value[data-target]');
     const experienceSection = document.getElementById('experience');
 
-    // --- Helper Functions for Modals/Nav/Popup State ---
-    const isModalOpen = () => Array.from(modals).some(m => m.classList.contains('active'));
-    const isNavOpen = () => mainNav && mainNav.classList.contains('active');
-    const isCookiePopupOpen = () => {
-        const banner = document.getElementById('cookie-banner');
-        return banner && banner.classList.contains('active');
-    }
-    const updateBodyScroll = () => {
-        if (isModalOpen() || isNavOpen() || isCookiePopupOpen()) {
-            body.classList.add('modal-open'); // Use a single class to prevent scroll
-        } else {
-            body.classList.remove('modal-open');
-        }
-    }
-
-
     // --- Mobile Navigation ---
     const toggleNav = () => {
-        if (!mainNav || !navToggle) return;
         const isOpening = !mainNav.classList.contains('active');
         navToggle.classList.toggle('active');
         mainNav.classList.toggle('active');
 
         if (isOpening) {
-            body.classList.add('nav-open'); // Specific class for nav state if needed
-            modalOverlay.classList.add('active');
+            body.classList.add('nav-open');
+            modalOverlay.classList.add('active'); // Show overlay
             updateNavToggleIconColor(true);
         } else {
             body.classList.remove('nav-open');
-             // Hide overlay ONLY if no modal or cookie popup is active
-            if (!isModalOpen() && !isCookiePopupOpen()) {
+            // Hide overlay ONLY if no modal is active
+            const anyModalActive = Array.from(modals).some(m => m.classList.contains('active'));
+            if (!anyModalActive) {
                  modalOverlay.classList.remove('active');
             }
             updateNavToggleIconColor(false);
         }
-        updateBodyScroll(); // Update scroll lock
     };
 
     const updateNavToggleIconColor = (isOpen) => {
          const styleId = 'nav-toggle-active-style';
          let styleElement = document.getElementById(styleId);
          if (isOpen) {
-             if (!styleElement) { styleElement = document.createElement('style'); styleElement.id = styleId; document.head.appendChild(styleElement); }
+             if (!styleElement) {
+                 styleElement = document.createElement('style');
+                 styleElement.id = styleId;
+                 document.head.appendChild(styleElement);
+             }
+             // Force white color for the 'X' icon when nav is open
              styleElement.innerHTML = `
                 .nav-toggle.active span { background-color: transparent !important; }
                 .nav-toggle.active span::before,
@@ -274,284 +232,246 @@ function initializePage() {
              `;
          } else {
              if (styleElement) styleElement.remove();
+             // Reset to default (primary color) is handled by base CSS
          }
     }
 
     if (navToggle && mainNav && modalOverlay) {
          navToggle.addEventListener('click', toggleNav);
-
-         // MODIFIED: Specific listener for links *inside* the mobile nav
-         mainNav.querySelectorAll('a[href^="#"]').forEach(link => {
-            link.addEventListener('click', (e) => {
-                const targetId = link.hash;
-                 if (targetId && document.getElementById(targetId.substring(1))) {
-                     e.preventDefault(); // Prevent default jump
-                     if (mainNav.classList.contains('active')) {
-                         toggleNav(); // Close the nav first
-                         // Use setTimeout to ensure nav closing animation starts
-                         setTimeout(() => {
-                             smoothScrollToTarget(targetId);
-                         }, 150); // Adjust delay if needed
-                     }
-                 }
-                 // Allow default for external links or links not finding a target
-            });
-         });
      }
 
-    // --- Smooth Scrolling & URL Hash Handling ---
-    function smoothScrollToTarget(targetId) {
-        if (!targetId || targetId === '#') return; // Ignore empty or just '#'
-        const targetElement = document.getElementById(targetId.substring(1)); // Remove #
-        if (targetElement) {
-            const headerHeight = getHeaderHeight();
-            // Calculate offset considering scroll-padding-top
-            const elementTop = targetElement.getBoundingClientRect().top;
-            const offsetPosition = window.pageYOffset + elementTop - headerHeight;
+    // --- Smooth Scrolling for ALL relevant links ---
+    const scrollLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])'); // Select all anchors starting with # except # itself
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        } else {
-            console.warn("Smooth scroll target not found:", targetId);
-        }
-    }
+    scrollLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            // Ensure it's a valid internal link
+            if (targetId && targetId.startsWith('#') && targetId.length > 1) {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault(); // Prevent default jump only if target exists
 
-    // Listener for non-nav anchor clicks (e.g., buttons)
-    document.addEventListener('click', function(e) {
-        const link = e.target.closest('a');
-        // Ensure it's an internal link AND not inside the mobile nav (handled separately)
-        if (link && link.hash && link.pathname === window.location.pathname && !link.closest('.main-nav')) {
-            if (document.getElementById(link.hash.substring(1))) {
-                 e.preventDefault();
-                 smoothScrollToTarget(link.hash);
+                    // Close mobile nav if open and the click came from within the nav
+                    if (mainNav && mainNav.classList.contains('active') && this.closest('.main-nav')) {
+                        toggleNav();
+                    }
+
+                    // Use setTimeout to allow nav closing animation to start before scrolling
+                    setTimeout(() => {
+                        const headerHeight = headerElement ? headerElement.offsetHeight : 0;
+                        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                        const offsetPosition = elementPosition - headerHeight;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }, 50); // Small delay
+                }
+                 // If it's not a target on the page (like the modal links), don't prevent default
+                 // Modal opening is handled separately
             }
-        }
+        });
     });
-
-    // Handle hash scrolling on page load
-    window.addEventListener('load', () => {
-        if (window.location.hash) {
-            const hash = window.location.hash;
-             // Only proceed if the target element exists
-            if (document.getElementById(hash.substring(1))) {
-                // Remove hash from URL immediately to prevent jump
-                history.replaceState(null, '', window.location.pathname + window.location.search);
-
-                // Scroll after a short delay using requestAnimationFrame
-                requestAnimationFrame(() => {
-                    requestAnimationFrame(() => {
-                         smoothScrollToTarget(hash);
-                    });
-                });
-            }
-        }
-    });
-
-    // Update scroll padding on resize
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-             const currentHeaderHeight = getHeaderHeight();
-             document.documentElement.style.scrollPaddingTop = currentHeaderHeight + 'px';
-        }, 100);
-    });
-     // Initial scroll padding set
-     document.documentElement.style.scrollPaddingTop = getHeaderHeight() + 'px';
-
 
     // --- Scroll Progress & Effects ---
-    function handleScroll() { /* ... (keep existing code) ... */
+    function handleScroll() {
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-        if (progressBar) progressBar.style.width = scrollPercent + '%';
+
+        if (progressBar) {
+            progressBar.style.width = scrollPercent + '%';
+        }
+
+        // Parallax-like effect for images (Optional, can be performance intensive)
         const scrollFactor = 0.08;
         applyScrollTransform(aboutImage, scrollFactor);
         applyScrollTransform(whyUsImage, scrollFactor);
-     }
-    function applyScrollTransform(element, factor) { /* ... (keep existing code) ... */
-        if (element && isElementInViewport(element)) { const elementRect = element.getBoundingClientRect(); const viewportHeight = window.innerHeight; const centerOffset = (elementRect.top + elementRect.height / 2) - viewportHeight / 2; const translateY = -centerOffset * factor; element.style.transform = `translateY(${translateY}px)`; }
-     }
-    function isElementInViewport(el) { /* ... (keep existing code) ... */
-        if (!el) return false; const rect = el.getBoundingClientRect(); return (rect.top < window.innerHeight && rect.bottom > 0);
-     }
+    }
+
+    function applyScrollTransform(element, factor) {
+        if (element && isElementInViewport(element)) {
+            const elementRect = element.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            // Calculate the element's center position relative to the viewport center
+            const centerOffset = (elementRect.top + elementRect.height / 2) - viewportHeight / 2;
+            // Apply translation based on the offset and factor
+            const translateY = -centerOffset * factor;
+            element.style.transform = `translateY(${translateY}px)`;
+        } else if (element) {
+             // Reset transform if not in viewport to avoid potential jumps
+             // element.style.transform = `translateY(0px)`; // Uncomment if needed
+        }
+    }
+
+    function isElementInViewport(el) {
+        if (!el) return false;
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top < window.innerHeight &&
+            rect.bottom > 0 &&
+            rect.left < window.innerWidth &&
+            rect.right > 0
+        );
+    }
+
     let ticking = false;
-    window.addEventListener('scroll', () => { if (!ticking) { window.requestAnimationFrame(() => { handleScroll(); ticking = false; }); ticking = true; } });
-    handleScroll();
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                handleScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+    handleScroll(); // Initial call
 
     // --- Animated Counter ---
     let countersAnimated = false;
-    const animateCountersObserver = new IntersectionObserver((entries) => { /* ... (keep existing code) ... */
+    const animateCountersObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            // Check if the experience section is intersecting and counters haven't run
             if (entry.isIntersecting && !countersAnimated && entry.target.id === 'experience') {
                 counters.forEach(counter => {
                     const target = +counter.getAttribute('data-target');
-                    if (!isNaN(target)) { const duration = 1500; animateCounter(counter, target, duration); }
-                    else {
-                         const textTargetKey = counter.getAttribute('data-i18n-key');
-                         if(textTargetKey && i18nStrings[textTargetKey]){
+                    // Ensure target is a number before animating
+                    if (!isNaN(target)) {
+                        const duration = 1500; // ms
+                        animateCounter(counter, target, duration);
+                    } else {
+                         // If target is not a number (e.g., "8-Figure"), just set the text
+                         const textTarget = counter.getAttribute('data-i18n-key');
+                         if(textTarget && i18nStrings[textTarget]){
                             const lang = document.documentElement.lang || 'en';
-                            counter.textContent = i18nStrings[textTargetKey][lang] || i18nStrings[textTargetKey]['en'];
+                            counter.textContent = i18nStrings[textTarget][lang] || i18nStrings[textTarget]['en'];
                          }
                     }
                 });
-                countersAnimated = true;
-                animateCountersObserver.unobserve(entry.target);
+                countersAnimated = true; // Mark as animated
+                animateCountersObserver.unobserve(entry.target); // Stop observing
             }
         });
-    }, { threshold: 0.3 });
-    if (experienceSection && counters.length > 0) { animateCountersObserver.observe(experienceSection); }
-    function animateCounter(element, target, duration) { /* ... (keep existing code) ... */
-        let start = 0; const stepTime = 16; const steps = duration / stepTime; const increment = target / steps; let currentStep = 0; const timer = setInterval(() => { start += increment; currentStep++; if (currentStep >= steps || start >= target) { element.textContent = target.toLocaleString(); if(element.getAttribute('data-target') === '30') element.textContent += "+"; clearInterval(timer); } else { element.textContent = Math.ceil(start).toLocaleString(); if(element.getAttribute('data-target') === '30') element.textContent += "+"; } }, stepTime);
-     }
+    }, { threshold: 0.3 }); // Trigger when 30% visible
 
-    // --- Contact Form ---
-    if (contactForm && emailInput && emailHiddenInput) { /* ... (keep existing code) ... */
+    if (experienceSection && counters.length > 0) {
+        animateCountersObserver.observe(experienceSection);
+    }
+
+    function animateCounter(element, target, duration) {
+        let start = 0;
+        const stepTime = 16; // approx 60fps
+        const steps = duration / stepTime;
+        const increment = target / steps;
+        let currentStep = 0;
+
+        const timer = setInterval(() => {
+            start += increment;
+            currentStep++;
+
+            if (currentStep >= steps || start >= target) {
+                element.textContent = target.toLocaleString(); // Use localeString for formatting if needed
+                 if(element.getAttribute('data-target') === '30') { // Add '+' only for the years counter
+                     element.textContent += "+";
+                 }
+                clearInterval(timer);
+            } else {
+                 element.textContent = Math.ceil(start).toLocaleString();
+                 if(element.getAttribute('data-target') === '30') {
+                     element.textContent += "+";
+                 }
+            }
+        }, stepTime);
+    }
+
+    // --- Contact Form (Formspree Integration) ---
+    if (contactForm && emailInput && emailHiddenInput) {
         contactForm.addEventListener('submit', function(e) {
+            // Copy the value from the visible email field to the hidden one
             emailHiddenInput.value = emailInput.value;
+            // Optional: Add a submitting state to the button
             const submitBtn = contactForm.querySelector('button[type="submit"]');
-            if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                // You might want to restore the original text later or on error
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                // Reset button state after a delay or on formspree success/error redirect
+                // Formspree usually handles redirects, so this might not be strictly needed
+                // unless you implement AJAX submission later.
+            }
+            console.log('Form submitting to Formspree...');
+            // Form submission proceeds normally
         });
-     }
+    }
 
     // --- Modal Logic ---
     const openModal = (modal) => {
         if (!modal || !modalOverlay) return;
-        // Ensure cookie banner is closed if open
-        closeCookieBanner(); // Call function to close cookie banner if necessary
         modal.classList.add('active');
         modalOverlay.classList.add('active');
         body.classList.add('modal-open'); // Prevents background scroll
-        modal.scrollTop = 0;
-        updateBodyScroll(); // Update scroll lock state
+        modal.scrollTop = 0; // Scroll modal to top
     }
+
     const closeModal = () => {
          if (!modalOverlay) return;
+         let navIsOpen = mainNav && mainNav.classList.contains('active');
+
          modals.forEach(modal => modal.classList.remove('active'));
-          // Hide overlay ONLY if nav and cookie popup are also closed
-         if (!isNavOpen() && !isCookiePopupOpen()) {
+         body.classList.remove('modal-open');
+
+         // Hide overlay ONLY if mobile nav is also closed
+         if (!navIsOpen) {
             modalOverlay.classList.remove('active');
          }
-         updateBodyScroll(); // Update scroll lock state
     }
-    if (openImprintLink && imprintModal) openImprintLink.addEventListener('click', (e) => { e.preventDefault(); openModal(imprintModal); });
-    if (openPrivacyLink && privacyModal) openPrivacyLink.addEventListener('click', (e) => { e.preventDefault(); openModal(privacyModal); });
-    closeButtons.forEach(button => button.addEventListener('click', closeModal); });
+
+    if (openImprintLink && imprintModal) {
+        openImprintLink.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default anchor behavior
+            openModal(imprintModal);
+        });
+    }
+    if (openPrivacyLink && privacyModal) {
+        openPrivacyLink.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default anchor behavior
+            openModal(privacyModal);
+        });
+    }
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', closeModal);
+    });
+
+     // Close modal/nav when clicking the overlay
      if (modalOverlay) {
          modalOverlay.addEventListener('click', () => {
-             // This overlay handles BOTH modals and mobile nav
-             if (isModalOpen()) closeModal();
-             else if (isNavOpen()) toggleNav();
+             const anyModalActive = Array.from(modals).some(m => m.classList.contains('active'));
+             const navIsOpen = mainNav && mainNav.classList.contains('active');
+
+             if (anyModalActive) {
+                 closeModal(); // If a modal is open, close it
+             } else if (navIsOpen) {
+                 toggleNav(); // If only nav is open, close it
+             }
          });
      }
+
+    // Close modal/nav on Escape key press
     document.addEventListener('keydown', (event) => {
         if (event.key === "Escape") {
-            if (isModalOpen()) closeModal();
-            else if (isNavOpen()) toggleNav();
-            else if (isCookiePopupOpen()) closeCookieBanner(); // Close cookie banner on Esc
+            const anyModalActive = Array.from(modals).some(m => m.classList.contains('active'));
+            const navIsOpen = mainNav && mainNav.classList.contains('active');
+
+            if (anyModalActive) {
+                 closeModal();
+             } else if (navIsOpen) {
+                 toggleNav();
+             }
         }
     });
 
-    // --- Make modal/nav functions globally accessible if needed by cookie banner ---
-    window.openModal = openModal; // Expose to global scope
-    window.closeCookieBanner = closeCookieBanner; // Expose function below
-
-
 } // End of initializePage
-
-// --- Function to Initialize and Manage Cookie Banner Popup ---
-function closeCookieBanner() { // Define close function separately
-    const banner = document.getElementById('cookie-banner');
-    const overlay = document.getElementById('cookie-overlay');
-    if (banner && banner.classList.contains('active')) {
-        banner.classList.remove('active');
-        if(overlay) overlay.classList.remove('active');
-        // Check if other modals/nav are open before removing the class
-        const isModalOpen = () => Array.from(document.querySelectorAll('.modal')).some(m => m.classList.contains('active'));
-        const isNavOpen = () => document.querySelector('.main-nav')?.classList.contains('active');
-        if (!isModalOpen() && !isNavOpen()) {
-             document.body.classList.remove('modal-open');
-        }
-    }
-}
-
-function initializeCookieBanner() {
-    const banner = document.getElementById('cookie-banner');
-    const overlay = document.getElementById('cookie-overlay');
-    const acceptButton = document.getElementById('cookie-accept');
-    const privacyLinkInBanner = document.getElementById('cookie-banner-privacy-link');
-    const privacyModal = document.getElementById('privacy-modal');
-
-    const CONSENT_KEY = 'elev8_cookie_consent';
-    const CONSENT_VALUE = 'accepted'; // Only storing acceptance
-
-    // Function to hide banner and set consent
-    const handleConsent = () => {
-        localStorage.setItem(CONSENT_KEY, CONSENT_VALUE);
-        if (banner) banner.classList.remove('active');
-        if (overlay) overlay.classList.remove('active');
-
-        // Check if modal or nav are open before unlocking scroll
-        const isModalOpen = () => Array.from(document.querySelectorAll('.modal')).some(m => m.classList.contains('active'));
-        const isNavOpen = () => document.querySelector('.main-nav')?.classList.contains('active');
-        if (!isModalOpen() && !isNavOpen()) {
-            document.body.classList.remove('modal-open'); // Remove scroll lock
-        }
-    }
-
-    // Check for existing consent
-    const currentConsent = localStorage.getItem(CONSENT_KEY);
-
-    if (currentConsent !== CONSENT_VALUE && banner && overlay) {
-        // No valid consent yet, show the banner and overlay
-        banner.classList.add('active');
-        overlay.classList.add('active');
-        document.body.classList.add('modal-open'); // Lock scroll
-
-        // Add event listeners
-        if (acceptButton) {
-            acceptButton.addEventListener('click', handleConsent);
-        }
-
-        // Link to open privacy modal from banner
-         if (privacyLinkInBanner && privacyModal) {
-             privacyLinkInBanner.addEventListener('click', (e) => {
-                 e.preventDefault();
-                 // Close cookie banner *before* opening modal
-                 closeCookieBanner();
-                 // Need a slight delay to allow close transition before opening modal
-                 setTimeout(() => {
-                     // Use the globally exposed function if needed, or re-get elements
-                    const modalOverlay = document.getElementById('modal-overlay'); // Re-get modal overlay
-                     const openModalFn = (modal) => {
-                         if (!modal || !modalOverlay) return;
-                         modal.classList.add('active');
-                         modalOverlay.classList.add('active');
-                         document.body.classList.add('modal-open'); // Ensure scroll lock remains
-                         modal.scrollTop = 0;
-                     }
-                     openModalFn(privacyModal);
-                 }, 350); // Delay slightly longer than transition
-             });
-         }
-          // Optional: Close banner if overlay is clicked
-         overlay.addEventListener('click', handleConsent);
-
-    } else {
-        // Consent already exists, ensure banner & overlay are hidden
-        if(banner) banner.classList.remove('active');
-        if(overlay) overlay.classList.remove('active');
-        // Ensure scroll isn't locked if only cookie banner was preventing it
-        const isModalOpen = () => Array.from(document.querySelectorAll('.modal')).some(m => m.classList.contains('active'));
-        const isNavOpen = () => document.querySelector('.main-nav')?.classList.contains('active');
-        if (!isModalOpen() && !isNavOpen()) {
-             document.body.classList.remove('modal-open');
-        }
-    }
-} // End of initializeCookieBanner
-
-// Expose the closeCookieBanner function if needed globally (e.g., for inline JS, though not recommended)
-// window.closeCookieBanner = closeCookieBanner;

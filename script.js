@@ -51,7 +51,8 @@ const i18nStrings = {
     footerRights: { en: "All Rights Reserved.", de: "Alle Rechte vorbehalten." },
     footerImprint: { en: "Imprint", de: "Impressum" },
     footerPrivacy: { en: "Privacy Policy", de: "Datenschutz" },
-    imprintTitle: { en: "Imprint", de: "Impressum" },
+    // MODIFIED: Added <br> for German translation
+    imprintTitle: { en: "Imprint", de: "Impressum" }, // Keep Impressum title simple
     imprintDSGVO: { en: "Information according to § 5 TMG", de: "Angaben gemäß § 5 TMG" },
     imprintPartners: { en: "Represented by the partners:", de: "Vertreten durch die Gesellschafter:" },
     imprintContact: { en: "Contact:", de: "Kontakt:" },
@@ -146,7 +147,6 @@ const i18nStrings = {
         de: "Diese Website verwendet technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Mit der Nutzung der Seite stimmen Sie dem zu. Mehr Infos:"
     },
     cookieAcceptBtn: { en: "Understood", de: "Verstanden" },
-    // cookieDeclineBtn: { en: "Decline", de: "Ablehnen" } // If you add a decline button
 };
 
 // --- Helper Function to Get Dynamic Header Height ---
@@ -166,23 +166,24 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!element) return; // Skip if element not found
 
         const translation = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['en']; // Fallback to EN
+        const keysWithHTML = ['aboutTitle', 'privacyTitle', 'imprintTitle']; // Keys that might contain <br>
 
         if (translation !== undefined) {
             if (key === 'pageTitle') {
                 document.title = translation;
             }
-            // Check if the key requires HTML insertion
-            else if (key === 'aboutTitle' || key === 'privacyTitle') {
-                 element.innerHTML = translation; // Use innerHTML for keys with <br>
+            // MODIFIED: Use innerHTML for specific keys, textContent for others
+            else if (keysWithHTML.includes(key)) {
+                 element.innerHTML = translation;
             }
             else {
-                element.textContent = translation; // Use textContent for others
+                element.textContent = translation;
             }
-        } else if (i18nStrings[key]?.['en']) { // Fallback explicitly to EN if key exists but lang specific doesn't
+        } else if (i18nStrings[key]?.['en']) { // Fallback explicitly to EN
              if (key === 'pageTitle') {
                  document.title = i18nStrings[key]['en'];
-             } else if (key === 'aboutTitle' || key === 'privacyTitle') {
-                 element.innerHTML = i18nStrings[key]['en'];
+             } else if (keysWithHTML.includes(key)) {
+                 element.innerHTML = i18nStrings[key]['en']; // Use innerHTML even for fallback if needed
              } else {
                  element.textContent = i18nStrings[key]['en'];
              }
@@ -206,7 +207,7 @@ function initializePage() {
     // --- Elements ---
     const navToggle = document.getElementById('nav-toggle');
     const mainNav = document.querySelector('.main-nav');
-    const modalOverlay = document.getElementById('modal-overlay');
+    const modalOverlay = document.getElementById('modal-overlay'); // Shared overlay for modals and nav
     const body = document.body;
     const progressBar = document.getElementById('scroll-progress-bar');
     const aboutImage = document.getElementById('about-img');
@@ -223,35 +224,49 @@ function initializePage() {
     const counters = document.querySelectorAll('.counter-value[data-target]');
     const experienceSection = document.getElementById('experience');
 
+    // --- Helper Functions for Modals/Nav/Popup State ---
+    const isModalOpen = () => Array.from(modals).some(m => m.classList.contains('active'));
+    const isNavOpen = () => mainNav && mainNav.classList.contains('active');
+    const isCookiePopupOpen = () => {
+        const banner = document.getElementById('cookie-banner');
+        return banner && banner.classList.contains('active');
+    }
+    const updateBodyScroll = () => {
+        if (isModalOpen() || isNavOpen() || isCookiePopupOpen()) {
+            body.classList.add('modal-open'); // Use a single class to prevent scroll
+        } else {
+            body.classList.remove('modal-open');
+        }
+    }
+
+
     // --- Mobile Navigation ---
     const toggleNav = () => {
+        if (!mainNav || !navToggle) return;
         const isOpening = !mainNav.classList.contains('active');
         navToggle.classList.toggle('active');
         mainNav.classList.toggle('active');
 
         if (isOpening) {
-            body.classList.add('nav-open');
+            body.classList.add('nav-open'); // Specific class for nav state if needed
             modalOverlay.classList.add('active');
             updateNavToggleIconColor(true);
         } else {
             body.classList.remove('nav-open');
-            const anyModalActive = Array.from(modals).some(m => m.classList.contains('active'));
-            if (!anyModalActive) {
+             // Hide overlay ONLY if no modal or cookie popup is active
+            if (!isModalOpen() && !isCookiePopupOpen()) {
                  modalOverlay.classList.remove('active');
             }
             updateNavToggleIconColor(false);
         }
+        updateBodyScroll(); // Update scroll lock
     };
 
     const updateNavToggleIconColor = (isOpen) => {
          const styleId = 'nav-toggle-active-style';
          let styleElement = document.getElementById(styleId);
          if (isOpen) {
-             if (!styleElement) {
-                 styleElement = document.createElement('style');
-                 styleElement.id = styleId;
-                 document.head.appendChild(styleElement);
-             }
+             if (!styleElement) { styleElement = document.createElement('style'); styleElement.id = styleId; document.head.appendChild(styleElement); }
              styleElement.innerHTML = `
                 .nav-toggle.active span { background-color: transparent !important; }
                 .nav-toggle.active span::before,
@@ -264,91 +279,91 @@ function initializePage() {
 
     if (navToggle && mainNav && modalOverlay) {
          navToggle.addEventListener('click', toggleNav);
-         // Add click listener to nav links to close nav
+
+         // MODIFIED: Specific listener for links *inside* the mobile nav
          mainNav.querySelectorAll('a[href^="#"]').forEach(link => {
-            link.addEventListener('click', () => {
-                if (mainNav.classList.contains('active')) {
-                    // We only toggle here; the scrolling is handled by the main scroll listener
-                    toggleNav();
-                }
+            link.addEventListener('click', (e) => {
+                const targetId = link.hash;
+                 if (targetId && document.getElementById(targetId.substring(1))) {
+                     e.preventDefault(); // Prevent default jump
+                     if (mainNav.classList.contains('active')) {
+                         toggleNav(); // Close the nav first
+                         // Use setTimeout to ensure nav closing animation starts
+                         setTimeout(() => {
+                             smoothScrollToTarget(targetId);
+                         }, 150); // Adjust delay if needed
+                     }
+                 }
+                 // Allow default for external links or links not finding a target
             });
          });
      }
 
     // --- Smooth Scrolling & URL Hash Handling ---
     function smoothScrollToTarget(targetId) {
+        if (!targetId || targetId === '#') return; // Ignore empty or just '#'
         const targetElement = document.getElementById(targetId.substring(1)); // Remove #
         if (targetElement) {
             const headerHeight = getHeaderHeight();
-            const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - headerHeight;
+            // Calculate offset considering scroll-padding-top
+            const elementTop = targetElement.getBoundingClientRect().top;
+            const offsetPosition = window.pageYOffset + elementTop - headerHeight;
 
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth'
             });
+        } else {
+            console.warn("Smooth scroll target not found:", targetId);
         }
     }
 
-    // Listener for all anchor clicks potentially leading to internal sections
+    // Listener for non-nav anchor clicks (e.g., buttons)
     document.addEventListener('click', function(e) {
-        // Find the closest ancestor anchor tag
         const link = e.target.closest('a');
-
-        // Check if it's a valid internal link
-        if (link && link.hash && link.pathname === window.location.pathname) {
-             // Check if target element exists on the page
+        // Ensure it's an internal link AND not inside the mobile nav (handled separately)
+        if (link && link.hash && link.pathname === window.location.pathname && !link.closest('.main-nav')) {
             if (document.getElementById(link.hash.substring(1))) {
-                 e.preventDefault(); // Prevent default jump only if target exists
-
-                // Close mobile nav if the link is inside it
-                 if (mainNav && mainNav.classList.contains('active') && link.closest('.main-nav')) {
-                     toggleNav();
-                     // Add a small delay after closing nav before scrolling
-                     setTimeout(() => smoothScrollToTarget(link.hash), 100);
-                 } else {
-                     smoothScrollToTarget(link.hash); // Scroll immediately if nav isn't open
-                 }
+                 e.preventDefault();
+                 smoothScrollToTarget(link.hash);
             }
-            // If target element doesn't exist (e.g., # for modal links), default behavior is allowed
         }
     });
-
 
     // Handle hash scrolling on page load
     window.addEventListener('load', () => {
         if (window.location.hash) {
-            // Temporarily override the browser's jump
-            // Using scrollTo(0,0) might cause a flicker, history.replaceState is cleaner
-            history.replaceState(null, '', window.location.pathname + window.location.search); // Remove hash without reload
+            const hash = window.location.hash;
+             // Only proceed if the target element exists
+            if (document.getElementById(hash.substring(1))) {
+                // Remove hash from URL immediately to prevent jump
+                history.replaceState(null, '', window.location.pathname + window.location.search);
 
-            // Scroll after a short delay to ensure layout is final
-            // Use requestAnimationFrame for better timing
-            requestAnimationFrame(() => {
-                requestAnimationFrame(() => { // Double RAF for extra safety
-                     smoothScrollToTarget(window.location.hash);
+                // Scroll after a short delay using requestAnimationFrame
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                         smoothScrollToTarget(hash);
+                    });
                 });
-            });
+            }
         }
     });
 
-    // Update scroll padding on resize/orientation change if header height changes
+    // Update scroll padding on resize
     let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
              const currentHeaderHeight = getHeaderHeight();
-             document.documentElement.style.setProperty('--header-height-dynamic', currentHeaderHeight + 'px');
-             // Update scroll-padding-top based on the *current* actual header height
              document.documentElement.style.scrollPaddingTop = currentHeaderHeight + 'px';
-        }, 100); // Debounce resize event
+        }, 100);
     });
      // Initial scroll padding set
      document.documentElement.style.scrollPaddingTop = getHeaderHeight() + 'px';
 
 
     // --- Scroll Progress & Effects ---
-    function handleScroll() {
+    function handleScroll() { /* ... (keep existing code) ... */
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
@@ -356,16 +371,20 @@ function initializePage() {
         const scrollFactor = 0.08;
         applyScrollTransform(aboutImage, scrollFactor);
         applyScrollTransform(whyUsImage, scrollFactor);
-    }
-    function applyScrollTransform(element, factor) { if (element && isElementInViewport(element)) { const elementRect = element.getBoundingClientRect(); const viewportHeight = window.innerHeight; const centerOffset = (elementRect.top + elementRect.height / 2) - viewportHeight / 2; const translateY = -centerOffset * factor; element.style.transform = `translateY(${translateY}px)`; } }
-    function isElementInViewport(el) { if (!el) return false; const rect = el.getBoundingClientRect(); return (rect.top < window.innerHeight && rect.bottom > 0); }
+     }
+    function applyScrollTransform(element, factor) { /* ... (keep existing code) ... */
+        if (element && isElementInViewport(element)) { const elementRect = element.getBoundingClientRect(); const viewportHeight = window.innerHeight; const centerOffset = (elementRect.top + elementRect.height / 2) - viewportHeight / 2; const translateY = -centerOffset * factor; element.style.transform = `translateY(${translateY}px)`; }
+     }
+    function isElementInViewport(el) { /* ... (keep existing code) ... */
+        if (!el) return false; const rect = el.getBoundingClientRect(); return (rect.top < window.innerHeight && rect.bottom > 0);
+     }
     let ticking = false;
     window.addEventListener('scroll', () => { if (!ticking) { window.requestAnimationFrame(() => { handleScroll(); ticking = false; }); ticking = true; } });
     handleScroll();
 
     // --- Animated Counter ---
     let countersAnimated = false;
-    const animateCountersObserver = new IntersectionObserver((entries) => {
+    const animateCountersObserver = new IntersectionObserver((entries) => { /* ... (keep existing code) ... */
         entries.forEach(entry => {
             if (entry.isIntersecting && !countersAnimated && entry.target.id === 'experience') {
                 counters.forEach(counter => {
@@ -385,113 +404,154 @@ function initializePage() {
         });
     }, { threshold: 0.3 });
     if (experienceSection && counters.length > 0) { animateCountersObserver.observe(experienceSection); }
-    function animateCounter(element, target, duration) { let start = 0; const stepTime = 16; const steps = duration / stepTime; const increment = target / steps; let currentStep = 0; const timer = setInterval(() => { start += increment; currentStep++; if (currentStep >= steps || start >= target) { element.textContent = target.toLocaleString(); if(element.getAttribute('data-target') === '30') element.textContent += "+"; clearInterval(timer); } else { element.textContent = Math.ceil(start).toLocaleString(); if(element.getAttribute('data-target') === '30') element.textContent += "+"; } }, stepTime); }
+    function animateCounter(element, target, duration) { /* ... (keep existing code) ... */
+        let start = 0; const stepTime = 16; const steps = duration / stepTime; const increment = target / steps; let currentStep = 0; const timer = setInterval(() => { start += increment; currentStep++; if (currentStep >= steps || start >= target) { element.textContent = target.toLocaleString(); if(element.getAttribute('data-target') === '30') element.textContent += "+"; clearInterval(timer); } else { element.textContent = Math.ceil(start).toLocaleString(); if(element.getAttribute('data-target') === '30') element.textContent += "+"; } }, stepTime);
+     }
 
     // --- Contact Form ---
-    if (contactForm && emailInput && emailHiddenInput) {
+    if (contactForm && emailInput && emailHiddenInput) { /* ... (keep existing code) ... */
         contactForm.addEventListener('submit', function(e) {
             emailHiddenInput.value = emailInput.value;
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
         });
-    }
+     }
 
     // --- Modal Logic ---
     const openModal = (modal) => {
         if (!modal || !modalOverlay) return;
+        // Ensure cookie banner is closed if open
+        closeCookieBanner(); // Call function to close cookie banner if necessary
         modal.classList.add('active');
         modalOverlay.classList.add('active');
-        body.classList.add('modal-open');
+        body.classList.add('modal-open'); // Prevents background scroll
         modal.scrollTop = 0;
+        updateBodyScroll(); // Update scroll lock state
     }
     const closeModal = () => {
          if (!modalOverlay) return;
-         let navIsOpen = mainNav && mainNav.classList.contains('active');
          modals.forEach(modal => modal.classList.remove('active'));
-         body.classList.remove('modal-open');
-         if (!navIsOpen) modalOverlay.classList.remove('active');
+          // Hide overlay ONLY if nav and cookie popup are also closed
+         if (!isNavOpen() && !isCookiePopupOpen()) {
+            modalOverlay.classList.remove('active');
+         }
+         updateBodyScroll(); // Update scroll lock state
     }
     if (openImprintLink && imprintModal) openImprintLink.addEventListener('click', (e) => { e.preventDefault(); openModal(imprintModal); });
     if (openPrivacyLink && privacyModal) openPrivacyLink.addEventListener('click', (e) => { e.preventDefault(); openModal(privacyModal); });
     closeButtons.forEach(button => button.addEventListener('click', closeModal); });
      if (modalOverlay) {
          modalOverlay.addEventListener('click', () => {
-             const anyModalActive = Array.from(modals).some(m => m.classList.contains('active'));
-             const navIsOpen = mainNav && mainNav.classList.contains('active');
-             if (anyModalActive) closeModal();
-             else if (navIsOpen) toggleNav();
+             // This overlay handles BOTH modals and mobile nav
+             if (isModalOpen()) closeModal();
+             else if (isNavOpen()) toggleNav();
          });
      }
-    document.addEventListener('keydown', (event) => { if (event.key === "Escape") { const anyModalActive = Array.from(modals).some(m => m.classList.contains('active')); const navIsOpen = mainNav && mainNav.classList.contains('active'); if (anyModalActive) closeModal(); else if (navIsOpen) toggleNav(); } });
+    document.addEventListener('keydown', (event) => {
+        if (event.key === "Escape") {
+            if (isModalOpen()) closeModal();
+            else if (isNavOpen()) toggleNav();
+            else if (isCookiePopupOpen()) closeCookieBanner(); // Close cookie banner on Esc
+        }
+    });
+
+    // --- Make modal/nav functions globally accessible if needed by cookie banner ---
+    window.openModal = openModal; // Expose to global scope
+    window.closeCookieBanner = closeCookieBanner; // Expose function below
+
 
 } // End of initializePage
 
-// --- Function to Initialize Cookie Banner ---
+// --- Function to Initialize and Manage Cookie Banner Popup ---
+function closeCookieBanner() { // Define close function separately
+    const banner = document.getElementById('cookie-banner');
+    const overlay = document.getElementById('cookie-overlay');
+    if (banner && banner.classList.contains('active')) {
+        banner.classList.remove('active');
+        if(overlay) overlay.classList.remove('active');
+        // Check if other modals/nav are open before removing the class
+        const isModalOpen = () => Array.from(document.querySelectorAll('.modal')).some(m => m.classList.contains('active'));
+        const isNavOpen = () => document.querySelector('.main-nav')?.classList.contains('active');
+        if (!isModalOpen() && !isNavOpen()) {
+             document.body.classList.remove('modal-open');
+        }
+    }
+}
+
 function initializeCookieBanner() {
     const banner = document.getElementById('cookie-banner');
+    const overlay = document.getElementById('cookie-overlay');
     const acceptButton = document.getElementById('cookie-accept');
-    // const declineButton = document.getElementById('cookie-decline'); // Uncomment if using decline
     const privacyLinkInBanner = document.getElementById('cookie-banner-privacy-link');
-    const privacyModal = document.getElementById('privacy-modal'); // Assume modal logic is handled elsewhere
+    const privacyModal = document.getElementById('privacy-modal');
 
     const CONSENT_KEY = 'elev8_cookie_consent';
+    const CONSENT_VALUE = 'accepted'; // Only storing acceptance
 
     // Function to hide banner and set consent
-    const handleConsent = (consentValue) => {
-        localStorage.setItem(CONSENT_KEY, consentValue);
-        if (banner) {
-             banner.classList.remove('active');
-             // Wait for animation before removing padding class
-             setTimeout(() => {
-                 document.body.classList.remove('cookie-banner-padding');
-             }, 400); // Match CSS transition duration
+    const handleConsent = () => {
+        localStorage.setItem(CONSENT_KEY, CONSENT_VALUE);
+        if (banner) banner.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+
+        // Check if modal or nav are open before unlocking scroll
+        const isModalOpen = () => Array.from(document.querySelectorAll('.modal')).some(m => m.classList.contains('active'));
+        const isNavOpen = () => document.querySelector('.main-nav')?.classList.contains('active');
+        if (!isModalOpen() && !isNavOpen()) {
+            document.body.classList.remove('modal-open'); // Remove scroll lock
         }
     }
 
     // Check for existing consent
     const currentConsent = localStorage.getItem(CONSENT_KEY);
 
-    if (!currentConsent && banner) {
-        // No consent yet, show the banner
+    if (currentConsent !== CONSENT_VALUE && banner && overlay) {
+        // No valid consent yet, show the banner and overlay
         banner.classList.add('active');
-        document.body.classList.add('cookie-banner-padding'); // Add padding for banner space
+        overlay.classList.add('active');
+        document.body.classList.add('modal-open'); // Lock scroll
 
         // Add event listeners
         if (acceptButton) {
-            acceptButton.addEventListener('click', () => {
-                handleConsent('accepted');
-            });
+            acceptButton.addEventListener('click', handleConsent);
         }
-
-        // if (declineButton) { // Uncomment if using decline
-        //     declineButton.addEventListener('click', () => {
-        //         handleConsent('declined');
-        //     });
-        // }
 
         // Link to open privacy modal from banner
          if (privacyLinkInBanner && privacyModal) {
              privacyLinkInBanner.addEventListener('click', (e) => {
                  e.preventDefault();
-                 // Find the function to open modal (assuming it's globally accessible or passed)
-                 // This relies on the modal opening logic being available.
-                 // We re-select here in case it wasn't available globally before.
-                 const modalOverlay = document.getElementById('modal-overlay');
-                 const body = document.body;
-                 const openModalFn = (modal) => {
-                     if (!modal || !modalOverlay) return;
-                     modal.classList.add('active');
-                     modalOverlay.classList.add('active');
-                     body.classList.add('modal-open');
-                     modal.scrollTop = 0;
-                 }
-                openModalFn(privacyModal);
+                 // Close cookie banner *before* opening modal
+                 closeCookieBanner();
+                 // Need a slight delay to allow close transition before opening modal
+                 setTimeout(() => {
+                     // Use the globally exposed function if needed, or re-get elements
+                    const modalOverlay = document.getElementById('modal-overlay'); // Re-get modal overlay
+                     const openModalFn = (modal) => {
+                         if (!modal || !modalOverlay) return;
+                         modal.classList.add('active');
+                         modalOverlay.classList.add('active');
+                         document.body.classList.add('modal-open'); // Ensure scroll lock remains
+                         modal.scrollTop = 0;
+                     }
+                     openModalFn(privacyModal);
+                 }, 350); // Delay slightly longer than transition
              });
          }
+          // Optional: Close banner if overlay is clicked
+         overlay.addEventListener('click', handleConsent);
 
-    } else if (banner) {
-        // Consent already given/declined, ensure banner is hidden
-        banner.style.display = 'none'; // Force hide if somehow active
-        document.body.classList.remove('cookie-banner-padding');
+    } else {
+        // Consent already exists, ensure banner & overlay are hidden
+        if(banner) banner.classList.remove('active');
+        if(overlay) overlay.classList.remove('active');
+        // Ensure scroll isn't locked if only cookie banner was preventing it
+        const isModalOpen = () => Array.from(document.querySelectorAll('.modal')).some(m => m.classList.contains('active'));
+        const isNavOpen = () => document.querySelector('.main-nav')?.classList.contains('active');
+        if (!isModalOpen() && !isNavOpen()) {
+             document.body.classList.remove('modal-open');
+        }
     }
 } // End of initializeCookieBanner
+
+// Expose the closeCookieBanner function if needed globally (e.g., for inline JS, though not recommended)
+// window.closeCookieBanner = closeCookieBanner;

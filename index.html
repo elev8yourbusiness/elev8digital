@@ -18,6 +18,8 @@
     <div class="scroll-progress-container"><div class="scroll-progress-bar" id="scroll-progress-bar"></div></div>
     <!-- Das Overlay für Modals UND Mobile Nav -->
     <div class="modal-overlay" id="modal-overlay"></div>
+    <!-- Separates Overlay für den Cookie Banner Popup -->
+    <div class="cookie-overlay" id="cookie-overlay"></div>
 
     <header class="main-header">
         <div class="container">
@@ -67,16 +69,15 @@
         </div>
     </div>
 
-    <!-- Cookie Banner -->
-    <div class="cookie-banner" id="cookie-banner">
+    <!-- Cookie Banner Popup -->
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-banner-title">
         <div class="cookie-banner-content">
-            <span data-i18n-key="cookieBannerText">Diese Website verwendet technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Mit der Nutzung der Seite stimmen Sie dem zu. Mehr Infos:</span>
-            <a href="#" id="cookie-banner-privacy-link" data-i18n-key="footerPrivacy">Datenschutz</a>
+             <!-- Optional: Add a title if needed -->
+             <!-- <h3 id="cookie-banner-title" data-i18n-key="cookieBannerTitle">Cookie Hinweis</h3> -->
+            <p data-i18n-key="cookieBannerText">Diese Website verwendet technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Mit der Nutzung der Seite stimmen Sie dem zu. Mehr Infos: <a href="#" id="cookie-banner-privacy-link" data-i18n-key="footerPrivacy">Datenschutz</a></p>
         </div>
         <div class="cookie-banner-actions">
-            <button class="btn btn-inverted" id="cookie-accept" data-i18n-key="cookieAcceptBtn">Verstanden</button>
-            <!-- Optional: Decline Button -->
-            <!-- <button class="btn" id="cookie-decline" data-i18n-key="cookieDeclineBtn">Ablehnen</button> -->
+            <button class="btn" id="cookie-accept" data-i18n-key="cookieAcceptBtn" aria-label="Cookies akzeptieren und Banner schließen">Verstanden</button>
         </div>
     </div>
 

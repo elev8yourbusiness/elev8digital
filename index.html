@@ -69,23 +69,24 @@
         </div>
     </div>
 
-    <!-- Cookie Banner Popup -->
-    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-banner-title">
-        <div class="cookie-banner-content">
-            <!-- Optional: Add a title if needed -->
-            <!-- <h3 id="cookie-banner-title" data-i18n-key="cookieBannerTitle">Cookie Hinweis</h3> -->
-            <p data-i18n-key="cookieBannerText">Diese Website verwendet technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Mit der Nutzung der Seite stimmen Sie dem zu. Mehr Infos: <a href="#" id="cookie-banner-privacy-link" data-i18n-key="footerPrivacy">Datenschutz</a></p>
-        </div>
-        <div class="cookie-banner-actions">
-            <button class="btn" id="cookie-accept" data-i18n-key="cookieAcceptBtn" aria-label="Cookies akzeptieren und Banner schließen">Verstanden</button>
-        </div>
+<!-- Cookie Banner Popup -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-banner-title">
+    <div class="cookie-banner-content">
+        <!-- ADD THIS DIV FOR THE ICON -->
+        <div class="cookie-icon">🍪</div>
+        <!-- The existing paragraph -->
+        <p data-i18n-key="cookieBannerText">Diese Website verwendet technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Mit der Nutzung der Seite stimmen Sie dem zu. Mehr Infos: <a href="#" id="cookie-banner-privacy-link" data-i18n-key="footerPrivacy">Datenschutz</a></p>
     </div>
+    <div class="cookie-banner-actions">
+        <button class="btn" id="cookie-accept" data-i18n-key="cookieAcceptBtn" aria-label="Cookies akzeptieren und Banner schließen">Verstanden</button>
+    </div>
+</div>
 
 
     <!-- Externe JS Libraries -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Eigenes JS -->
-    <script src="script.js" defer></script>
+    <script src="script.js" defer></script> <!-- DEFER ist wichtig! -->
 
 </body>
 </html>

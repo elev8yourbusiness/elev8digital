@@ -7,7 +7,7 @@ const i18nStrings = {
    navExperience: { en: "Experience", de: "Experience" },
    navWhyUs: { en: "Why Us", de: "Why Us" },
    navContact: { en: "Contact", de: "Kontakt" },
-   heroHeadline: { en: "We Elevate Your Business", de: "We Elevate Your Business" },
+   heroHeadline: { en: "We Elevate Your </br>Business", de: "We Elevate Your </br>Business" },
    heroSubheadline: { en: "Performance marketing & e-commerce expertise focused on driving measurable growth for ambitious brands.", de: "Performance Marketing und E-Commerce-Kompetenz für nachhaltiges, messbares Wachstum starker Marken." },
    heroButton: { en: "Start Scaling", de: "Jetzt Skalieren" },
    // --- Adjusted German Hyphenation using &shy; ---

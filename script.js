@@ -142,8 +142,8 @@ const i18nStrings = {
    privacyCookiesBrowserSettingsText: { en: "You can set your browser so that you are informed about the setting of cookies and only allow cookies in individual cases, exclude the acceptance of cookies for certain cases or generally, and activate the automatic deletion of cookies when closing the browser. If cookies are deactivated, the functionality of this website may be limited.", de: "Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browsers aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein." },
    privacyCookiesWhichUsedText: { en: "Which cookies and services are used on this website can be found in this privacy policy. (Currently, no cookies are actively set by our site, except technically necessary ones by the hoster or Formspree.)", de: "Welche Cookies und Dienste auf dieser Website eingesetzt werden, können Sie dieser Datenschutzerklärung entnehmen. (Aktuell werden von unserer Seite keine Cookies aktiv gesetzt, außer technisch notwendige durch den Hoster oder Formspree.)" },
    cookieBannerText: {
-       en: "This website uses technically necessary cookies. No tracking or analysis cookies are used. By using the site, you agree to this. More info:",
-       de: "Diese Website verwendet technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Mit der Nutzung der Seite stimmen Sie dem zu. Mehr Infos:"
+       en: "This website uses technically necessary cookies. No tracking or analysis cookies are used. By using the site, you agree to this.",
+       de: "Diese Website verwendet technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Mit der Nutzung der Seite stimmen Sie dem zu."
    },
    cookieAcceptBtn: { en: "Understood", de: "Verstanden" },
 };

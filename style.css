@@ -190,7 +190,7 @@ section {
 
 /* Hero Section */
 #hero {
-    background-image: url('https://images.pexels.com/photos/572056/pexels-photo-572056.jpeg');
+    background-image: url('img/hero-background.webp');
     background-size: cover; background-position: center center; background-attachment: fixed;
     min-height: 100vh; display: flex; align-items: center; justify-content: center;
     text-align: center; padding-top: var(--header-height); position: relative; color: var(--text-color-light);
@@ -359,7 +359,7 @@ footer p { color: rgba(255, 255, 255, 0.6); margin-bottom: 10px; }
 .cookie-icon { font-size: 2.2rem; display: block; margin: 0 auto 15px auto; line-height: 1; }
 .cookie-banner-content p { color: var(--text-color-dark); opacity: 0.9; margin-bottom: 0; }
 .cookie-banner-content a { color: var(--primary-color); text-decoration: underline; font-weight: 600; }
-.cookie-banner-actions { display: flex; justify-content: flex-end; gap: 15px; }
+.cookie-banner-actions { display: flex; justify-content: center; gap: 15px; }
 .cookie-banner .btn { padding: 10px 25px; font-size: 0.85rem; }
 
 /* --- Responsive Styles --- */

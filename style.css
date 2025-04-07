@@ -255,7 +255,7 @@ section {
 .advantage-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px 40px; margin-top: 30px; }
 .advantage-item { display: flex; align-items: flex-start; gap: 15px; }
 .advantage-item svg { flex-shrink: 0; width: 18px !important; height: 18px !important; stroke-width: 2; color: var(--primary-color); margin-top: 4px; }
-.advantage-item h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 5px; color: var(--primary-color); }
+.advantage-item h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 5px; color: var(--primary-color); }
 .advantage-item p { font-size: 0.95rem; line-height: 1.6; margin-bottom: 0; color: var(--text-color-dark); opacity: 0.8; }
 
 /* Contact Section */

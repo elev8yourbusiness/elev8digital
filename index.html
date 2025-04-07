@@ -6,10 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title will be set dynamically -->
     <title>elev8digital - We Elevate Your Business</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/poppins.css">
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="js/feather.min.js" defer></script>
+    <!-- SEO Meta-Tags -->
+    <meta name="description" content="elev8digital – Performance Marketing und E-Commerce Beratung für messbares Wachstum.">
+    <meta name="author" content="elev8digital">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph (für Social Media) -->
+    <meta property="og:title" content="elev8digital – We Elevate Your Business">
+    <meta property="og:description" content="Performance Marketing & E-Commerce Beratung für messbares Wachstum.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elev8digital.de/">
+    <meta property="og:image" content="https://elev8digital.de/img/og-image.jpg">
 </head>
 <body>
 
@@ -22,7 +32,7 @@
     <header class="main-header">
         <div class="container">
             <a href="#hero" class="logo">
-                <img src="https://i.imgur.com/VXyJiox.png" alt="elev8digital Logo">
+                <img src="img/elev8digital_logo.png" alt="elev8digital Logo">
             </a>
             <nav class="main-nav">
                 <ul>
@@ -60,7 +70,7 @@
                 <a href="#services" class="btn" data-i18n-key="aboutButton">Explore Services</a>
             </div>
             <div class="about-image" data-aos="fade-left" data-aos-delay="200">
-                <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="elev8digital Team Collaboration" id="about-img">
+                <img src="img/handshake.webp" alt="elev8digital Team Collaboration" id="about-img" loading="lazy">
             </div>
         </div>
     </section>
@@ -111,7 +121,7 @@
     <section id="why-us">
         <div class="container why-us-content">
             <div class="why-us-image" data-aos="fade-right" data-aos-delay="200">
-                <img src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Strategic approach" id="why-us-img">
+                <img src="img/discussing-charts.webp" alt="Strategic approach" id="why-us-img" loading="lazy">
             </div>
             <div class="why-us-text" data-aos="fade-left">
                 <h2 data-i18n-key="whyUsTitle">The Elev8 Advantage</h2>
@@ -321,8 +331,17 @@
         </div>
     </div>
 
-    <!-- External JS Libraries -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <!-- Local AOS JS -->
+  <script src="js/aos.js" defer></script>
+
+ <!-- Feather Replace init -->
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      feather.replace();
+      AOS.init();
+    });
+  </script>
+
     <!-- Custom JS -->
     <script src="script.js" defer></script>
 

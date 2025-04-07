@@ -1,25 +1,25 @@
 // --- i18n Content ---
 const i18nStrings = {
-    pageTitle: { en: "elev8digital - We Elevate Your Business", de: "elev8digital - Performance Marketing & E-Commerce" },
+    pageTitle: { en: "elev8digital - We Elevate Your Business", de: "elev8digital - We Elevate Your Business" },
    navHome: { en: "Home", de: "Home" },
    navAbout: { en: "About", de: "About" },
    navServices: { en: "Services", de: "Services" },
    navExperience: { en: "Experience", de: "Experience" },
    navWhyUs: { en: "Why Us", de: "Why Us" },
    navContact: { en: "Contact", de: "Kontakt" },
-   heroHeadline: { en: "We Elevate Your Business", de: "We Elevate Your Business" },
+   heroHeadline: { en: "We Elevate Your<br>Business", de: "We Elevate Your<br>Business" },
    heroSubheadline: { en: "Performance marketing & e-commerce expertise focused on driving measurable growth for ambitious brands.", de: "Performance Marketing und E-Commerce-Kompetenz für nachhaltiges, messbares Wachstum starker Marken." },
    heroButton: { en: "Start Scaling", de: "Jetzt Skalieren" },
    // --- Adjusted German Hyphenation using &shy; ---
-   aboutTitle: { en: "Your Growth Partners", de: "Ihre Wachstums&shy;partner" },
+   aboutTitle: { en: "Your<br>Growth Partners", de: "Ihre<br>Wachstums&shy;partner" },
    aboutText1: { en: "elev8digital isn't just another agency. We are a dedicated duo, deeply invested in the success of our clients. We blend strategic performance marketing with meticulous e-commerce optimization.", de: "Als engagiertes Zweierteam setzen wir alles daran, unsere Kunden erfolgreich zu machen. Wir verbinden strategisches Performance Marketing mit sorgfältiger E-Commerce-Optimierung." },
    aboutText2: { en: "We focus on what matters: data-driven strategies that deliver tangible ROI. Think of us as an extension of your team – dedicated, transparent, and focused on your goals.", de: "Wir konzentrieren uns auf das Wesentliche: Datengestützte Strategien, die greifbaren ROI liefern. Betrachten Sie uns als Erweiterung Ihres Teams – engagiert, transparent und auf Ihre Ziele fokussiert." },
    aboutButton: { en: "Explore Services", de: "Leistungen Entdecken" },
    servicesTitle: { en: "Core Capabilities", de: "Kernkompetenzen" },
    servicesSubtitle: { en: "Tailored solutions designed to maximize your digital footprint and revenue.", de: "Maßgeschneiderte Lösungen zur Maximierung Ihrer digitalen Präsenz und Ihres Umsatzes." },
-   service1Title: { en: "Performance Advertising", de: "Performance Advertising" },
+   service1Title: { en: "Performance<br>Marketing", de: "Performance<br>Marketing" },
    service1Text: { en: "Data-backed campaigns on Google, Meta, TikTok & more. With a clear focus on conversions, ROAS, and Customer Acquisition Cost (CAC).", de: "Datengestützte Kampagnen auf Google, Meta, TikTok & Co. Mit klarem Fokus auf Conversions, ROAS und Kundengewinnungskosten (CAC)." },
-   service2Title: { en: "E-Commerce Optimization", de: "E-Commerce Optimierung" },
+   service2Title: { en: "E-Commerce<br>Optimization", de: "E-Commerce<br>Optimierung" },
    service2Text: { en: "Enhancing user experience, conversion rates (CRO), average order value (AOV), and customer lifetime value (CLTV) for platforms like Shopify.", de: "Verbesserung der User Experience, Conversion Rates (CRO), des durchschnittlichen Bestellwerts (AOV) und des Customer Lifetime Value (CLTV) für Plattformen wie Shopify." },
    service3Title: { en: "Strategy & Analytics", de: "Strategie & Analytics" },
    service3Text: { en: "Holistic growth strategies built for scale. From channel mix to conversion funnels — we bridge marketing and tech to unlock your brand’s full potential.", de: "Ganzheitliche Wachstumsstrategien für Skalierbarkeit. Vom Channel-Mix bis zu Conversion Funnels – wir verbinden Marketing und Technologie, um das volle Potenzial Ihrer Marke zu erschließen." },
@@ -27,7 +27,7 @@ const i18nStrings = {
    experienceCounter1Label: { en: "Years Combined Experience", de: "Jahre kombinierte Erfahrung" },
    experienceCounter2Value: { en: "8-Figure", de: "8-stellig" },
    experienceCounter2Label: { en: "Budgets Managed Annually", de: "Verwaltete Jahresbudgets" },
-   whyUsTitle: { en: "The Elev8 Advantage", de: "The Elev8 Advantage" },
+   whyUsTitle: { en: "The Elev8<span class='br-mobile'> </span>Advantage", de: "The Elev8<span class='br-mobile'> </span>Advantage" },
    whyUsSubtitle: { en: "We combine agency-level expertise with the focus and dedication of in-house specialists.", de: "Wir kombinieren Expertise auf Agentur-Niveau mit dem Fokus und Engagement von Inhouse-Spezialisten." },
    advantage1Title: { en: "Direct Founder Involvement", de: "Direkte Betreuung durch Gründer" },
    advantage1Text: { en: "Work directly with us – no junior account managers, ensuring deep understanding.", de: "Bei uns arbeiten Sie direkt mit erfahrenen Profis – kein Weiterreichen an Junioren, dafür echtes Verständnis und schnelle Ergebnisse." },
@@ -40,7 +40,7 @@ const i18nStrings = {
    advantage5Title: { en: "Radical Transparency", de: "Absolute Transparenz" },
    advantage5Text: { en: "Clear, consistent communication and reporting are fundamental to our partnership.", de: "Klare, konsistente Kommunikation und Berichterstattung sind grundlegend für unsere Partnerschaft." },
    whyUsButton: { en: "Let's Collaborate", de: "Projekt besprechen" },
-   contactTitle: { en: "Start Your Elevation", de: "Start Your Elevation" },
+   contactTitle: { en: "Start Your<span class='br-mobile'> </span>Elevation", de: "Start Your<span class='br-mobile'> </span>Elevation" },
    contactSubtitle: { en: "Ready to discuss how elev8digital can accelerate your growth? Fill out the form below or email us directly. We're excited to hear from you.", de: "Lassen Sie uns gemeinsam besprechen, wie elev8digital Ihr Wachstum voranbringen kann. Schreiben Sie uns direkt oder füllen Sie das Kontaktformular aus – wir freuen uns auf Ihre Nachricht!" },
    formLabelName: { en: "Name", de: "Name" },
    formLabelEmail: { en: "Email", de: "E-Mail" },
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
        const lang = userLang.startsWith('de') ? 'de' : 'en';
        document.documentElement.lang = lang;
 
-       const keysWithHTML = ['aboutTitle', 'privacyTitle']; // Keys needing innerHTML
+       const keysWithHTML = ['aboutTitle', 'privacyTitle', 'heroHeadline', 'service1Title', 'service2Title', 'whyUsTitle', 'contactTitle']; // Keys needing innerHTML
 
        Object.keys(i18nStrings).forEach(key => {
            const elements = document.querySelectorAll(`[data-i18n-key="${key}"]`);

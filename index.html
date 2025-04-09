@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!-- Set lang attribute dynamically -->
-<html lang="en">
+<html lang="en"> <!-- Lang attribute will be updated by JS -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,22 +40,22 @@
                     <li><a href="#services" data-i18n-key="navServices">Services</a></li>
                     <li><a href="#experience" data-i18n-key="navExperience">Experience</a></li>
                     <li><a href="#why-us" data-i18n-key="navWhyUs">Why Us</a></li>
-                    <li><a href="#contact" data-i18n-key="navContact">Contact</a></li>
+                    <li><a href="#contact" data-i18n-key="navContact">Kontakt</a></li>
                 </ul>
             </nav>
              <div class="nav-toggle" id="nav-toggle"><span></span></div>
         </div>
     </header>
 
-    <div class="sticky-contact"><a href="#contact" title="Contact Us"><i data-feather="mail"></i></a></div>
+    <div class="sticky-contact"><a href="#contact" title="Kontakt aufnehmen"><i data-feather="mail"></i></a></div>
 
     <!-- Hero Section -->
     <section id="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1 data-aos="fade-up" data-aos-delay="300" data-i18n-key="heroHeadline">We Elevate Your Business</h1>
-            <p data-aos="fade-up" data-aos-delay="500" data-i18n-key="heroSubheadline">Performance marketing & e-commerce expertise focused on driving measurable growth for ambitious brands.</p>
-            <a href="#contact" class="btn btn-inverted" data-aos="fade-up" data-aos-delay="700" data-i18n-key="heroButton">Start Scaling</a>
+            <h1 data-aos="fade-up" data-aos-delay="300" data-i18n-key="heroHeadline">We Elevate Your<br>Business</h1>
+            <p data-aos="fade-up" data-aos-delay="500" data-i18n-key="heroSubheadline">Performance Marketing und E-Commerce-Kompetenz für nachhaltiges, messbares Wachstum starker Marken.</p>
+            <a href="#contact" class="btn btn-inverted" data-aos="fade-up" data-aos-delay="700" data-i18n-key="heroButton">Jetzt Skalieren</a>
         </div>
     </section>
 
@@ -64,10 +63,10 @@
     <section id="about">
         <div class="container about-content">
             <div class="about-text" data-aos="fade-right">
-                <h2 data-i18n-key="aboutTitle">Your Growth Partners</h2>
-                <p data-i18n-key="aboutText1">elev8digital isn't just another agency. We are a dedicated duo, deeply invested in the success of our clients. We blend strategic performance marketing with meticulous e-commerce optimization.</p>
-                <p data-i18n-key="aboutText2">We focus on what matters: data-driven strategies that deliver tangible ROI. Think of us as an extension of your team – dedicated, transparent, and focused on your goals.</p>
-                <a href="#services" class="btn" data-i18n-key="aboutButton">Explore Services</a>
+                <h2 data-i18n-key="aboutTitle">Ihre<br>Wachstumspartner</h2>
+                <p data-i18n-key="aboutText1">Als engagiertes Zweierteam setzen wir alles daran, unsere Kunden erfolgreich zu machen. Wir verbinden strategisches Performance Marketing mit sorgfältiger E-Commerce-Optimierung.</p>
+                <p data-i18n-key="aboutText2">Wir konzentrieren uns auf das Wesentliche: Datengestützte Strategien, die greifbaren ROI liefern. Betrachten Sie uns als Erweiterung Ihres Teams – engagiert, transparent und auf Ihre Ziele fokussiert.</p>
+                <a href="#services" class="btn" data-i18n-key="aboutButton">Leistungen Entdecken</a>
             </div>
             <div class="about-image" data-aos="fade-left" data-aos-delay="200">
                 <img src="img/handshake.webp" alt="elev8digital Team Collaboration" id="about-img" loading="lazy">
@@ -75,26 +74,50 @@
         </div>
     </section>
 
+    <!-- Founders Section -->
+    <section id="founders">
+        <div class="container" data-aos="fade-up">
+            <h2 style="text-align: center;" data-i18n-key="foundersTitle">Mit wem Sie zusammenarbeiten</h2>
+            <p class="section-subtitle" data-i18n-key="foundersSubtitle">Bei uns bekommen Sie keine Wundertüte, sondern erfahrene Profis, die sich Ihrem Erfolg widmen.</p>
+            <div class="founders-grid">
+                <!-- Founder 1: Lukas -->
+                <div class="founder-card" data-aos="fade-right" data-aos-delay="200">
+                    <img src="img/lukas.webp" alt="Lukas Henke - Founder elev8digital" class="founder-img" loading="lazy">
+                    <h3 data-i18n-key="founder1Name">Lukas Henke</h3>
+                    <p class="founder-title" data-i18n-key="founder1Title">PERFORMANCE & TECH LEAD</p>
+                    <p data-i18n-key="founder1Desc">Lukas ist Experte für datengetriebenes Marketing mit Fokus auf Tracking, Automatisierung und technische Umsetzung. Sein Fokus liegt auf strategischer Performance-Optimierung – durch präzise Datenanalysen, smarte Prozesse und die reibungslose Verzahnung aller Systeme entlang der digitalen Customer Journey.</p>
+                </div>
+                <!-- Founder 2: Taylan -->
+                <div class="founder-card" data-aos="fade-left" data-aos-delay="400">
+                    <img src="img/taylan.webp" alt="Taylan Demirkol - Founder elev8digital" class="founder-img" loading="lazy">
+                    <h3 data-i18n-key="founder2Name">Taylan Demirkol</h3>
+                    <p class="founder-title" data-i18n-key="founder2Title">E-COMMERCE & STRATEGIE LEAD</p>
+                    <p data-i18n-key="founder2Desc">Taylan bringt langjährige Erfahrung in führenden E-Commerce- und Marketingpositionen mit. Sein Fokus liegt auf strategischem Wachstum – durch strukturierte Shop-Optimierung, gezielte Maßnahmen entlang der Customer Journey und eine nachhaltige Positionierung Ihres Online-Business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section id="services">
         <div class="container" data-aos="fade-up">
-            <h2 style="text-align: center;" data-i18n-key="servicesTitle">Core Capabilities</h2>
-            <p class="section-subtitle" data-i18n-key="servicesSubtitle">Tailored solutions designed to maximize your digital footprint and revenue.</p>
+            <h2 style="text-align: center;" data-i18n-key="servicesTitle">Kernkompetenzen</h2>
+            <p class="section-subtitle" data-i18n-key="servicesSubtitle">Maßgeschneiderte Lösungen zur Maximierung Ihrer digitalen Präsenz und Ihres Umsatzes.</p>
             <div class="services-grid">
                 <div class="service-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon">📈</div>
-                    <h3 data-i18n-key="service1Title">Performance Advertising</h3>
-                    <p data-i18n-key="service1Text">Data-backed campaigns on Google, Meta, TikTok & more. With a clear focus on conversions, ROAS, and Customer Acquisition Cost (CAC).</p>
+                    <h3 data-i18n-key="service1Title">Performance<br>Marketing</h3>
+                    <p data-i18n-key="service1Text">Datengestützte Kampagnen auf Google, Meta, TikTok & Co. Mit klarem Fokus auf Conversions, ROAS und Kundengewinnungskosten (CAC).</p>
                 </div>
                 <div class="service-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon">⚙️</div>
-                    <h3 data-i18n-key="service2Title">E-Commerce Optimization</h3>
-                    <p data-i18n-key="service2Text">Enhancing user experience, conversion rates (CRO), average order value (AOV), and customer lifetime value (CLTV) for platforms like Shopify.</p>
+                    <h3 data-i18n-key="service2Title">E-Commerce<br>Optimierung</h3>
+                    <p data-i18n-key="service2Text">Wir machen Ihren Onlineshop erfolgreicher – mit klarer Struktur, reibungsloser Nutzerführung und gezielter Conversion-Optimierung. Für mehr Verkäufe, treue Kund:innen und nachhaltiges Wachstum.</p>
                 </div>
                 <div class="service-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-icon">💡</div>
-                    <h3 data-i18n-key="service3Title">Strategy & Analytics</h3>
-                    <p data-i18n-key="service3Text">Holistic growth strategies built for scale. From channel mix to conversion funnels — we bridge marketing and tech to unlock your brand’s full potential.</p>
+                    <h3 data-i18n-key="service3Title">Strategie & Analytics</h3>
+                    <p data-i18n-key="service3Text">Ganzheitliche Wachstumsstrategien, fundierte Analysen und sauberes Tracking bilden die Basis. Wir definieren Kanäle, Funnels und KPIs für Ihren nachhaltigen Erfolg.</p>
                 </div>
             </div>
         </div>
@@ -103,15 +126,15 @@
     <!-- Experience Section -->
     <section id="experience">
         <div class="container">
-            <h2 data-aos="fade-up" data-i18n-key="experienceTitle">Proven Expertise</h2>
+            <h2 data-aos="fade-up" data-i18n-key="experienceTitle">Nachgewiesene Expertise</h2>
             <div class="counters-wrapper">
                 <div class="counter-box" data-aos="fade-up" data-aos-delay="100">
                     <div class="counter-value" data-target="30">0</div>
-                    <div class="counter-label" data-i18n-key="experienceCounter1Label">Years Combined Experience</div>
+                    <div class="counter-label" data-i18n-key="experienceCounter1Label">Jahre kombinierte Erfahrung</div>
                 </div>
                 <div class="counter-box" data-aos="fade-up" data-aos-delay="200">
-                    <div class="counter-value" data-i18n-key="experienceCounter2Value">8-Figure</div>
-                    <div class="counter-label" data-i18n-key="experienceCounter2Label">Budgets Managed Annually</div>
+                    <div class="counter-value" data-i18n-key="experienceCounter2Value">8-stellig</div>
+                    <div class="counter-label" data-i18n-key="experienceCounter2Label">Verwaltete Jahresbudgets</div>
                 </div>
             </div>
         </div>
@@ -124,46 +147,46 @@
             <img src="img/discussing-charts.webp" alt="Strategic approach" id="why-us-img" loading="lazy">
         </div>
         <div class="why-us-text" data-aos="fade-left">
-            <h2 data-i18n-key="whyUsTitle">The Elev8 Advantage</h2>
-            <p data-i18n-key="whyUsSubtitle">We combine agency-level expertise with the focus and dedication of in-house specialists.</p>
+            <h2 data-i18n-key="whyUsTitle">The Elev8 <span class='br-mobile'></span>Advantage</h2>
+            <p data-i18n-key="whyUsSubtitle">Wir kombinieren Expertise auf Agentur-Niveau mit dem Fokus und Engagement von Inhouse-Spezialisten.</p>
             <div class="advantage-grid">
                 <div class="advantage-item">
                     <i data-feather="users"></i>
                     <div>
-                        <h3 data-i18n-key="advantage1Title">Direct Founder Involvement</h3>
-                        <p data-i18n-key="advantage1Text">Work directly with us – no junior account managers, ensuring deep understanding.</p>
+                        <h3 data-i18n-key="advantage1Title">Direkte Betreuung durch Gründer</h3>
+                        <p data-i18n-key="advantage1Text">Bei uns arbeiten Sie direkt mit erfahrenen Profis – kein Weiterreichen an Junioren, dafür echtes Verständnis und schnelle Ergebnisse.</p>
                     </div>
                 </div>
                 <div class="advantage-item">
                     <i data-feather="trending-up"></i>
                     <div>
-                        <h3 data-i18n-key="advantage2Title">Uncompromisingly Data-Driven</h3>
-                        <p data-i18n-key="advantage2Text">Every decision and strategy is rooted in analytics, not guesswork.</p>
+                        <h3 data-i18n-key="advantage2Title">Kompromisslos datengesteuert</h3>
+                        <p data-i18n-key="advantage2Text">Jede Entscheidung und Strategie basiert auf Analysen, nicht auf Vermutungen.</p>
                     </div>
                 </div>
                 <div class="advantage-item">
                     <i data-feather="settings"></i>
                     <div>
-                        <h3 data-i18n-key="advantage3Title">Bespoke Strategies</h3>
-                        <p data-i18n-key="advantage3Text">Solutions meticulously crafted for your unique brand, market, and goals.</p>
+                        <h3 data-i18n-key="advantage3Title">Maßgeschneiderte Strategien</h3>
+                        <p data-i18n-key="advantage3Text">Sorgfältig entwickelte Lösungen für Ihre einzigartige Marke, Ihren Markt und Ihre Ziele.</p>
                     </div>
                 </div>
                 <div class="advantage-item">
                     <i data-feather="target"></i>
                     <div>
-                        <h3 data-i18n-key="advantage4Title">Obsessed with Results</h3>
-                        <p data-i18n-key="advantage4Text">We measure our success directly by the tangible growth of your bottom line.</p>
+                        <h3 data-i18n-key="advantage4Title">Ergebnisfokussiert</h3>
+                        <p data-i18n-key="advantage4Text">Wir messen unseren Erfolg direkt am greifbaren Wachstum Ihres Geschäftsergebnisses.</p>
                     </div>
                 </div>
                 <div class="advantage-item">
                     <i data-feather="eye"></i>
                     <div>
-                        <h3 data-i18n-key="advantage5Title">Radical Transparency</h3>
-                        <p data-i18n-key="advantage5Text">Clear, consistent communication and reporting are fundamental to our partnership.</p>
+                        <h3 data-i18n-key="advantage5Title">Absolute Transparenz</h3>
+                        <p data-i18n-key="advantage5Text">Klare, konsistente Kommunikation und Berichterstattung sind grundlegend für unsere Partnerschaft.</p>
                     </div>
                 </div>
             </div>
-            <a href="#contact" class="btn" style="margin-top: 30px;" data-i18n-key="whyUsButton">Let's Collaborate</a>
+            <a href="#contact" class="btn" style="margin-top: 30px;" data-i18n-key="whyUsButton">Projekt besprechen</a>
         </div>
     </div>
 </section>
@@ -172,8 +195,8 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="container" data-aos="zoom-in-up">
-            <h2 data-i18n-key="contactTitle">Start Your Elevation</h2>
-            <p class="subtitle" data-i18n-key="contactSubtitle">Ready to discuss how elev8digital can accelerate your growth? Fill out the form below or email us directly. We're excited to hear from you.</p>
+            <h2 data-i18n-key="contactTitle">Start Your <span class='br-mobile'></span>Elevation</h2>
+            <p class="subtitle" data-i18n-key="contactSubtitle">Lassen Sie uns gemeinsam besprechen, wie elev8digital Ihr Wachstum voranbringen kann. Schreiben Sie uns direkt oder füllen Sie das Kontaktformular aus – wir freuen uns auf Ihre Nachricht!</p>
             <form action="https://formspree.io/f/xyzenbdk" method="POST" class="contact-form" id="contact-form">
                 <input type="hidden" name="_subject" value="Neue Kontaktanfrage von elev8digital Website">
                 <div class="form-group" data-aos="fade-up" data-aos-delay="100">
@@ -181,24 +204,24 @@
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group" data-aos="fade-up" data-aos-delay="200">
-                    <label for="email" data-i18n-key="formLabelEmail">Email</label>
+                    <label for="email" data-i18n-key="formLabelEmail">E-Mail</label>
                     <input type="email" id="email" name="_replyto" required>
                     <input type="hidden" name="email" id="email-hidden">
                 </div>
                 <div class="form-group" data-aos="fade-up" data-aos-delay="300">
-                    <label for="subject" data-i18n-key="formLabelSubject">Subject</label>
+                    <label for="subject" data-i18n-key="formLabelSubject">Betreff</label>
                     <input type="text" id="subject" name="subject">
                 </div>
                 <div class="form-group" data-aos="fade-up" data-aos-delay="400">
-                    <label for="message" data-i18n-key="formLabelMessage">Your Message</label>
+                    <label for="message" data-i18n-key="formLabelMessage">Ihre Nachricht</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
                 <div class="form-submit-btn" data-aos="fade-up" data-aos-delay="500">
-                    <button type="submit" class="btn btn-inverted" data-i18n-key="formButtonSubmit">Send Message</button>
+                    <button type="submit" class="btn btn-inverted" data-i18n-key="formButtonSubmit">Nachricht Senden</button>
                 </div>
             </form>
             <p style="margin-top: 40px; font-size: 0.9em; opacity: 0.7;">
-                <span data-i18n-key="contactEmailPrefix">Email:</span> <a href="mailto:info@elev8digital.de" style="color: var(--text-color-light); text-decoration: underline;">info@elev8digital.de</a>
+                <span data-i18n-key="contactEmailPrefix">E-Mail:</span> <a href="mailto:info@elev8digital.de" style="color: var(--text-color-light); text-decoration: underline;">info@elev8digital.de</a>
             </p>
         </div>
     </section>
@@ -207,7 +230,7 @@
     <footer>
         <div class="container">
             <p>© <span id="current-year"></span> elev8digital.
-               <span data-i18n-key="footerRights">All Rights Reserved.</span>
+               <span data-i18n-key="footerRights">Alle Rechte vorbehalten.</span>
             </p>
             <ul class="footer-links">
                 <li><a href="#" id="open-imprint" data-i18n-key="footerImprint">Impressum</a></li>
@@ -218,13 +241,13 @@
 
     <!-- Imprint Modal -->
     <div id="imprint-modal" class="modal">
-        <button class="modal-close" aria-label="Close">×</button>
+        <button class="modal-close" aria-label="Schließen">×</button>
         <div class="modal-content">
             <h2 data-i18n-key="imprintTitle">Impressum</h2>
             <p data-i18n-key="imprintDSGVO">Angaben gemäß § 5 TMG</p>
             <p> elev8digital GbR<br> Stooter Straße 24<br> 45481 Mülheim an der Ruhr </p>
             <p><strong data-i18n-key="imprintPartners">Vertreten durch die Gesellschafter:</strong><br> Lukas Henke<br> Taylan Demirkol </p>
-            <p><strong data-i18n-key="imprintContact">Kontakt:</strong><br> <!-- <span data-i18n-key="imprintPhone">Telefon:</span> [Ihre Telefonnummer] <span style="color: #888; font-size: 0.8em;" data-i18n-key="imprintPhoneOptional">(Optional, bitte eintragen)</span><br> --> <span data-i18n-key="imprintEmail">E-Mail:</span> info@elev8digital.de </p>
+            <p><strong data-i18n-key="imprintContact">Kontakt:</strong><br> <span data-i18n-key="imprintEmail">E-Mail:</span> info@elev8digital.de </p>
             <p><strong data-i18n-key="imprintVatId">Umsatzsteuer-ID:</strong><br> <span data-i18n-key="imprintVatIdText">Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:</span><br> USt-IdNr. beantragt </p>
             <h3 data-i18n-key="imprintDisputeTitle">EU-Streitschlichtung</h3>
             <p data-i18n-key="imprintDisputeText1">Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>.</p>
@@ -241,7 +264,7 @@
 
     <!-- Privacy Policy Modal -->
     <div id="privacy-modal" class="modal">
-        <button class="modal-close" aria-label="Close">×</button>
+        <button class="modal-close" aria-label="Schließen">×</button>
         <div class="modal-content">
             <h2 data-i18n-key="privacyTitle">Datenschutzerklärung</h2>
             <h3 data-i18n-key="privacyGeneralTitle">1. Datenschutz auf einen Blick</h3>
@@ -337,9 +360,9 @@
 
  <!-- Feather Replace init -->
  <script>
+    // Initialize Feather Icons after DOM is ready
     document.addEventListener("DOMContentLoaded", function () {
       feather.replace();
-      AOS.init();
     });
   </script>
 

@@ -32,6 +32,7 @@ const i18nStrings = {
         en: "Taylan brings years of experience from leading e-commerce and marketing positions. His focus is on strategic growth – through structured shop optimization, targeted customer journey measures, and the sustainable positioning of your online business.",
         de: "Taylan bringt langjährige Erfahrung in führenden E-Commerce- und Marketingpositionen mit. Sein Fokus liegt auf strategischem Wachstum – durch strukturierte Shop-Optimierung, gezielte Maßnahmen entlang der Customer Journey und eine nachhaltige Positionierung Ihres Online-Business."
      },
+    founderContactBtn: { en: "Contact Now", de: "Jetzt kontaktieren" },
     // --- Services Section ---
     servicesTitle: { en: "Core Capabilities", de: "Kernkompetenzen" },
     servicesSubtitle: { en: "Tailored solutions designed to maximize your digital footprint and revenue.", de: "Maßgeschneiderte Lösungen zur Maximierung Ihrer digitalen Präsenz und Ihres Umsatzes." },
@@ -72,6 +73,8 @@ const i18nStrings = {
     formLabelMessage: { en: "Your Message", de: "Ihre Nachricht" },
     formButtonSubmit: { en: "Send Message", de: "Nachricht Senden" },
     formButtonSending: { en: "Sending...", de: "Sende..." },
+    formSuccessMsg: { en: "Thank you! Message sent.", de: "Vielen Dank! Nachricht gesendet." }, // Slightly shorter success
+    formErrorMsg: { en: "Oops! Error sending message.", de: "Ups! Fehler beim Senden." }, // Slightly shorter error
     contactEmailPrefix: { en: "Email:", de: "E-Mail:" },
     footerRights: { en: "All Rights Reserved.", de: "Alle Rechte vorbehalten." },
     footerImprint: { en: "Imprint", de: "Impressum" },
@@ -174,7 +177,6 @@ const i18nStrings = {
 // --- Helper Function to Get Dynamic Header Height ---
 function getHeaderHeight() {
     const headerElement = document.querySelector('.main-header');
-    // Use optional chaining and provide a fallback height
     return headerElement?.offsetHeight > 0 ? headerElement.offsetHeight : 70;
 }
 
@@ -183,35 +185,31 @@ function openModal(modalId) {
     const modal = document.getElementById(modalId);
     const modalOverlay = document.getElementById('modal-overlay');
     if (!modal || !modalOverlay) return console.error("Modal or overlay not found:", modalId);
-
-    closeCookieBanner(); // Close cookie banner if it's open
-    if (isNavOpen()) toggleNav(); // Close mobile nav if it's open
-
+    closeCookieBanner();
+    if (isNavOpen()) toggleNav();
     modal.classList.add('active');
     modalOverlay.classList.add('active');
-    modalOverlay.classList.remove('nav-open'); // Ensure overlay is clickable for modal
-    modal.scrollTop = 0; // Scroll modal to top when opened
-    updateBodyScrollLock(); // Lock body scroll
+    modalOverlay.classList.remove('nav-open');
+    modal.scrollTop = 0;
+    updateBodyScrollLock();
 }
 
 function closeModal() {
     const modalOverlay = document.getElementById('modal-overlay');
     document.querySelectorAll('.modal.active').forEach(modal => modal.classList.remove('active'));
-
-    // Only deactivate overlay if mobile nav is also closed
     if (!isNavOpen() && modalOverlay) {
         modalOverlay.classList.remove('active', 'nav-open');
     }
-    updateBodyScrollLock(); // Unlock body scroll if applicable
+    updateBodyScrollLock();
 }
 
 function closeCookieBanner() {
     const banner = document.getElementById('cookie-banner');
     const overlay = document.getElementById('cookie-overlay');
-    if (banner?.classList.contains('active')) { // Use optional chaining
+    if (banner?.classList.contains('active')) {
         banner.classList.remove('active');
-        overlay?.classList.remove('active'); // Use optional chaining
-        updateBodyScrollLock(); // Update scroll lock status
+        overlay?.classList.remove('active');
+        updateBodyScrollLock();
     }
 }
 
@@ -224,24 +222,20 @@ const isCookiePopupOpen = () => document.getElementById('cookie-banner')?.classL
 function updateBodyScrollLock() {
     const body = document.body;
     const modalOverlay = document.getElementById('modal-overlay');
-    // Lock scroll if a modal, the mobile nav, or the cookie banner is open
     const shouldLockScroll = isModalOpen() || isNavOpen() || isCookiePopupOpen();
 
     if (shouldLockScroll) {
         body.classList.add('modal-open');
-        // Ensure main overlay is active for modal/nav (but not needed for cookie banner)
         if ((isModalOpen() || isNavOpen()) && modalOverlay && !modalOverlay.classList.contains('active')) {
             modalOverlay.classList.add('active');
         }
     } else {
         body.classList.remove('modal-open');
-        // Deactivate main overlay if nothing (modal/nav) needs it anymore
         if (modalOverlay && modalOverlay.classList.contains('active') && !isModalOpen() && !isNavOpen()) {
-            modalOverlay.classList.remove('active', 'nav-open'); // Clean up nav-open class too
+            modalOverlay.classList.remove('active', 'nav-open');
         }
     }
 }
-
 
 // --- Smooth Scrolling ---
 function smoothScrollToTarget(targetId) {
@@ -251,15 +245,10 @@ function smoothScrollToTarget(targetId) {
         if (targetElement) {
             const headerHeight = getHeaderHeight();
             const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - headerHeight; // Calculate position below fixed header
+            const offsetPosition = elementPosition - headerHeight;
             window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-        } else {
-            console.warn(`Smooth scroll target not found: ${targetId}`);
-        }
-    } catch (e) {
-         // Catch potential errors if ID is invalid
-         console.error(`Error finding element for smooth scroll: ${targetId}`, e);
-    }
+        } else console.warn(`Smooth scroll target not found: ${targetId}`);
+    } catch (e) { console.error(`Error finding element for scroll: ${targetId}`, e); }
 }
 
 // --- Global variable for nav toggle function ---
@@ -268,54 +257,38 @@ let toggleNav;
 // --- Initialize Everything on DOMContentLoaded ---
 document.addEventListener('DOMContentLoaded', function () {
     try {
-        // --- 1. Apply Translations ---
+        // Apply Translations
         const userLang = navigator.language || navigator.userLanguage;
-        const lang = userLang.startsWith('de') ? 'de' : 'en'; // Default to 'en' if not 'de'
-        document.documentElement.lang = lang; // Set HTML lang attribute
-
-        // Define keys where HTML content should be allowed (e.g., for <br>)
+        const lang = userLang.startsWith('de') ? 'de' : 'en';
+        document.documentElement.lang = lang;
         const keysWithHTML = ['aboutTitle', 'privacyTitle', 'heroHeadline', 'service1Title', 'service2Title', 'whyUsTitle', 'contactTitle'];
 
-        // Iterate over all translation keys
         Object.keys(i18nStrings).forEach(key => {
             const elements = document.querySelectorAll(`[data-i18n-key="${key}"]`);
-            // Skip if no elements found for this key (except pageTitle)
             if (elements.length === 0 && key !== 'pageTitle') return;
+            // Improved fallback: Try current lang -> EN -> DE -> first defined
+            const translation = i18nStrings[key]?.[lang]
+                                ?? i18nStrings[key]?.['en']
+                                ?? i18nStrings[key]?.['de']
+                                ?? i18nStrings[key]?.[Object.keys(i18nStrings[key])[0]];
+            if (translation === undefined) return;
 
-            // Get translation, fallback to English if specific lang missing
-            const translation = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['en'];
-            const fallback = i18nStrings[key]?.['en'];
-            const finalTranslation = translation ?? fallback; // Use translation or fallback
-
-            // Skip if no translation is defined at all
-            if (finalTranslation === undefined) return /* console.warn(`Translation missing: ${key}`) */;
-
-            // Apply translation
-            if (key === 'pageTitle') {
-                document.title = finalTranslation; // Set page title
-            } else {
-                // Apply to all found elements
-                elements.forEach(el => {
-                    // Use innerHTML for keys specified, otherwise textContent
-                    el[keysWithHTML.includes(key) ? 'innerHTML' : 'textContent'] = finalTranslation;
-                });
-            }
+            if (key === 'pageTitle') document.title = translation;
+            else elements.forEach(el => el[keysWithHTML.includes(key) ? 'innerHTML' : 'textContent'] = translation);
         });
 
-        // --- 2. Initialize Core Page Functionality ---
+        // Initialize Core Page Functionality
         initializePage();
-        // --- 3. Initialize Cookie Banner ---
+        // Initialize Cookie Banner
         initializeCookieBanner();
 
-    } catch (error) {
-        console.error("Initialization Error:", error);
-    }
+    } catch (error) { console.error("Initialization Error:", error); }
 });
 
 
 // --- Function to contain Core Page Initializations ---
 function initializePage() {
-    // Cache frequently accessed elements
+    // Cache elements
     const modalOverlay = document.getElementById('modal-overlay');
     const navToggle = document.getElementById('nav-toggle');
     const mainNav = document.querySelector('.main-nav');
@@ -327,286 +300,235 @@ function initializePage() {
     const emailHiddenInput = document.getElementById('email-hidden');
     const counters = document.querySelectorAll('.counter-value[data-target], .counter-value[data-i18n-key]');
     const experienceSection = document.getElementById('experience');
+    const foundersGrid = document.getElementById('founders-grid'); // Get the grid container
 
     // Initialize Libraries
     if (typeof feather !== 'undefined') feather.replace(); else console.warn("Feather Icons not loaded");
     if (typeof AOS !== 'undefined') AOS.init({ duration: 800, easing: 'ease-in-out-quad', once: true, offset: 50 });
     else console.warn("AOS not loaded");
 
-    // Dynamic Year in Footer
+    // Dynamic Year
     const currentYearElement = document.getElementById('current-year');
     if (currentYearElement) currentYearElement.textContent = new Date().getFullYear();
 
     // --- Mobile Navigation Toggle ---
-    toggleNav = () => { // Assign function to global scope
-        if (!mainNav || !navToggle || !modalOverlay) return; // Guard clause
+    toggleNav = () => {
+        if (!mainNav || !navToggle || !modalOverlay) return;
         const isOpening = !mainNav.classList.contains('active');
         navToggle.classList.toggle('active');
         mainNav.classList.toggle('active');
-        // Manage overlay and icon style based on state
-        if (isOpening) {
-            modalOverlay.classList.add('active', 'nav-open'); // Add 'nav-open' to make overlay non-interactive
-        } else {
-            modalOverlay.classList.remove('nav-open'); // Remove non-interactive state
-            if (!isModalOpen()) modalOverlay.classList.remove('active'); // Hide overlay only if no modal is open
+        if (isOpening) modalOverlay.classList.add('active', 'nav-open');
+        else {
+            modalOverlay.classList.remove('nav-open');
+            if (!isModalOpen()) modalOverlay.classList.remove('active');
         }
-        updateNavToggleIconColor(isOpening); // Update the burger/X icon style
-        updateBodyScrollLock(); // Lock/unlock body scroll
+        updateNavToggleIconColor(isOpening);
+        updateBodyScrollLock();
     };
-
-    // Function to inject/remove styles for the active nav toggle (X icon)
     const updateNavToggleIconColor = (isOpen) => {
         const styleId = 'nav-toggle-active-style';
         let styleElement = document.getElementById(styleId);
         if (isOpen) {
-            // Create style element if it doesn't exist
             if (!styleElement) { styleElement = document.createElement('style'); styleElement.id = styleId; document.head.appendChild(styleElement); }
-            // Apply styles for the 'X' shape, assuming nav background is dark
             styleElement.innerHTML = `
-               .nav-toggle.active span { background-color: transparent !important; } /* Hide middle bar */
+               .nav-toggle.active span { background-color: transparent !important; }
                .nav-toggle.active span::before,
-               .nav-toggle.active span::after {
-                    background-color: var(--secondary-color) !important; /* White X */
-                    top: 0; /* Align bars for X */
-               }
+               .nav-toggle.active span::after { background-color: var(--secondary-color) !important; top: 0; }
                .nav-toggle.active span::before { transform: rotate(45deg); }
                .nav-toggle.active span::after { transform: rotate(-45deg); }`;
-        } else {
-            styleElement?.remove(); // Remove injected style (optional chaining)
-        }
+        } else { styleElement?.remove(); }
     }
-    // Attach click listener to the toggle button
     if (navToggle) navToggle.addEventListener('click', toggleNav);
-    else console.warn("Nav toggle button (#nav-toggle) not found.");
+    else console.warn("Nav toggle button not found.");
 
-    // --- Mobile Navigation Link Handling (using event delegation) ---
+    // --- Mobile Navigation Link Handling ---
     if (mainNav) {
         mainNav.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent closing nav if clicking inside but not on a link
-            const link = e.target.closest('a[href^="#"]'); // Find the closest anchor link clicked
-            // Check if it's a valid internal hash link
-            if (link?.hash && link.hash !== '#') { // Use optional chaining
+            e.stopPropagation();
+            const link = e.target.closest('a[href^="#"]');
+            if (link?.hash && link.hash !== '#') {
                  try {
                      const targetElement = document.getElementById(link.hash.substring(1));
-                     // If target exists on the page
-                     if (targetElement) {
-                         e.preventDefault(); // Prevent default jump
-                         if (isNavOpen()) toggleNav(); // Close the nav
-                         // Scroll smoothly after a short delay (allows nav animation)
-                         setTimeout(() => smoothScrollToTarget(link.hash), 250);
-                     } else if (isNavOpen()) {
-                         // Target not found, but close nav anyway
-                         toggleNav();
-                     }
-                 } catch (err) { // Catch errors from invalid selectors
-                     if (isNavOpen()) toggleNav();
-                     console.error("Error processing nav link:", err);
-                 }
-            } else if (isNavOpen() && e.target.closest('a')) {
-                // If any other link (external, mailto, etc.) is clicked, just close the nav
-                toggleNav();
+                     if (targetElement) { e.preventDefault(); if (isNavOpen()) toggleNav(); setTimeout(() => smoothScrollToTarget(link.hash), 250); }
+                     else if (isNavOpen()) toggleNav();
+                 } catch (err) { if (isNavOpen()) toggleNav(); console.error("Nav link error:", err); }
+            } else if (isNavOpen() && e.target.closest('a')) { toggleNav(); }
+        });
+    } else console.warn("Mobile navigation container not found.");
+
+    // --- Founder Card Tap Handling ---
+    if (foundersGrid) {
+        const founderCards = foundersGrid.querySelectorAll('.founder-card');
+
+        foundersGrid.addEventListener('click', (e) => {
+            const clickedCard = e.target.closest('.founder-card');
+
+            // If the click is not on a card or is on the button itself, do nothing here
+            if (!clickedCard || e.target.closest('.founder-contact-btn')) {
+                return;
+            }
+
+            // Check if the clicked card is already active
+            const wasActive = clickedCard.classList.contains('active-card');
+
+            // Remove active class from all cards first
+            founderCards.forEach(card => card.classList.remove('active-card'));
+
+            // If it wasn't active, add the active class to the clicked one
+            if (!wasActive) {
+                clickedCard.classList.add('active-card');
+            }
+            // If it *was* active, clicking it again effectively deactivates it (because we removed the class above)
+        });
+
+        // Add listener to close active card if clicking outside
+        document.addEventListener('click', (e) => {
+            // If the click was outside the founders grid entirely
+            if (!foundersGrid.contains(e.target)) {
+                founderCards.forEach(card => card.classList.remove('active-card'));
             }
         });
-    } else console.warn("Mobile navigation container (.main-nav) not found.");
+    }
+
 
     // --- Smooth Scrolling & Initial Load ---
-    // Handle clicks on non-nav internal hash links
-    document.addEventListener('click', function (e) {
+    document.addEventListener('click', (e) => {
         const link = e.target.closest('a');
-        // Check for valid internal hash link outside the main navigation
         if (link?.hash && link.hash !== '#' && link.pathname === window.location.pathname && !link.closest('.main-nav')) {
-             try {
-                 const targetElement = document.getElementById(link.hash.substring(1));
-                 if (targetElement) {
-                     e.preventDefault(); // Prevent default jump
-                     smoothScrollToTarget(link.hash); // Scroll smoothly
-                 }
-             } catch (err) { console.error("Error processing non-nav link:", err); }
+             try { if (document.getElementById(link.hash.substring(1))) { e.preventDefault(); smoothScrollToTarget(link.hash); } }
+             catch (err) { console.error("Non-nav link error:", err); }
         }
     });
-    // Handle direct load with a hash in the URL
     window.addEventListener('load', () => {
         if (window.location.hash && window.location.hash !== '#') {
             const hash = window.location.hash;
-            try {
-                const targetElement = document.getElementById(hash.substring(1));
-                if (targetElement) {
-                    // Remove hash from URL without reloading
-                    history.replaceState(null, '', window.location.pathname + window.location.search);
-                    // Use nested rAF for potentially better timing after layout reflow
-                    requestAnimationFrame(() => requestAnimationFrame(() => smoothScrollToTarget(hash)));
-                } else {
-                    console.warn(`Element with ID '${hash.substring(1)}' not found for initial scroll.`);
-                }
-            } catch (e) {
-                console.error(`Error processing initial hash scroll for ${hash}:`, e);
-                // Clean URL even if hash is invalid? Optional.
-                history.replaceState(null, '', window.location.pathname + window.location.search);
-            }
+            try { if (document.getElementById(hash.substring(1))) { history.replaceState(null, '', window.location.pathname + window.location.search); requestAnimationFrame(() => requestAnimationFrame(() => smoothScrollToTarget(hash))); } }
+            catch (e) { console.error(`Initial hash scroll error: ${hash}`, e); history.replaceState(null, '', window.location.pathname + window.location.search); }
         }
     });
 
     // --- Scroll Padding & Parallax ---
-    // Debounced resize handler to update scroll padding top
     let resizeTimer;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            document.documentElement.style.scrollPaddingTop = getHeaderHeight() + 'px';
-        }, 100); // Adjust debounce time if needed
-    });
-    // Set initial scroll padding top
+    window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => document.documentElement.style.scrollPaddingTop = getHeaderHeight() + 'px', 100); });
     document.documentElement.style.scrollPaddingTop = getHeaderHeight() + 'px';
-
-    // Function to handle scroll events (progress bar, parallax)
     function handleScroll() {
         const scrollTop = window.scrollY;
-        // Calculate scroll progress
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-        if (progressBar) progressBar.style.width = scrollPercent + '%';
-
-        // Apply parallax effect if elements are potentially visible
-        const scrollFactor = 0.08; // Adjust parallax intensity
+        if (progressBar) progressBar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
+        const scrollFactor = 0.08;
         if (aboutImage && isElementPotentiallyInViewport(aboutImage)) applyScrollTransform(aboutImage, scrollFactor);
         if (whyUsImage && isElementPotentiallyInViewport(whyUsImage)) applyScrollTransform(whyUsImage, scrollFactor);
     }
-    // Function to apply Y-translation based on element's position in viewport
-    function applyScrollTransform(el, factor) {
-        const r = el.getBoundingClientRect();
-        const vh = window.innerHeight;
-        // Calculate offset from viewport center and apply translation
-        el.style.transform = `translateY(${-((r.top + r.height / 2) - vh / 2) * factor}px)`;
-    }
-    // Check if element bounding box intersects with the viewport
-    function isElementPotentiallyInViewport(el) {
-        if (!el) return false;
-        const r = el.getBoundingClientRect();
-        return r.top < window.innerHeight && r.bottom > 0;
-    }
-    // Optimized scroll listener using requestAnimationFrame
+    function applyScrollTransform(el, factor) { const r = el.getBoundingClientRect(), vh = window.innerHeight; el.style.transform = `translateY(${-((r.top + r.height / 2) - vh / 2) * factor}px)`; }
+    function isElementPotentiallyInViewport(el) { if (!el) return false; const r = el.getBoundingClientRect(); return r.top < window.innerHeight && r.bottom > 0; }
     let ticking = false;
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            window.requestAnimationFrame(() => {
-                handleScroll();
-                ticking = false;
-            });
-            ticking = true;
-        }
-    });
-    handleScroll(); // Initial call to set positions correctly
+    window.addEventListener('scroll', () => { if (!ticking) { window.requestAnimationFrame(() => { handleScroll(); ticking = false; }); ticking = true; } });
+    handleScroll();
 
     // --- Animated Counter ---
-    let countersAnimated = false; // Flag to ensure counters animate only once
+    let countersAnimated = false;
     const animateCountersObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            // Animate if intersecting, not already animated, and is the experience section
             if (entry.isIntersecting && !countersAnimated && entry.target.id === 'experience') {
                 counters.forEach(counter => {
-                    const targetAttr = counter.getAttribute('data-target'); // For numeric counters
-                    const i18nKey = counter.getAttribute('data-i18n-key'); // For text counters
-
-                    if (targetAttr) { // Handle numeric
-                        const target = +targetAttr;
-                        if (!isNaN(target)) animateCounter(counter, target, 1500);
-                        else counter.textContent = targetAttr; // Display as text if not a number
-                    } else if (i18nKey && i18nStrings[i18nKey]) { // Handle text (e.g., "8-Figure")
-                         const lang = document.documentElement.lang || 'en';
-                         // Directly set text from i18n strings
-                         counter.textContent = i18nStrings[i18nKey][lang] || i18nStrings[i18nKey]['en'];
-                    }
-                    // else console.warn('Counter missing attributes:', counter); // Optional warning
+                    const targetAttr = counter.getAttribute('data-target');
+                    const i18nKey = counter.getAttribute('data-i18n-key');
+                    if (targetAttr) { const target = +targetAttr; if (!isNaN(target)) animateCounter(counter, target, 1500); else counter.textContent = targetAttr; }
+                    else if (i18nKey && i18nStrings[i18nKey]) { const lang = document.documentElement.lang || 'en'; counter.textContent = i18nStrings[i18nKey][lang] || i18nStrings[i18nKey]['en']; }
                 });
-                countersAnimated = true; // Set flag
-                observer.unobserve(entry.target); // Stop observing once animated
+                countersAnimated = true; observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.3 }); // Trigger when 30% visible
-
-    // Start observing the experience section if it exists
+    }, { threshold: 0.3 });
     if (experienceSection) animateCountersObserver.observe(experienceSection);
     else console.warn("Experience section not found for counter observer.");
 
-    // Function to animate a single counter element
     function animateCounter(element, target, duration) {
-        let start = 0, range = target - start, current = start;
-        const startTime = performance.now();
-        const isThirtyPlus = element.getAttribute('data-target') === '30'; // Special case for the "30+" counter
-
+        let start = 0, range = target - start, current = start, startTime = performance.now();
+        const isThirtyPlus = element.getAttribute('data-target') === '30';
         function update(timestamp) {
-            const elapsed = timestamp - startTime;
-            const progress = Math.min(1, elapsed / duration); // Ensure progress doesn't exceed 1
-            current = start + range * progress; // Calculate current value based on progress
-            // Determine display value (ceiling for positive targets, floor for negative)
+            const elapsed = timestamp - startTime, progress = Math.min(1, elapsed / duration);
+            current = start + range * progress;
             const displayValue = target > 0 ? Math.ceil(current) : Math.floor(current);
-            // Update text content, add "+" if needed
             element.textContent = displayValue.toLocaleString() + (isThirtyPlus ? "+" : "");
-
-            // Continue animation if not finished
-            if (progress < 1) {
-                requestAnimationFrame(update);
-            } else {
-                // Ensure final value is exact target
-                element.textContent = target.toLocaleString() + (isThirtyPlus ? "+" : "");
-            }
+            if (progress < 1) requestAnimationFrame(update);
+            else element.textContent = target.toLocaleString() + (isThirtyPlus ? "+" : "");
         }
-        requestAnimationFrame(update); // Start the animation loop
+        requestAnimationFrame(update);
     }
 
-    // --- Contact Form ---
-    if (contactForm && emailInput && emailHiddenInput) {
+    // --- Contact Form AJAX Submission ---
+    if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            // Copy email value to hidden field for Formspree's _replyto
-            emailHiddenInput.value = emailInput.value;
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            // Disable button and show sending state
-            if (submitBtn) {
-                submitBtn.disabled = true;
-                const sendingText = i18nStrings.formButtonSending?.[document.documentElement.lang || 'en'] || 'Sending...';
-                submitBtn.textContent = sendingText;
-                // Consider adding a visual spinner here
+            e.preventDefault();
+
+            if(emailInput && emailHiddenInput) { emailHiddenInput.value = emailInput.value; }
+
+            const formData = new FormData(contactForm);
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const lang = document.documentElement.lang || 'en';
+            const originalButtonTextKey = 'formButtonSubmit';
+            const originalButtonText = i18nStrings[originalButtonTextKey]?.[lang] || 'Send Message';
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = i18nStrings.formButtonSending?.[lang] || 'Sending...';
+                submitButton.classList.remove('success', 'error');
             }
-            // Formspree handles the submission; success/error typically managed via redirect or AJAX response handling
+
+            const resetButton = (delay = 4000) => {
+                setTimeout(() => {
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalButtonText;
+                        submitButton.classList.remove('success', 'error');
+                    }
+                }, delay);
+            };
+
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    if (submitButton) {
+                        submitButton.textContent = i18nStrings.formSuccessMsg?.[lang] || 'Message sent!';
+                        submitButton.classList.add('success');
+                    }
+                    contactForm.reset();
+                    resetButton();
+                } else {
+                    response.json().then(data => {
+                        const errorMsg = data?.errors?.map(err => err.message).join(', ') || i18nStrings.formErrorMsg?.[lang] || 'An error occurred.';
+                        if (submitButton) { submitButton.textContent = errorMsg; submitButton.classList.add('error'); }
+                        resetButton();
+                    }).catch(() => {
+                        if (submitButton) { submitButton.textContent = i18nStrings.formErrorMsg?.[lang] || 'An error occurred.'; submitButton.classList.add('error'); }
+                        resetButton();
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Form submission error:', error);
+                if (submitButton) { submitButton.textContent = i18nStrings.formErrorMsg?.[lang] || 'Network error.'; submitButton.classList.add('error'); }
+                resetButton();
+            });
         });
-    } else if (!contactForm) {
-        console.warn("Contact form (#contact-form) not found.");
-    }
+    } else console.warn("Contact form not found.");
 
     // --- Modal Event Listeners ---
-    // Links to open modals
     const openImprintLink = document.getElementById('open-imprint');
     const openPrivacyLink = document.getElementById('open-privacy');
     if (openImprintLink) openImprintLink.addEventListener('click', (e) => { e.preventDefault(); openModal('imprint-modal'); }); else console.warn("Imprint link not found");
     if (openPrivacyLink) openPrivacyLink.addEventListener('click', (e) => { e.preventDefault(); openModal('privacy-modal'); }); else console.warn("Privacy link not found");
-
-    // Delegate close button clicks to the document
-    document.addEventListener('click', (e) => {
-        if (e.target.matches('.modal-close')) {
-             closeModal();
-        }
-    });
-
-    // Overlay click listener (closes modal if overlay is clicked and nav is not open)
-    if (modalOverlay) {
-        modalOverlay.addEventListener('click', () => {
-            // Only close if overlay is clickable (not when nav is open) and a modal is actually open
-            if (!modalOverlay.classList.contains('nav-open') && isModalOpen()) {
-                closeModal();
-            }
-        });
-    } else {
-        console.warn("Modal overlay not found");
-    }
+    document.addEventListener('click', (e) => { if (e.target.matches('.modal-close')) closeModal(); });
+    if (modalOverlay) modalOverlay.addEventListener('click', () => { if (!modalOverlay.classList.contains('nav-open') && isModalOpen()) closeModal(); });
+    else console.warn("Modal overlay not found");
 
     // --- Global Escape Key Handler ---
-    document.addEventListener('keydown', (e) => {
-        if (e.key === "Escape") {
-            if (isModalOpen()) closeModal();          // Close modal first
-            else if (isNavOpen()) toggleNav();        // Then close nav
-            else if (isCookiePopupOpen()) closeCookieBanner(); // Finally, close cookie banner
-        }
-    });
+    document.addEventListener('keydown', (e) => { if (e.key === "Escape") { if (isModalOpen()) closeModal(); else if (isNavOpen()) toggleNav(); else if (isCookiePopupOpen()) closeCookieBanner(); } });
 
 } // End of initializePage
 
@@ -615,57 +537,16 @@ function initializeCookieBanner() {
     const banner = document.getElementById('cookie-banner');
     const overlay = document.getElementById('cookie-overlay');
     const acceptButton = document.getElementById('cookie-accept');
-    // Exit if essential elements are missing
     if (!banner || !overlay || !acceptButton) return console.warn("Cookie banner elements missing.");
 
-    const CONSENT_KEY = 'elev8_cookie_consent_v1'; // Key for storing consent state
-    const CONSENT_VALUE = 'accepted'; // Value indicating consent
-
-    // Function to handle user accepting the cookies
-    const handleConsent = () => {
-        try {
-            localStorage.setItem(CONSENT_KEY, CONSENT_VALUE); // Store consent
-        } catch (e) {
-            // Handle potential localStorage errors (e.g., private browsing)
-            console.error("LocalStorage Error (Cookie Consent):", e);
-        }
-        closeCookieBanner(); // Close the banner UI
-    };
-
-    // Check current consent status
+    const CONSENT_KEY = 'elev8_cookie_consent_v1', CONSENT_VALUE = 'accepted';
+    const handleConsent = () => { try { localStorage.setItem(CONSENT_KEY, CONSENT_VALUE); } catch (e) { console.error("LS Error:", e); } closeCookieBanner(); };
     let currentConsent = null;
-    try {
-        currentConsent = localStorage.getItem(CONSENT_KEY);
-    } catch (e) {
-        console.error("LocalStorage Error (Reading Consent):", e);
-        // Proceed as if no consent given if reading fails
-    }
+    try { currentConsent = localStorage.getItem(CONSENT_KEY); } catch (e) { console.error("LS Error:", e); }
 
-    // If consent not previously given
     if (currentConsent !== CONSENT_VALUE) {
-        // Show banner and overlay after a short delay (ensures smooth appearance)
-        requestAnimationFrame(() => {
-             banner.classList.add('active');
-             overlay.classList.add('active');
-             updateBodyScrollLock(); // Lock scroll while banner is visible
-        });
-
-        // Add listener to the accept button
+        requestAnimationFrame(() => { banner.classList.add('active'); overlay.classList.add('active'); updateBodyScrollLock(); });
         acceptButton.addEventListener('click', handleConsent);
-
-        // Add listener for the privacy policy link within the banner
-        const privacyLink = document.getElementById('cookie-banner-privacy-link');
-        if (privacyLink) {
-            privacyLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                // Close banner *before* opening the modal for a cleaner transition
-                closeCookieBanner();
-                // Open privacy modal after a short delay
-                setTimeout(() => { openModal('privacy-modal'); }, 350);
-            });
-        } else {
-            console.warn("Cookie banner privacy link not found.");
-        }
+        // Privacy link handling logic is removed
     }
-    // No 'else' needed - if already consented, banner remains hidden via CSS default state
 } // End of initializeCookieBanner

@@ -79,13 +79,14 @@
         <div class="container" data-aos="fade-up">
             <h2 style="text-align: center;" data-i18n-key="foundersTitle">Mit wem Sie zusammenarbeiten</h2>
             <p class="section-subtitle" data-i18n-key="foundersSubtitle">Bei uns bekommen Sie keine Wundertüte, sondern erfahrene Profis, die sich Ihrem Erfolg widmen.</p>
-            <div class="founders-grid">
+            <div class="founders-grid" id="founders-grid"> <!-- Added ID for JS targeting -->
                 <!-- Founder 1: Lukas -->
                 <div class="founder-card" data-aos="fade-right" data-aos-delay="200">
                     <img src="img/lukas.webp" alt="Lukas Henke - Founder elev8digital" class="founder-img" loading="lazy">
                     <h3 data-i18n-key="founder1Name">Lukas Henke</h3>
                     <p class="founder-title" data-i18n-key="founder1Title">PERFORMANCE & TECH LEAD</p>
                     <p data-i18n-key="founder1Desc">Lukas ist Experte für datengetriebenes Marketing mit Fokus auf Tracking, Automatisierung und technische Umsetzung. Sein Fokus liegt auf strategischer Performance-Optimierung – durch präzise Datenanalysen, smarte Prozesse und die reibungslose Verzahnung aller Systeme entlang der digitalen Customer Journey.</p>
+                    <a href="mailto:lukas.henke@elev8digital.de" target="_blank" class="btn founder-contact-btn" data-i18n-key="founderContactBtn">Jetzt kontaktieren</a>
                 </div>
                 <!-- Founder 2: Taylan -->
                 <div class="founder-card" data-aos="fade-left" data-aos-delay="400">
@@ -93,6 +94,7 @@
                     <h3 data-i18n-key="founder2Name">Taylan Demirkol</h3>
                     <p class="founder-title" data-i18n-key="founder2Title">E-COMMERCE & STRATEGIE LEAD</p>
                     <p data-i18n-key="founder2Desc">Taylan bringt langjährige Erfahrung in führenden E-Commerce- und Marketingpositionen mit. Sein Fokus liegt auf strategischem Wachstum – durch strukturierte Shop-Optimierung, gezielte Maßnahmen entlang der Customer Journey und eine nachhaltige Positionierung Ihres Online-Business.</p>
+                    <a href="mailto:taylan.demirkol@elev8digital.de" target="_blank" class="btn founder-contact-btn" data-i18n-key="founderContactBtn">Jetzt kontaktieren</a>
                 </div>
             </div>
         </div>
@@ -197,6 +199,8 @@
         <div class="container" data-aos="zoom-in-up">
             <h2 data-i18n-key="contactTitle">Start Your <span class='br-mobile'></span>Elevation</h2>
             <p class="subtitle" data-i18n-key="contactSubtitle">Lassen Sie uns gemeinsam besprechen, wie elev8digital Ihr Wachstum voranbringen kann. Schreiben Sie uns direkt oder füllen Sie das Kontaktformular aus – wir freuen uns auf Ihre Nachricht!</p>
+
+            <!-- Contact Form for AJAX Submission -->
             <form action="https://formspree.io/f/xyzenbdk" method="POST" class="contact-form" id="contact-form">
                 <input type="hidden" name="_subject" value="Neue Kontaktanfrage von elev8digital Website">
                 <div class="form-group" data-aos="fade-up" data-aos-delay="100">
@@ -220,6 +224,8 @@
                     <button type="submit" class="btn btn-inverted" data-i18n-key="formButtonSubmit">Nachricht Senden</button>
                 </div>
             </form>
+            <!-- Form status popup removed -->
+
             <p style="margin-top: 40px; font-size: 0.9em; opacity: 0.7;">
                 <span data-i18n-key="contactEmailPrefix">E-Mail:</span> <a href="mailto:info@elev8digital.de" style="color: var(--text-color-light); text-decoration: underline;">info@elev8digital.de</a>
             </p>
@@ -348,7 +354,7 @@
     <div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="true">
         <div class="cookie-banner-content">
             <div class="cookie-icon">🍪</div>
-            <p data-i18n-key="cookieBannerText">Diese Website verwendet technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Mit der Nutzung der Seite stimmen Sie dem zu. Mehr Infos: <a href="#" id="cookie-banner-privacy-link" data-i18n-key="footerPrivacy">Datenschutz</a></p>
+            <p data-i18n-key="cookieBannerText">Diese Website verwendet technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Mit der Nutzung der Seite stimmen Sie dem zu.</p>
         </div>
         <div class="cookie-banner-actions">
             <button class="btn" id="cookie-accept" data-i18n-key="cookieAcceptBtn" aria-label="Cookies akzeptieren und Banner schließen">Verstanden</button>
@@ -360,7 +366,6 @@
 
  <!-- Feather Replace init -->
  <script>
-    // Initialize Feather Icons after DOM is ready
     document.addEventListener("DOMContentLoaded", function () {
       feather.replace();
     });

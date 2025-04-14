@@ -1,45 +1,60 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Lang attribute will be updated by JS -->
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title will be set dynamically -->
     <title>elev8digital - We Elevate Your Business</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="fonts/poppins.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="style.css">
-    <script src="js/feather.min.js" defer></script>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-light-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-light-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-dark-32x32.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-dark-16x16.png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon-light-180x180.png">
+
     <!-- SEO Meta-Tags -->
     <meta name="description" content="elev8digital – Performance Marketing und E-Commerce Beratung für messbares Wachstum.">
     <meta name="author" content="elev8digital">
     <meta name="robots" content="index, follow">
-    <!-- Open Graph (für Social Media) -->
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="https://elev8digital.de/" />
+    <link rel="alternate" hreflang="de" href="https://elev8digital.de/" />
+    <link rel="alternate" hreflang="x-default" href="https://elev8digital.de/" />
+
+    <!-- Open Graph -->
     <meta property="og:title" content="elev8digital – We Elevate Your Business">
     <meta property="og:description" content="Performance Marketing & E-Commerce Beratung für messbares Wachstum.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://elev8digital.de/">
-    <meta property="og:image" content="https://elev8digital.de/img/og-image.jpg">
+    <meta property="og:image" content="https://elev8digital.de/img/og-image.webp">
+
+    <!-- Scripts -->
+    <script src="js/feather.min.js" defer></script>
 </head>
 <body>
 
     <div class="scroll-progress-container"><div class="scroll-progress-bar" id="scroll-progress-bar"></div></div>
-    <!-- Overlay for Modals & Mobile Nav -->
     <div class="modal-overlay" id="modal-overlay"></div>
-    <!-- Overlay for Cookie Banner -->
     <div class="cookie-overlay" id="cookie-overlay"></div>
 
     <header class="main-header">
         <div class="container">
             <a href="#hero" class="logo">
-                <img src="img/elev8digital_logo.webp" alt="elev8digital Logo">
+                <img src="img/elev8digital-r2d3.svg" alt="elev8digital Logo">
             </a>
             <nav class="main-nav">
                 <ul>
                     <li><a href="#hero" data-i18n-key="navHome">Home</a></li>
-                    <li><a href="#about" data-i18n-key="navAbout">About</a></li>
-                    <li><a href="#services" data-i18n-key="navServices">Services</a></li>
-                    <li><a href="#experience" data-i18n-key="navExperience">Experience</a></li>
-                    <li><a href="#why-us" data-i18n-key="navWhyUs">Why Us</a></li>
+                    <li><a href="#about" data-i18n-key="navAbout">Über Uns</a></li>
+                    <li><a href="#services" data-i18n-key="navServices">Leistungen</a></li>
+                    <li><a href="#experience" data-i18n-key="navExperience">Erfahrung</a></li>
+                    <li><a href="#why-us" data-i18n-key="navWhyUs">Warum Wir</a></li>
                     <li><a href="#contact" data-i18n-key="navContact">Kontakt</a></li>
                 </ul>
             </nav>
@@ -49,7 +64,6 @@
 
     <div class="sticky-contact"><a href="#contact" title="Kontakt aufnehmen"><i data-feather="mail"></i></a></div>
 
-    <!-- Hero Section -->
     <section id="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
@@ -59,7 +73,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <div class="container about-content">
             <div class="about-text" data-aos="fade-right">
@@ -74,13 +87,11 @@
         </div>
     </section>
 
-    <!-- Founders Section -->
     <section id="founders">
         <div class="container" data-aos="fade-up">
             <h2 style="text-align: center;" data-i18n-key="foundersTitle">Mit wem Sie zusammenarbeiten</h2>
             <p class="section-subtitle" data-i18n-key="foundersSubtitle">Bei uns bekommen Sie keine Wundertüte, sondern erfahrene Profis, die sich Ihrem Erfolg widmen.</p>
-            <div class="founders-grid" id="founders-grid"> <!-- Added ID for JS targeting -->
-                <!-- Founder 1: Lukas -->
+            <div class="founders-grid" id="founders-grid">
                 <div class="founder-card" data-aos="fade-right" data-aos-delay="200">
                     <img src="img/lukas.webp" alt="Lukas Henke - Founder elev8digital" class="founder-img" loading="lazy">
                     <h3 data-i18n-key="founder1Name">Lukas Henke</h3>
@@ -88,7 +99,6 @@
                     <p data-i18n-key="founder1Desc">Lukas ist Experte für datengetriebenes Marketing mit Fokus auf Tracking, Automatisierung und technische Umsetzung. Sein Fokus liegt auf strategischer Performance-Optimierung – durch präzise Datenanalysen, smarte Prozesse und die reibungslose Verzahnung aller Systeme entlang der digitalen Customer Journey.</p>
                     <a href="mailto:lukas.henke@elev8digital.de" target="_blank" class="btn founder-contact-btn" data-i18n-key="founderContactBtn">Jetzt kontaktieren</a>
                 </div>
-                <!-- Founder 2: Taylan -->
                 <div class="founder-card" data-aos="fade-left" data-aos-delay="400">
                     <img src="img/taylan.webp" alt="Taylan Demirkol - Founder elev8digital" class="founder-img" loading="lazy">
                     <h3 data-i18n-key="founder2Name">Taylan Demirkol</h3>
@@ -100,7 +110,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services">
         <div class="container" data-aos="fade-up">
             <h2 style="text-align: center;" data-i18n-key="servicesTitle">Kernkompetenzen</h2>
@@ -121,11 +130,25 @@
                     <h3 data-i18n-key="service3Title">Strategie & Analytics</h3>
                     <p data-i18n-key="service3Text">Ganzheitliche Wachstumsstrategien, fundierte Analysen und sauberes Tracking bilden die Basis. Wir definieren Kanäle, Funnels und KPIs für Ihren nachhaltigen Erfolg.</p>
                 </div>
+                <div class="service-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">🛒</div>
+                    <h3 data-i18n-key="service4Title">Marktplatz-<br>Integration</h3>
+                    <p data-i18n-key="service4Text">Beratung und Anbindung an relevante Marktplätze wie Amazon, Otto, AboutYou & Co. zur Erweiterung Ihrer Vertriebskanäle.</p>
+                </div>
+                <div class="service-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">💻</div>
+                    <h3 data-i18n-key="service5Title">Technologie-<br>Beratung</h3>
+                    <p data-i18n-key="service5Text">Expertise bei der Auswahl und Integration von Systemen wie ERP, CRM, PIM etc. zur Optimierung Ihrer Geschäftsprozesse.</p>
+                </div>
+                <div class="service-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">🌐</div>
+                    <h3 data-i18n-key="service6Title">Web-<br>Entwicklung</h3>
+                    <p data-i18n-key="service6Text">Konzeption und Umsetzung von individuellen Websites und Onlineshops, die überzeugen und konvertieren.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience">
         <div class="container">
             <h2 data-aos="fade-up" data-i18n-key="experienceTitle">Nachgewiesene Expertise</h2>
@@ -138,69 +161,72 @@
                     <div class="counter-value" data-i18n-key="experienceCounter2Value">8-stellig</div>
                     <div class="counter-label" data-i18n-key="experienceCounter2Label">Verwaltete Jahresbudgets</div>
                 </div>
+                <div class="counter-box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="counter-value" data-i18n-key="experienceCounter3Value">7+</div>
+                    <div class="counter-label" data-i18n-key="experienceCounter3Label">Integrierte Marktplätze</div>
+                </div>
+                <div class="counter-box" data-aos="fade-up" data-aos-delay="400">
+                    <div class="counter-value" data-i18n-key="experienceCounter4Value">Diverse</div>
+                    <div class="counter-label" data-i18n-key="experienceCounter4Label">Shopsysteme (Shopify bis SFCC)</div>
+                </div>
             </div>
         </div>
     </section>
 
-<!-- Why Us Section -->
-<section id="why-us">
-    <div class="container why-us-content">
-        <div class="why-us-image" data-aos="fade-right" data-aos-delay="200">
-            <img src="img/discussing-charts.webp" alt="Strategic approach" id="why-us-img" loading="lazy">
-        </div>
-        <div class="why-us-text" data-aos="fade-left">
-            <h2 data-i18n-key="whyUsTitle">The Elev8 <span class='br-mobile'></span>Advantage</h2>
-            <p data-i18n-key="whyUsSubtitle">Wir kombinieren Expertise auf Agentur-Niveau mit dem Fokus und Engagement von Inhouse-Spezialisten.</p>
-            <div class="advantage-grid">
-                <div class="advantage-item">
-                    <i data-feather="users"></i>
-                    <div>
-                        <h3 data-i18n-key="advantage1Title">Direkte Betreuung durch Gründer</h3>
-                        <p data-i18n-key="advantage1Text">Bei uns arbeiten Sie direkt mit erfahrenen Profis – kein Weiterreichen an Junioren, dafür echtes Verständnis und schnelle Ergebnisse.</p>
-                    </div>
-                </div>
-                <div class="advantage-item">
-                    <i data-feather="trending-up"></i>
-                    <div>
-                        <h3 data-i18n-key="advantage2Title">Kompromisslos datengesteuert</h3>
-                        <p data-i18n-key="advantage2Text">Jede Entscheidung und Strategie basiert auf Analysen, nicht auf Vermutungen.</p>
-                    </div>
-                </div>
-                <div class="advantage-item">
-                    <i data-feather="settings"></i>
-                    <div>
-                        <h3 data-i18n-key="advantage3Title">Maßgeschneiderte Strategien</h3>
-                        <p data-i18n-key="advantage3Text">Sorgfältig entwickelte Lösungen für Ihre einzigartige Marke, Ihren Markt und Ihre Ziele.</p>
-                    </div>
-                </div>
-                <div class="advantage-item">
-                    <i data-feather="target"></i>
-                    <div>
-                        <h3 data-i18n-key="advantage4Title">Ergebnisfokussiert</h3>
-                        <p data-i18n-key="advantage4Text">Wir messen unseren Erfolg direkt am greifbaren Wachstum Ihres Geschäftsergebnisses.</p>
-                    </div>
-                </div>
-                <div class="advantage-item">
-                    <i data-feather="eye"></i>
-                    <div>
-                        <h3 data-i18n-key="advantage5Title">Absolute Transparenz</h3>
-                        <p data-i18n-key="advantage5Text">Klare, konsistente Kommunikation und Berichterstattung sind grundlegend für unsere Partnerschaft.</p>
-                    </div>
-                </div>
+    <section id="why-us">
+        <div class="container why-us-content">
+            <div class="why-us-image" data-aos="fade-right" data-aos-delay="200">
+                <img src="img/discussing-charts.webp" alt="Strategic approach" id="why-us-img" loading="lazy">
             </div>
-            <a href="#contact" class="btn" style="margin-top: 30px;" data-i18n-key="whyUsButton">Projekt besprechen</a>
+            <div class="why-us-text" data-aos="fade-left">
+                <h2 data-i18n-key="whyUsTitle">Der Elev8 <span class='br-mobile'></span>Vorteil</h2>
+                <p data-i18n-key="whyUsSubtitle">Wir kombinieren Expertise auf Agentur-Niveau mit dem Fokus und Engagement von Inhouse-Spezialisten.</p>
+                <div class="advantage-grid">
+                    <div class="advantage-item">
+                        <i data-feather="users"></i>
+                        <div>
+                            <h3 data-i18n-key="advantage1Title">Direkte Betreuung durch Gründer</h3>
+                            <p data-i18n-key="advantage1Text">Bei uns arbeiten Sie direkt mit erfahrenen Profis – kein Weiterreichen an Junioren, dafür echtes Verständnis und schnelle Ergebnisse.</p>
+                        </div>
+                    </div>
+                    <div class="advantage-item">
+                        <i data-feather="trending-up"></i>
+                        <div>
+                            <h3 data-i18n-key="advantage2Title">Kompromisslos datengesteuert</h3>
+                            <p data-i18n-key="advantage2Text">Jede Entscheidung und Strategie basiert auf Analysen, nicht auf Vermutungen.</p>
+                        </div>
+                    </div>
+                    <div class="advantage-item">
+                        <i data-feather="settings"></i>
+                        <div>
+                            <h3 data-i18n-key="advantage3Title">Maßgeschneiderte Strategien</h3>
+                            <p data-i18n-key="advantage3Text">Sorgfältig entwickelte Lösungen für Ihre einzigartige Marke, Ihren Markt und Ihre Ziele.</p>
+                        </div>
+                    </div>
+                    <div class="advantage-item">
+                        <i data-feather="target"></i>
+                        <div>
+                            <h3 data-i18n-key="advantage4Title">Ergebnisfokussiert</h3>
+                            <p data-i18n-key="advantage4Text">Wir messen unseren Erfolg direkt am greifbaren Wachstum Ihres Geschäftsergebnisses.</p>
+                        </div>
+                    </div>
+                    <div class="advantage-item">
+                        <i data-feather="eye"></i>
+                        <div>
+                            <h3 data-i18n-key="advantage5Title">Absolute Transparenz</h3>
+                            <p data-i18n-key="advantage5Text">Klare, konsistente Kommunikation und Berichterstattung sind grundlegend für unsere Partnerschaft.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn" style="margin-top: 30px;" data-i18n-key="whyUsButton">Projekt besprechen</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-    <!-- Contact Section -->
     <section id="contact">
         <div class="container" data-aos="zoom-in-up">
             <h2 data-i18n-key="contactTitle">Start Your <span class='br-mobile'></span>Elevation</h2>
             <p class="subtitle" data-i18n-key="contactSubtitle">Lassen Sie uns gemeinsam besprechen, wie elev8digital Ihr Wachstum voranbringen kann. Schreiben Sie uns direkt oder füllen Sie das Kontaktformular aus – wir freuen uns auf Ihre Nachricht!</p>
-
-            <!-- Contact Form for AJAX Submission -->
             <form action="https://formspree.io/f/xyzenbdk" method="POST" class="contact-form" id="contact-form">
                 <input type="hidden" name="_subject" value="Neue Kontaktanfrage von elev8digital Website">
                 <div class="form-group" data-aos="fade-up" data-aos-delay="100">
@@ -224,15 +250,12 @@
                     <button type="submit" class="btn btn-inverted" data-i18n-key="formButtonSubmit">Nachricht Senden</button>
                 </div>
             </form>
-            <!-- Form status popup removed -->
-
             <p style="margin-top: 40px; font-size: 0.9em; opacity: 0.7;">
                 <span data-i18n-key="contactEmailPrefix">E-Mail:</span> <a href="mailto:info@elev8digital.de" style="color: var(--text-color-light); text-decoration: underline;">info@elev8digital.de</a>
             </p>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>© <span id="current-year"></span> elev8digital.
@@ -245,7 +268,6 @@
         </div>
     </footer>
 
-    <!-- Imprint Modal -->
     <div id="imprint-modal" class="modal">
         <button class="modal-close" aria-label="Schließen">×</button>
         <div class="modal-content">
@@ -268,7 +290,6 @@
         </div>
     </div>
 
-    <!-- Privacy Policy Modal -->
     <div id="privacy-modal" class="modal">
         <button class="modal-close" aria-label="Schließen">×</button>
         <div class="modal-content">
@@ -291,7 +312,7 @@
             <p data-i18n-key="privacyHostingText2">Die Verwendung von GitHub Pages erfolgt im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO). GitHub wird Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen.</p>
             <p data-i18n-key="privacyHostingText3">Weitere Informationen finden Sie in der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a>.</p>
             <p data-i18n-key="privacyHostingContractText">Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung des oben genannten Dienstes geschlossen. Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der gewährleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet.</p>
-            <h3 data-i18n-key="privacyMandatoryInfoTitle">3. Allgemeine Hinweise und Pflichtinformationen</h3>
+            <h3 data-i18n-key="privacyMandatoryInfoTitle">3. Allgemeine Hinweise und Pflicht­informationen</h3>
             <h4 data-i18n-key="privacyProtectionTitle">Datenschutz</h4>
             <p data-i18n-key="privacyProtectionText1">Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
             <p data-i18n-key="privacyProtectionText2">Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.</p>
@@ -307,9 +328,9 @@
             <p data-i18n-key="privacyLegalBasisText">Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im Falle einer ausdrücklichen Einwilligung in die Übertragung personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf Informationen in Ihr Endgerät (z. B. via Device-Fingerprinting) eingewilligt haben, erfolgt die Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TTDSG. Die Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, verarbeiten wir Ihre Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten, sofern diese zur Erfüllung einer rechtlichen Verpflichtung erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann ferner auf Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. Über die jeweils im Einzelfall einschlägigen Rechtsgrundlagen wird in den folgenden Absätzen dieser Datenschutzerklärung informiert.</p>
             <h4 data-i18n-key="privacyRevocationTitle">Widerruf Ihrer Einwilligung zur Datenverarbeitung</h4>
             <p data-i18n-key="privacyRevocationText">Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
-            <h4 data-i18n-key="privacyComplaintRightTitle">Beschwerderecht bei der zuständigen Aufsichtsbehörde</h4>
+            <h4 data-i18n-key="privacyComplaintRightTitle">Beschwerde­recht bei der zuständigen Aufsichts­behörde</h4>
             <p data-i18n-key="privacyComplaintRightText">Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.</p>
-            <h4 data-i18n-key="privacyPortabilityTitle">Recht auf Datenübertragbarkeit</h4>
+            <h4 data-i18n-key="privacyPortabilityTitle">Recht auf Daten­übertrag­barkeit</h4>
             <p data-i18n-key="privacyPortabilityText">Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.</p>
             <h4 data-i18n-key="privacyInfoDeletionTitle">Auskunft, Berichtigung und Löschung</h4>
             <p data-i18n-key="privacyInfoDeletionText">Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.</p>
@@ -327,7 +348,7 @@
             <h3 data-i18n-key="privacyDataCollectionWebsiteTitle">4. Datenerfassung auf dieser Website</h3>
             <h4 data-i18n-key="privacyContactFormTitle">Kontaktformular</h4>
             <p data-i18n-key="privacyContactFormText1">Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.</p>
-            <p data-i18n-key="privacyContactFormText2">Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar.</p>
+            <p data-i18n-key="privacyContactFormText2">Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In all übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar.</p>
             <p data-i18n-key="privacyContactFormText3">Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.</p>
             <p data-i18n-key="privacyContactFormProcessorText">Für den Empfang und die Verwaltung der über das Kontaktformular gesendeten Daten nutzen wir den Dienst Formspree (Formspree, Inc., 1201 N Orange St STE 7171, Wilmington, DE 19801, USA). Formspree agiert als unser Auftragsverarbeiter. Die Daten werden über die Server von Formspree an unsere E-Mail-Adresse weitergeleitet. Wir haben mit Formspree einen Vertrag zur Auftragsverarbeitung geschlossen. Weitere Informationen zum Datenschutz bei Formspree finden Sie hier: <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">https://formspree.io/legal/privacy-policy/</a></p>
             <h4 data-i18n-key="privacyServerLogsTitle">Server-Log-Dateien</h4>
@@ -350,7 +371,6 @@
         </div>
     </div>
 
-    <!-- Cookie Banner Popup -->
     <div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="true">
         <div class="cookie-banner-content">
             <div class="cookie-icon">🍪</div>
@@ -362,14 +382,14 @@
     </div>
 
      <!-- Local AOS JS -->
-  <script src="js/aos.js" defer></script>
+    <script src="js/aos.js" defer></script>
 
- <!-- Feather Replace init -->
- <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      feather.replace();
-    });
-  </script>
+    <!-- Feather Replace init -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          feather.replace();
+        });
+    </script>
 
     <!-- Custom JS -->
     <script src="script.js" defer></script>

@@ -1,18 +1,17 @@
-/* --- Base Styles & Variables --- */
 :root {
-    --primary-color: #000000; /* Black */
-    --secondary-color: #FFFFFF; /* White */
+    --primary-color: #000000;
+    --secondary-color: #FFFFFF;
     --text-color-dark: #000000;
     --text-color-light: #FFFFFF;
-    --success-color: #28a745; /* Green for success messages */
-    --error-color: #dc3545; /* Red for error messages */
+    --success-color: #28a745;
+    --error-color: #dc3545;
     --font-family: 'Poppins', sans-serif;
     --section-padding: 100px 0;
     --container-width: 1140px;
     --header-height: 80px;
-    --overlay-color: rgba(0, 0, 0, 0.6); /* Hero */
-    --modal-overlay-color: rgba(0, 0, 0, 0.7); /* Modal/Nav */
-    --cookie-overlay-color: rgba(0, 0, 0, 0.6); /* Cookie */
+    --overlay-color: rgba(0, 0, 0, 0.6);
+    --modal-overlay-color: rgba(0, 0, 0, 0.7);
+    --cookie-overlay-color: rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -41,7 +40,6 @@ body.modal-open {
      overflow: hidden;
 }
 
-/* Scroll Progress Bar */
 .scroll-progress-container {
     position: fixed;
     top: 0; left: 0; width: 100%;
@@ -57,14 +55,12 @@ body.modal-open {
     transition: width 0.1s linear;
 }
 
-/* Container */
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 25px;
 }
 
-/* Typography */
 h1, h2, h3, h4 {
     font-weight: 700;
     color: var(--primary-color);
@@ -112,7 +108,6 @@ section {
     line-height: 1.7;
 }
 
-/* Buttons */
 .btn {
     display: inline-block;
     background-color: var(--primary-color);
@@ -155,8 +150,6 @@ section {
 }
 .btn-inverted:not(.success):not(.error):hover::before { left: 0; }
 
-
-/* Header */
 .main-header {
     position: fixed;
     top: 0; left: 0; width: 100%;
@@ -187,7 +180,6 @@ section {
 .main-nav a:hover { color: #555; }
 .main-nav a:hover::after { width: 100%; }
 
-/* Mobile Nav Toggle */
 .nav-toggle {
     display: none;
     cursor: pointer; width: 30px; height: 25px;
@@ -204,9 +196,6 @@ section {
 .nav-toggle span::before { top: -8px; }
 .nav-toggle span::after { bottom: -8px; top: auto; }
 
-/* Active state (X icon) styles injected via JS */
-
-/* Hero Section */
 #hero {
     background-image: url('img/hero-background.webp');
     background-size: cover; background-position: center center; background-attachment: fixed;
@@ -224,11 +213,9 @@ section {
 #hero .btn::before { background-color: var(--primary-color); }
 #hero .btn:hover { color: var(--secondary-color); border-color: var(--secondary-color); }
 
-/* Section Alternating Backgrounds & Colors */
 #about, #founders, #why-us { background-color: var(--secondary-color); }
 #services, #experience, #contact { background-color: var(--primary-color); color: var(--text-color-light); }
 
-/* Text colors for dark sections */
 #services h2, #services h3, #services p, #services .section-subtitle, #services .service-icon,
 #experience h2, #experience p, #experience .counter-value, #experience .counter-label,
 #contact h2, #contact p, #contact label, #contact .subtitle, #contact a {
@@ -236,13 +223,11 @@ section {
 }
 #contact a:hover { color: rgba(255, 255, 255, 0.8); }
 
-/* About Section */
 .about-content { display: flex; align-items: center; gap: 60px; }
 .about-text { flex: 1; }
 .about-image { flex: 1; text-align: center; }
 .about-image img { max-width: 500px; will-change: transform; transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
-/* Founders Section */
 #founders h2 { margin-bottom: 15px; }
 #founders .section-subtitle { margin-top: 0; margin-bottom: 60px; }
 .founders-grid {
@@ -260,9 +245,8 @@ section {
     display: flex;
     flex-direction: column;
     height: 100%;
-    cursor: pointer; /* Indicate tappable area on mobile */
+    cursor: pointer;
 }
-/* Apply hover styles also when active-card class is present */
 .founder-card:hover,
 .founder-card.active-card {
     transform: translateY(-8px);
@@ -298,34 +282,47 @@ section {
     align-self: center;
     opacity: 0;
     transform: translateY(10px);
-    /* Slower transition */
     transition: opacity 0.5s ease, transform 0.5s ease;
     pointer-events: none;
 }
 
-/* Services Section */
 #services h2, #services .section-subtitle { text-align: center; }
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; margin-top: 50px; align-items: stretch; }
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+    align-items: stretch;
+}
 .service-item {
-    background-color: transparent; padding: 40px; text-align: left; border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent; padding: 35px;
+    text-align: left; border: 1px solid rgba(255, 255, 255, 0.2);
     transition: background-color 0.4s ease, transform 0.3s ease; position: relative; overflow: hidden;
     display: flex; flex-direction: column;
 }
 .service-item:hover { background-color: rgba(255, 255, 255, 0.05); transform: translateY(-8px); }
-.service-icon { font-size: 3rem; margin-bottom: 25px; line-height: 1; font-weight: 300; flex-shrink: 0; }
-.service-item h3 { margin-bottom: 15px; font-size: 1.4rem; flex-shrink: 0; }
-.service-item p { opacity: 0.8; margin-bottom: 0; flex-grow: 1; }
+.service-icon { font-size: 2.8rem; margin-bottom: 20px; line-height: 1; font-weight: 300; flex-shrink: 0; }
+.service-item h3 { margin-bottom: 15px; font-size: 1.3rem; flex-shrink: 0; }
+.service-item p { opacity: 0.8; margin-bottom: 0; flex-grow: 1; font-size: 0.95rem; }
 
-/* Experience Section */
 #experience { padding: 80px 0; }
 #experience .container { text-align: center; }
 #experience h2 { margin-bottom: 50px; }
-.counters-wrapper { display: flex; justify-content: center; align-items: flex-start; gap: 60px; flex-wrap: wrap; }
-.counter-box { padding: 20px; min-width: 250px; text-align: center; }
+.counters-wrapper {
+    display: flex; justify-content: center; align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.counter-box {
+    padding: 20px;
+    min-width: 200px;
+    flex: 1 1 200px;
+    max-width: 270px;
+    text-align: center;
+}
 .counter-value { font-size: 3.5rem; font-weight: 700; line-height: 1.1; margin-bottom: 10px; min-height: 1.1em; }
 .counter-label { font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.8; }
 
-/* Why Us Section */
 .why-us-content { display: flex; align-items: center; gap: 60px; }
 .why-us-image { flex: 1; text-align: center; }
 .why-us-image img { max-width: 500px; will-change: transform; transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); }
@@ -338,7 +335,6 @@ section {
 .advantage-item h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 5px; color: var(--primary-color); }
 .advantage-item p { font-size: 0.95rem; line-height: 1.6; margin-bottom: 0; color: var(--text-color-dark); opacity: 0.8; }
 
-/* Contact Section */
 #contact { text-align: center; }
 #contact h2 { margin-bottom: 15px; }
 #contact p.subtitle { max-width: 700px; margin: 0 auto 50px auto; opacity: 0.8; }
@@ -358,7 +354,7 @@ section {
 .form-group textarea:focus { outline: none; border-color: var(--secondary-color); background-color: rgba(255, 255, 255, 0.1); }
 .form-group textarea { min-height: 150px; resize: vertical; }
 .form-submit-btn { text-align: center; margin-top: 30px; }
-/* Contact Form Submit Button Status Styles */
+
 .contact-form button[type="submit"] {
     min-width: 200px;
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
@@ -375,16 +371,15 @@ section {
     color: var(--secondary-color);
     cursor: default;
 }
-/* Disable hover effect when showing status */
 .contact-form button[type="submit"].success::before,
 .contact-form button[type="submit"].error::before {
     display: none;
 }
 .contact-form button[type="submit"].success:hover,
 .contact-form button[type="submit"].error:hover {
-     color: var(--secondary-color); /* Prevent text color change */
-     background-color: inherit; /* Prevent background change */
-     border-color: inherit; /* Prevent border change */
+     color: var(--secondary-color);
+     background-color: inherit;
+     border-color: inherit;
 }
 .contact-form button[type="submit"]:disabled {
      opacity: 0.7;
@@ -394,7 +389,6 @@ section {
     left: -100%; /* Prevent hover slide effect when disabled */
 }
 
-/* Sticky Contact Button */
 .sticky-contact { position: fixed; bottom: 30px; right: 30px; z-index: 999; }
 .sticky-contact a {
     display: flex; align-items: center; justify-content: center; width: 60px; height: 60px;
@@ -404,7 +398,6 @@ section {
 .sticky-contact a:hover { background-color: #333; transform: scale(1.1); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
 .sticky-contact svg { width: 28px; height: 28px; }
 
-/* Footer */
 footer { background-color: #0a0a0a; color: rgba(255, 255, 255, 0.6); text-align: center; padding: 30px 0; font-size: 0.9rem; }
 footer p { color: rgba(255, 255, 255, 0.6); margin-bottom: 10px; }
 .footer-links { list-style: none; padding: 0; margin-top: 10px; }
@@ -412,7 +405,6 @@ footer p { color: rgba(255, 255, 255, 0.6); margin-bottom: 10px; }
 .footer-links a { color: rgba(255, 255, 255, 0.7); text-decoration: underline; font-size: 0.85rem; cursor: pointer; }
 .footer-links a:hover { color: var(--secondary-color); }
 
-/* --- Overlays & Modals --- */
 .modal-overlay {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background-color: var(--modal-overlay-color); z-index: 1002;
@@ -443,7 +435,6 @@ footer p { color: rgba(255, 255, 255, 0.6); margin-bottom: 10px; }
 .modal-close { position: absolute; top: 15px; right: 20px; font-size: 2.5rem; font-weight: bold; line-height: 1; color: var(--primary-color); cursor: pointer; background: none; border: none; padding: 0; transition: color 0.2s ease; -webkit-appearance: none; appearance: none; }
 .modal-close:hover { color: #555; }
 
-/* --- Cookie Banner Popup --- */
 .cookie-overlay {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background-color: var(--cookie-overlay-color); z-index: 1040;
@@ -466,12 +457,24 @@ footer p { color: rgba(255, 255, 255, 0.6); margin-bottom: 10px; }
 .cookie-banner-actions { display: flex; justify-content: center; gap: 15px; }
 .cookie-banner .btn { padding: 10px 25px; font-size: 0.85rem; }
 
-/* --- Responsive Styles --- */
-
 .br-mobile { display: block; }
 @media (min-width: 769px) { .br-mobile { display: none; } }
 
-@media (max-width: 992px) { /* Tablet - Large */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+    }
+     .counters-wrapper {
+        gap: 30px;
+    }
+     .counter-box {
+        min-width: 180px;
+        flex-basis: 200px;
+    }
+}
+
+@media (max-width: 992px) {
     :root { --section-padding: 80px 0; }
     h1 { font-size: 3rem; } h2 { font-size: 2.2rem; } #hero h1 { font-size: 3.2rem; }
     .container { max-width: 960px; padding: 0 20px; }
@@ -488,12 +491,15 @@ footer p { color: rgba(255, 255, 255, 0.6); margin-bottom: 10px; }
     .advantage-grid { grid-template-columns: 1fr; gap: 25px; text-align: left; }
     .why-us-text { flex: 1; } .why-us-content { align-items: stretch; }
     #hero p { font-size: 1.2rem; }
-    .counters-wrapper { gap: 40px; } .counter-box { min-width: 200px; } .counter-value { font-size: 3rem; }
+    .counters-wrapper { gap: 40px; }
+    .counter-box { min-width: calc(50% - 20px); flex-basis: calc(50% - 20px); }
+    .counter-value { font-size: 3rem; }
     .modal { width: 95%; } .modal-content { padding: 25px 30px; }
     .cookie-banner { max-width: 90%; padding: 25px; }
+     .services-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 }
 
-@media (max-width: 768px) { /* Tablet - Small / Large Phones */
+@media (max-width: 768px) {
      :root { --section-padding: 70px 0; --header-height: 75px; }
      html { scroll-padding-top: var(--header-height); }
      h1 { font-size: 2.8rem; } h2 { font-size: 2rem; }
@@ -503,7 +509,6 @@ footer p { color: rgba(255, 255, 255, 0.6); margin-bottom: 10px; }
      #hero { background-attachment: scroll; }
      .main-nav li { margin-left: 30px; }
 
-    /* Mobile Navigation */
     .nav-toggle { display: block; }
     .main-nav {
         position: fixed; top: 0; right: -100%; width: 80%; max-width: 320px; height: 100vh;
@@ -527,7 +532,7 @@ footer p { color: rgba(255, 255, 255, 0.6); margin-bottom: 10px; }
     .services-grid { grid-template-columns: 1fr; gap: 30px;} .service-item { padding: 30px; }
     #experience { padding: 50px 0; }
     .counters-wrapper { gap: 30px; flex-direction: column; align-items: center; }
-    .counter-box { min-width: auto; width: 80%; }
+    .counter-box { min-width: auto; width: 80%; max-width: 300px; flex-basis: auto; }
     .advantage-grid { grid-template-columns: 1fr; }
     .sticky-contact { bottom: 20px; right: 20px; }
     .sticky-contact a { width: 50px; height: 50px; }
@@ -540,7 +545,7 @@ footer p { color: rgba(255, 255, 255, 0.6); margin-bottom: 10px; }
     .cookie-banner-content { font-size: 0.9rem; margin-bottom: 20px; }
 }
 
-@media (max-width: 576px) { /* Small Phones */
+@media (max-width: 576px) {
     :root { --section-padding: 60px 0; --header-height: 70px; }
     h1 { font-size: 2.2rem; } #hero h1 { font-size: 2.5rem; } #hero p { font-size: 1rem; }
     .logo img { height: 40px; }
@@ -551,6 +556,9 @@ footer p { color: rgba(255, 255, 255, 0.6); margin-bottom: 10px; }
     .founder-card p:not(.founder-title) { font-size: 0.9rem; }
     .founder-contact-btn { font-size: 0.85rem; padding: 8px 20px; }
     .service-item { padding: 25px; }
+    .service-icon { font-size: 2.5rem; }
+    .service-item h3 { font-size: 1.2rem; }
+    .service-item p { font-size: 0.9rem; }
     .form-group input[type="text"], .form-group input[type="email"], .form-group textarea { padding: 12px; }
     .advantage-item { gap: 15px; }
     .advantage-item h3 { font-size: 1rem; } .advantage-item p { font-size: 0.9rem; }
@@ -568,10 +576,6 @@ footer p { color: rgba(255, 255, 255, 0.6); margin-bottom: 10px; }
     .contact-form button[type="submit"] { font-size: 0.85rem; }
 }
 
-/* Remove touch-specific override for founder button visibility */
-/* @media (hover: none) { ... } <-- Removed this block */
-
-/* Style for the active founder card (tapped on mobile) */
 .founder-card.active-card .founder-contact-btn {
     opacity: 1;
     transform: translateY(0);

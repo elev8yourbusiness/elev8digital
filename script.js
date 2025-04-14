@@ -1,11 +1,10 @@
-// --- i18n Content ---
 const i18nStrings = {
     pageTitle: { en: "elev8digital - We Elevate Your Business", de: "elev8digital - We Elevate Your Business" },
     navHome: { en: "Home", de: "Home" },
-    navAbout: { en: "About", de: "About" },
-    navServices: { en: "Services", de: "Services" },
-    navExperience: { en: "Experience", de: "Experience" },
-    navWhyUs: { en: "Why Us", de: "Why Us" },
+    navAbout: { en: "About", de: "Über Uns" },
+    navServices: { en: "Services", de: "Leistungen" },
+    navExperience: { en: "Experience", de: "Erfahrung" },
+    navWhyUs: { en: "Why Us", de: "Warum Wir" },
     navContact: { en: "Contact", de: "Kontakt" },
     heroHeadline: { en: "We Elevate Your<br>Business", de: "We Elevate Your<br>Business" },
     heroSubheadline: { en: "Performance marketing & e-commerce expertise focused on driving measurable growth for ambitious brands.", de: "Performance Marketing und E-Commerce-Kompetenz für nachhaltiges, messbares Wachstum starker Marken." },
@@ -14,7 +13,6 @@ const i18nStrings = {
     aboutText1: { en: "elev8digital isn't just another agency. We are a dedicated duo, deeply invested in the success of our clients. We blend strategic performance marketing with meticulous e-commerce optimization.", de: "Als engagiertes Zweierteam setzen wir alles daran, unsere Kunden erfolgreich zu machen. Wir verbinden strategisches Performance Marketing mit sorgfältiger E-Commerce-Optimierung." },
     aboutText2: { en: "We focus on what matters: data-driven strategies that deliver tangible ROI. Think of us as an extension of your team – dedicated, transparent, and focused on your goals.", de: "Wir konzentrieren uns auf das Wesentliche: Datengestützte Strategien, die greifbaren ROI liefern. Betrachten Sie uns als Erweiterung Ihres Teams – engagiert, transparent und auf Ihre Ziele fokussiert." },
     aboutButton: { en: "Explore Services", de: "Leistungen Entdecken" },
-    // --- Founders Section ---
     foundersTitle: { en: "Who You'll Work With", de: "Mit wem Sie zusammenarbeiten" },
     foundersSubtitle: {
         en: "No surprises here. You work directly with experienced professionals dedicated to your success.",
@@ -33,7 +31,6 @@ const i18nStrings = {
         de: "Taylan bringt langjährige Erfahrung in führenden E-Commerce- und Marketingpositionen mit. Sein Fokus liegt auf strategischem Wachstum – durch strukturierte Shop-Optimierung, gezielte Maßnahmen entlang der Customer Journey und eine nachhaltige Positionierung Ihres Online-Business."
      },
     founderContactBtn: { en: "Contact Now", de: "Jetzt kontaktieren" },
-    // --- Services Section ---
     servicesTitle: { en: "Core Capabilities", de: "Kernkompetenzen" },
     servicesSubtitle: { en: "Tailored solutions designed to maximize your digital footprint and revenue.", de: "Maßgeschneiderte Lösungen zur Maximierung Ihrer digitalen Präsenz und Ihres Umsatzes." },
     service1Title: { en: "Performance<br>Marketing", de: "Performance<br>Marketing" },
@@ -48,11 +45,30 @@ const i18nStrings = {
         en: "Holistic growth strategies, well-founded analyses, and clean tracking form the foundation. We define channels, funnels, and KPIs for your sustainable success.",
         de: "Ganzheitliche Wachstumsstrategien, fundierte Analysen und sauberes Tracking bilden die Basis. Wir definieren Kanäle, Funnels und KPIs für Ihren nachhaltigen Erfolg."
     },
+    service4Title: { en: "Marketplace<br>Integration", de: "Marktplatz-<br>Integration" },
+    service4Text: {
+        en: "Consulting and integration with relevant marketplaces like Amazon, Otto, AboutYou & Co. to expand your sales channels.",
+        de: "Beratung und Anbindung an relevante Marktplätze wie Amazon, Otto, AboutYou & Co. zur Erweiterung Ihrer Vertriebskanäle."
+    },
+    service5Title: { en: "Technology<br>Consulting", de: "Technologie-<br>Beratung" },
+    service5Text: {
+        en: "Expertise in selecting and integrating systems such as ERP, CRM, PIM, etc. to optimize your business processes.",
+        de: "Expertise bei der Auswahl und Integration von Systemen wie ERP, CRM, PIM etc. zur Optimierung Ihrer Geschäftsprozesse."
+    },
+    service6Title: { en: "Web<br>Development", de: "Web-<br>Entwicklung" },
+    service6Text: {
+        en: "Conception and implementation of custom websites and online shops that convince and convert.",
+        de: "Konzeption und Umsetzung von individuellen Websites und Onlineshops, die überzeugen und konvertieren."
+    },
     experienceTitle: { en: "Proven Expertise", de: "Nachgewiesene Expertise" },
     experienceCounter1Label: { en: "Years Combined Experience", de: "Jahre kombinierte Erfahrung" },
     experienceCounter2Value: { en: "8-Figure", de: "8-stellig" },
     experienceCounter2Label: { en: "Budgets Managed Annually", de: "Verwaltete Jahresbudgets" },
-    whyUsTitle: { en: "The Elev8 <span class='br-mobile'></span>Advantage", de: "The Elev8 <span class='br-mobile'></span>Advantage" },
+    experienceCounter3Value: { en: "7+", de: "7+" },
+    experienceCounter3Label: { en: "Marketplaces Integrated", de: "Integrierte Marktplätze" },
+    experienceCounter4Value: { en: "Diverse", de: "Diverse" },
+    experienceCounter4Label: { en: "Shop Systems (Shopify to SFCC)", de: "Shopsysteme (Shopify bis SFCC)" },
+    whyUsTitle: { en: "The Elev8 <span class='br-mobile'></span>Advantage", de: "Der Elev8 <span class='br-mobile'></span>Vorteil" },
     whyUsSubtitle: { en: "We combine agency-level expertise with the focus and dedication of in-house specialists.", de: "Wir kombinieren Expertise auf Agentur-Niveau mit dem Fokus und Engagement von Inhouse-Spezialisten." },
     advantage1Title: { en: "Direct Founder Involvement", de: "Direkte Betreuung durch Gründer" },
     advantage1Text: { en: "Work directly with us – no junior account managers, ensuring deep understanding.", de: "Bei uns arbeiten Sie direkt mit erfahrenen Profis – kein Weiterreichen an Junioren, dafür echtes Verständnis und schnelle Ergebnisse." },
@@ -73,8 +89,8 @@ const i18nStrings = {
     formLabelMessage: { en: "Your Message", de: "Ihre Nachricht" },
     formButtonSubmit: { en: "Send Message", de: "Nachricht Senden" },
     formButtonSending: { en: "Sending...", de: "Sende..." },
-    formSuccessMsg: { en: "Thank you! Message sent.", de: "Vielen Dank! Nachricht gesendet." }, // Slightly shorter success
-    formErrorMsg: { en: "Oops! Error sending message.", de: "Ups! Fehler beim Senden." }, // Slightly shorter error
+    formSuccessMsg: { en: "Thank you! Message sent.", de: "Vielen Dank! Nachricht gesendet." },
+    formErrorMsg: { en: "Oops! Error sending message.", de: "Ups! Fehler beim Senden." },
     contactEmailPrefix: { en: "Email:", de: "E-Mail:" },
     footerRights: { en: "All Rights Reserved.", de: "Alle Rechte vorbehalten." },
     footerImprint: { en: "Imprint", de: "Impressum" },
@@ -174,13 +190,11 @@ const i18nStrings = {
     cookieAcceptBtn: { en: "Understood", de: "Verstanden" },
 };
 
-// --- Helper Function to Get Dynamic Header Height ---
 function getHeaderHeight() {
     const headerElement = document.querySelector('.main-header');
     return headerElement?.offsetHeight > 0 ? headerElement.offsetHeight : 70;
 }
 
-// --- Global Scope Functions for Modals/Popups ---
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
     const modalOverlay = document.getElementById('modal-overlay');
@@ -213,12 +227,10 @@ function closeCookieBanner() {
     }
 }
 
-// --- Helper Functions to Check State ---
 const isModalOpen = () => document.querySelector('.modal.active') !== null;
 const isNavOpen = () => document.querySelector('.main-nav.active') !== null;
 const isCookiePopupOpen = () => document.getElementById('cookie-banner')?.classList.contains('active');
 
-// --- Central Function to Manage Body Scroll Lock ---
 function updateBodyScrollLock() {
     const body = document.body;
     const modalOverlay = document.getElementById('modal-overlay');
@@ -237,7 +249,6 @@ function updateBodyScrollLock() {
     }
 }
 
-// --- Smooth Scrolling ---
 function smoothScrollToTarget(targetId) {
     if (!targetId || targetId === '#') return;
     try {
@@ -251,44 +262,46 @@ function smoothScrollToTarget(targetId) {
     } catch (e) { console.error(`Error finding element for scroll: ${targetId}`, e); }
 }
 
-// --- Global variable for nav toggle function ---
 let toggleNav;
 
-// --- Initialize Everything on DOMContentLoaded ---
 document.addEventListener('DOMContentLoaded', function () {
     try {
-        // Apply Translations
         const userLang = navigator.language || navigator.userLanguage;
         const lang = userLang.startsWith('de') ? 'de' : 'en';
-        document.documentElement.lang = lang;
-        const keysWithHTML = ['aboutTitle', 'privacyTitle', 'heroHeadline', 'service1Title', 'service2Title', 'whyUsTitle', 'contactTitle'];
+        document.documentElement.lang = lang; // Set detected language on HTML tag
+
+        const keysWithHTML = ['aboutTitle', 'privacyTitle', 'heroHeadline', 'service1Title', 'service2Title', 'service3Title', 'service4Title', 'service5Title', 'service6Title', 'whyUsTitle', 'contactTitle'];
 
         Object.keys(i18nStrings).forEach(key => {
             const elements = document.querySelectorAll(`[data-i18n-key="${key}"]`);
             if (elements.length === 0 && key !== 'pageTitle') return;
-            // Improved fallback: Try current lang -> EN -> DE -> first defined
+
             const translation = i18nStrings[key]?.[lang]
                                 ?? i18nStrings[key]?.['en']
                                 ?? i18nStrings[key]?.['de']
                                 ?? i18nStrings[key]?.[Object.keys(i18nStrings[key])[0]];
-            if (translation === undefined) return;
 
-            if (key === 'pageTitle') document.title = translation;
-            else elements.forEach(el => el[keysWithHTML.includes(key) ? 'innerHTML' : 'textContent'] = translation);
+            if (translation === undefined) {
+                console.warn(`Translation key "${key}" has no value for lang "${lang}" or fallbacks.`);
+                return;
+            }
+
+            if (key === 'pageTitle') {
+                document.title = translation;
+            } else {
+                // Apply translation via JS, overwriting the HTML fallback if necessary
+                elements.forEach(el => el[keysWithHTML.includes(key) ? 'innerHTML' : 'textContent'] = translation);
+            }
         });
 
-        // Initialize Core Page Functionality
         initializePage();
-        // Initialize Cookie Banner
         initializeCookieBanner();
 
     } catch (error) { console.error("Initialization Error:", error); }
 });
 
 
-// --- Function to contain Core Page Initializations ---
 function initializePage() {
-    // Cache elements
     const modalOverlay = document.getElementById('modal-overlay');
     const navToggle = document.getElementById('nav-toggle');
     const mainNav = document.querySelector('.main-nav');
@@ -300,18 +313,14 @@ function initializePage() {
     const emailHiddenInput = document.getElementById('email-hidden');
     const counters = document.querySelectorAll('.counter-value[data-target], .counter-value[data-i18n-key]');
     const experienceSection = document.getElementById('experience');
-    const foundersGrid = document.getElementById('founders-grid'); // Get the grid container
+    const foundersGrid = document.getElementById('founders-grid');
 
-    // Initialize Libraries
-    if (typeof feather !== 'undefined') feather.replace(); else console.warn("Feather Icons not loaded");
-    if (typeof AOS !== 'undefined') AOS.init({ duration: 800, easing: 'ease-in-out-quad', once: true, offset: 50 });
-    else console.warn("AOS not loaded");
+    if (typeof feather !== 'undefined') { feather.replace(); } else { console.warn("Feather Icons not loaded"); }
+    if (typeof AOS !== 'undefined') { AOS.init({ duration: 800, easing: 'ease-in-out-quad', once: true, offset: 50 }); } else { console.warn("AOS not loaded"); }
 
-    // Dynamic Year
     const currentYearElement = document.getElementById('current-year');
     if (currentYearElement) currentYearElement.textContent = new Date().getFullYear();
 
-    // --- Mobile Navigation Toggle ---
     toggleNav = () => {
         if (!mainNav || !navToggle || !modalOverlay) return;
         const isOpening = !mainNav.classList.contains('active');
@@ -338,10 +347,9 @@ function initializePage() {
                .nav-toggle.active span::after { transform: rotate(-45deg); }`;
         } else { styleElement?.remove(); }
     }
-    if (navToggle) navToggle.addEventListener('click', toggleNav);
-    else console.warn("Nav toggle button not found.");
+    if (navToggle) { navToggle.addEventListener('click', toggleNav); }
+    else { console.warn("Nav toggle button not found."); }
 
-    // --- Mobile Navigation Link Handling ---
     if (mainNav) {
         mainNav.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -356,61 +364,53 @@ function initializePage() {
         });
     } else console.warn("Mobile navigation container not found.");
 
-    // --- Founder Card Tap Handling ---
     if (foundersGrid) {
         const founderCards = foundersGrid.querySelectorAll('.founder-card');
-
         foundersGrid.addEventListener('click', (e) => {
             const clickedCard = e.target.closest('.founder-card');
-
-            // If the click is not on a card or is on the button itself, do nothing here
-            if (!clickedCard || e.target.closest('.founder-contact-btn')) {
-                return;
-            }
-
-            // Check if the clicked card is already active
+            if (!clickedCard || e.target.closest('.founder-contact-btn')) return;
             const wasActive = clickedCard.classList.contains('active-card');
-
-            // Remove active class from all cards first
             founderCards.forEach(card => card.classList.remove('active-card'));
-
-            // If it wasn't active, add the active class to the clicked one
-            if (!wasActive) {
-                clickedCard.classList.add('active-card');
-            }
-            // If it *was* active, clicking it again effectively deactivates it (because we removed the class above)
+            if (!wasActive) clickedCard.classList.add('active-card');
         });
-
-        // Add listener to close active card if clicking outside
         document.addEventListener('click', (e) => {
-            // If the click was outside the founders grid entirely
             if (!foundersGrid.contains(e.target)) {
                 founderCards.forEach(card => card.classList.remove('active-card'));
             }
         });
     }
 
-
-    // --- Smooth Scrolling & Initial Load ---
     document.addEventListener('click', (e) => {
         const link = e.target.closest('a');
         if (link?.hash && link.hash !== '#' && link.pathname === window.location.pathname && !link.closest('.main-nav')) {
-             try { if (document.getElementById(link.hash.substring(1))) { e.preventDefault(); smoothScrollToTarget(link.hash); } }
-             catch (err) { console.error("Non-nav link error:", err); }
+             try {
+                 if (document.getElementById(link.hash.substring(1))) {
+                     e.preventDefault();
+                     smoothScrollToTarget(link.hash);
+                 }
+             } catch (err) { console.error("Non-nav link error:", err); }
         }
     });
     window.addEventListener('load', () => {
         if (window.location.hash && window.location.hash !== '#') {
             const hash = window.location.hash;
-            try { if (document.getElementById(hash.substring(1))) { history.replaceState(null, '', window.location.pathname + window.location.search); requestAnimationFrame(() => requestAnimationFrame(() => smoothScrollToTarget(hash))); } }
-            catch (e) { console.error(`Initial hash scroll error: ${hash}`, e); history.replaceState(null, '', window.location.pathname + window.location.search); }
+            try {
+                if (document.getElementById(hash.substring(1))) {
+                    history.replaceState(null, '', window.location.pathname + window.location.search);
+                    requestAnimationFrame(() => requestAnimationFrame(() => smoothScrollToTarget(hash)));
+                }
+            } catch (e) {
+                console.error(`Initial hash scroll error: ${hash}`, e);
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
         }
     });
 
-    // --- Scroll Padding & Parallax ---
     let resizeTimer;
-    window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => document.documentElement.style.scrollPaddingTop = getHeaderHeight() + 'px', 100); });
-    document.documentElement.style.scrollPaddingTop = getHeaderHeight() + 'px';
+    const setScrollPadding = () => document.documentElement.style.scrollPaddingTop = getHeaderHeight() + 'px';
+    window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(setScrollPadding, 100); });
+    setScrollPadding();
+
     function handleScroll() {
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -425,43 +425,64 @@ function initializePage() {
     window.addEventListener('scroll', () => { if (!ticking) { window.requestAnimationFrame(() => { handleScroll(); ticking = false; }); ticking = true; } });
     handleScroll();
 
-    // --- Animated Counter ---
     let countersAnimated = false;
     const animateCountersObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting && !countersAnimated && entry.target.id === 'experience') {
+                const lang = document.documentElement.lang || 'en';
                 counters.forEach(counter => {
                     const targetAttr = counter.getAttribute('data-target');
                     const i18nKey = counter.getAttribute('data-i18n-key');
-                    if (targetAttr) { const target = +targetAttr; if (!isNaN(target)) animateCounter(counter, target, 1500); else counter.textContent = targetAttr; }
-                    else if (i18nKey && i18nStrings[i18nKey]) { const lang = document.documentElement.lang || 'en'; counter.textContent = i18nStrings[i18nKey][lang] || i18nStrings[i18nKey]['en']; }
+
+                    if (targetAttr) { // Handle numeric counters
+                        const target = +targetAttr;
+                        if (!isNaN(target)) animateCounter(counter, target, 1500);
+                        else counter.textContent = targetAttr; // Fallback if data-target isn't a number
+                    } else if (i18nKey && i18nStrings[i18nKey]) { // Handle text-based counters
+                        const textValue = i18nStrings[i18nKey]?.[lang]
+                                         ?? i18nStrings[i18nKey]?.['en']
+                                         ?? i18nStrings[i18nKey]?.['de']
+                                         ?? '';
+                         counter.textContent = textValue; // Set text directly
+                    }
                 });
-                countersAnimated = true; observer.unobserve(entry.target);
+                countersAnimated = true;
+                observer.unobserve(entry.target); // Stop observing
             }
         });
     }, { threshold: 0.3 });
-    if (experienceSection) animateCountersObserver.observe(experienceSection);
-    else console.warn("Experience section not found for counter observer.");
+
+    if (experienceSection) {
+        animateCountersObserver.observe(experienceSection);
+    } else {
+        console.warn("Experience section not found for counter observer.");
+    }
 
     function animateCounter(element, target, duration) {
-        let start = 0, range = target - start, current = start, startTime = performance.now();
+        let start = 0;
+        const range = target - start;
+        let current = start;
+        const startTime = performance.now();
         const isThirtyPlus = element.getAttribute('data-target') === '30';
+
         function update(timestamp) {
-            const elapsed = timestamp - startTime, progress = Math.min(1, elapsed / duration);
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(1, elapsed / duration);
             current = start + range * progress;
             const displayValue = target > 0 ? Math.ceil(current) : Math.floor(current);
             element.textContent = displayValue.toLocaleString() + (isThirtyPlus ? "+" : "");
-            if (progress < 1) requestAnimationFrame(update);
-            else element.textContent = target.toLocaleString() + (isThirtyPlus ? "+" : "");
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                element.textContent = target.toLocaleString() + (isThirtyPlus ? "+" : "");
+            }
         }
         requestAnimationFrame(update);
     }
 
-    // --- Contact Form AJAX Submission ---
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-
             if(emailInput && emailHiddenInput) { emailHiddenInput.value = emailInput.value; }
 
             const formData = new FormData(contactForm);
@@ -501,7 +522,9 @@ function initializePage() {
                     resetButton();
                 } else {
                     response.json().then(data => {
-                        const errorMsg = data?.errors?.map(err => err.message).join(', ') || i18nStrings.formErrorMsg?.[lang] || 'An error occurred.';
+                        const errorMsg = data?.errors?.map(err => err.message).join(', ')
+                                       || i18nStrings.formErrorMsg?.[lang]
+                                       || 'An error occurred.';
                         if (submitButton) { submitButton.textContent = errorMsg; submitButton.classList.add('error'); }
                         resetButton();
                     }).catch(() => {
@@ -518,21 +541,19 @@ function initializePage() {
         });
     } else console.warn("Contact form not found.");
 
-    // --- Modal Event Listeners ---
     const openImprintLink = document.getElementById('open-imprint');
     const openPrivacyLink = document.getElementById('open-privacy');
-    if (openImprintLink) openImprintLink.addEventListener('click', (e) => { e.preventDefault(); openModal('imprint-modal'); }); else console.warn("Imprint link not found");
-    if (openPrivacyLink) openPrivacyLink.addEventListener('click', (e) => { e.preventDefault(); openModal('privacy-modal'); }); else console.warn("Privacy link not found");
-    document.addEventListener('click', (e) => { if (e.target.matches('.modal-close')) closeModal(); });
-    if (modalOverlay) modalOverlay.addEventListener('click', () => { if (!modalOverlay.classList.contains('nav-open') && isModalOpen()) closeModal(); });
-    else console.warn("Modal overlay not found");
+    if (openImprintLink) { openImprintLink.addEventListener('click', (e) => { e.preventDefault(); openModal('imprint-modal'); }); } else { console.warn("Imprint link not found"); }
+    if (openPrivacyLink) { openPrivacyLink.addEventListener('click', (e) => { e.preventDefault(); openModal('privacy-modal'); }); } else { console.warn("Privacy link not found"); }
 
-    // --- Global Escape Key Handler ---
+    document.addEventListener('click', (e) => { if (e.target.matches('.modal-close')) closeModal(); });
+    if (modalOverlay) { modalOverlay.addEventListener('click', () => { if (!modalOverlay.classList.contains('nav-open') && isModalOpen()) closeModal(); }); }
+    else { console.warn("Modal overlay not found"); }
+
     document.addEventListener('keydown', (e) => { if (e.key === "Escape") { if (isModalOpen()) closeModal(); else if (isNavOpen()) toggleNav(); else if (isCookiePopupOpen()) closeCookieBanner(); } });
 
-} // End of initializePage
+}
 
-// --- Function to Initialize and Manage Cookie Banner Popup ---
 function initializeCookieBanner() {
     const banner = document.getElementById('cookie-banner');
     const overlay = document.getElementById('cookie-overlay');
@@ -547,6 +568,5 @@ function initializeCookieBanner() {
     if (currentConsent !== CONSENT_VALUE) {
         requestAnimationFrame(() => { banner.classList.add('active'); overlay.classList.add('active'); updateBodyScrollLock(); });
         acceptButton.addEventListener('click', handleConsent);
-        // Privacy link handling logic is removed
     }
-} // End of initializeCookieBanner
+}

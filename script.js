@@ -60,6 +60,7 @@ const i18nStrings = {
         en: "Conception and implementation of custom websites and online shops that convince and convert.",
         de: "Konzeption und Umsetzung von individuellen Websites und Onlineshops, die überzeugen und konvertieren."
     },
+    serviceLearnMore: { en: "Learn More", de: "Mehr erfahren" },
     experienceTitle: { en: "Proven Expertise", de: "Nachgewiesene Expertise" },
     experienceCounter1Label: { en: "Years Combined Experience", de: "Jahre kombinierte Erfahrung" },
     experienceCounter2Value: { en: "8-Figure", de: "8-stellig" },
@@ -99,8 +100,6 @@ const i18nStrings = {
     imprintDSGVO: { en: "Information according to § 5 TMG", de: "Angaben gemäß § 5 TMG" },
     imprintPartners: { en: "Represented by the partners:", de: "Vertreten durch die Gesellschafter:" },
     imprintContact: { en: "Contact:", de: "Kontakt:" },
-    imprintPhone: { en: "Phone:", de: "Telefon:" },
-    imprintPhoneOptional: { en: "(Optional, please enter)", de: "(Optional, bitte eintragen)" },
     imprintEmail: { en: "Email:", de: "E-Mail:" },
     imprintVatId: { en: "VAT ID:", de: "Umsatzsteuer-ID:" },
     imprintVatIdText: { en: "VAT identification number according to §27a VAT Act:", de: "Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:" },
@@ -114,7 +113,7 @@ const i18nStrings = {
     imprintLiabilityLinksText: { en: "Our offer includes links to external third party websites. We have no influence on the contents of those websites, therefore we cannot guarantee for those contents. Providers or administrators of linked websites are always responsible for their own contents. The linked websites had been checked for possible violations of law at the time of the establishment of the link. Illegal contents were not detected at the time of the linking. A permanent monitoring of the contents of linked websites cannot be imposed without reasonable indications that there has been a violation of law. Illegal links will be removed immediately at the time we get knowledge of them.", de: "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen." },
     imprintCopyrightTitle: { en: "Copyright", de: "Urheberrecht" },
     imprintCopyrightText: { en: "Contents and compilations published on these websites by the providers are subject to German copyright laws. Reproduction, editing, distribution as well as the use of any kind outside the scope of the copyright law require a written permission of the author or originator. Downloads and copies of these websites are permitted for private use only. The commercial use of our contents without permission of the originator is prohibited. Copyright laws of third parties are respected as long as the contents on these websites do not originate from the provider. Contributions of third parties on this site are indicated as such. However, if you notice any violations of copyright law, please inform us. Such contents will be removed immediately.", de: "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen." },
-    privacyTitle: { en: "Privacy Policy", de: "Datenschutz&shy;erklärung" },
+    privacyTitle: { en: "Privacy Policy", de: "Datenschutz­erklärung" },
     privacyGeneralTitle: { en: "1. Privacy at a Glance", de: "1. Datenschutz auf einen Blick" },
     privacyGeneralHintTitle: { en: "General Information", de: "Allgemeine Hinweise" },
     privacyGeneralHintText: { en: "The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data with which you can be personally identified. Detailed information on the subject of data protection can be found in our privacy policy listed below this text.", de: "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung." },
@@ -188,7 +187,44 @@ const i18nStrings = {
         de: "Diese Website verwendet technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Mit der Nutzung der Seite stimmen Sie dem zu."
     },
     cookieAcceptBtn: { en: "Understood", de: "Verstanden" },
+
+    pmPageTitle: { en: "Performance Marketing Agency for Growth | elev8digital", de: "Performance Marketing Agentur für Wachstum | elev8digital" },
+    pmMetaDescription: { en: "elev8digital: Your experts for data-driven performance marketing (Google Ads, Meta Ads, TikTok). Sustainably increase ROAS & conversions.", de: "elev8digital: Ihre Experten für datengetriebenes Performance Marketing (Google Ads, Meta Ads, TikTok). Steigern Sie ROAS & Conversions nachhaltig."},
+    pmHeroHeadline: { en: "Performance <span class='br-mobile'></span>Marketing<br>That Delivers Results.", de: "Performance <span class='br-mobile'></span>Marketing,<br>das Ergebnisse liefert." },
+    pmHeroSubheadline: { en: "We maximize your ROAS through data-driven campaigns on Google, Meta, TikTok & Co. – transparent, strategic, sustainable.", de: "Wir maximieren Ihren ROAS durch datengetriebene Kampagnen auf Google, Meta, TikTok & Co. – transparent, strategisch, nachhaltig." },
+    pmHeroButton: { en: "Request Analysis Now", de: "Jetzt Analyse anfordern" },
+    pmProblemTitle: { en: "Burning Budget?<br>We Bring Efficiency.", de: "Budget verbrannt?<br>Wir bringen Effizienz." },
+    pmProblemText1: { en: "Many companies invest in online advertising without seeing clear results. Lack of tracking, unclear target audience definition, and inefficient campaign structures often lead to high ad waste and low Return on Ad Spend (ROAS).", de: "Viele Unternehmen investieren in Online-Werbung, ohne klare Ergebnisse zu sehen. Fehlendes Tracking, unklare Zielgruppenansprache und ineffiziente Kampagnenstrukturen führen oft zu hohem Streuverlust und geringem Return on Ad Spend (ROAS)." },
+    pmProblemText2: { en: "elev8digital analyzes your potential, implements precise tracking, and develops tailored campaign strategies that contribute to your business goals and generate measurable growth.", de: "elev8digital analysiert Ihre Potenziale, implementiert präzises Tracking und entwickelt maßgeschneiderte Kampagnenstrategien, die auf Ihre Geschäftsziele einzahlen und messbares Wachstum generieren." },
+    pmOfferingsTitle: { en: "Our Performance Marketing Services", de: "Unsere Performance Marketing Leistungen" },
+    pmOfferingsSubtitle: { en: "A holistic approach for your success across all relevant channels.", de: "Ein ganzheitlicher Ansatz für Ihren Erfolg auf allen relevanten Kanälen." },
+    pmOffering1Title: { en: "Google Ads (SEA)", de: "Google Ads (SEA)" },
+    pmOffering1Text: { en: "Search, Shopping, Display, Video, and Performance Max campaigns to reach purchase-ready users along the entire customer journey.", de: "Such-, Shopping-, Display-, Video- und Performance Max-Kampagnen zur Erreichung kaufbereiter Nutzer entlang der gesamten Customer Journey." },
+    pmOffering2Title: { en: "Meta Ads (Facebook & Instagram)", de: "Meta Ads (Facebook & Instagram)" },
+    pmOffering2Text: { en: "Effective campaigns for lead generation, brand awareness increase, and sales through precise targeting and creative ad assets.", de: "Effektive Kampagnen zur Leadgenerierung, Steigerung der Markenbekanntheit und Abverkauf über präzises Targeting und kreative Werbemittel." },
+    pmOffering3Title: { en: "TikTok Ads & Other Channels", de: "TikTok Ads & Weitere Kanäle" },
+    pmOffering3Text: { en: "Tapping into new audiences and channels like TikTok, Pinterest, or LinkedIn Ads, based on strategic fit and potential.", de: "Erschließung neuer Zielgruppen und Kanäle wie TikTok, Pinterest oder LinkedIn Ads, basierend auf strategischer Eignung und Potenzial." },
+    pmOffering4Title: { en: "Tracking & Analytics", de: "Tracking & Analytics" },
+    pmOffering4Text: { en: "Clean implementation of tracking (GA4, Server-Side Tagging, Conversion APIs) and meaningful analyses as the basis for optimization.", de: "Saubere Implementierung von Tracking (GA4, Server-Side Tagging, Conversion APIs) und aussagekräftige Analysen als Basis für Optimierung." },
+    pmApproachTitle: { en: "Our Approach:<br>Data, Strategy, Transparency", de: "Unser Ansatz:<br>Daten, Strategie, Transparenz" },
+    pmApproachText1: { en: "We don't believe in standard solutions. Our process starts with a deep analysis of your business, goals, and data.", de: "Wir glauben nicht an Standardlösungen. Unser Prozess beginnt mit einer tiefgehenden Analyse Ihres Geschäfts, Ihrer Ziele und Ihrer Daten." },
+    pmApproachPoint1: { en: "Analysis & Strategy: Understanding your goals, target audiences, and competitors.", de: "Analyse & Strategie: Verständnis Ihrer Ziele, Zielgruppen und Wettbewerber." },
+    pmApproachPoint2: { en: "Setup & Tracking: Implementation or optimization of tracking and campaign structure.", de: "Setup & Tracking: Implementierung oder Optimierung von Tracking und Kampagnenstruktur." },
+    pmApproachPoint3: { en: "Optimization & Scaling: Continuous testing, adjustments, and data-based scaling.", de: "Optimierung & Skalierung: Kontinuierliche Tests, Anpassungen und datenbasierte Skalierung." },
+    pmApproachPoint4: { en: "Reporting & Communication: Transparent reports and regular alignment.", de: "Reporting & Austausch: Transparente Berichte und regelmäßige Abstimmung." },
+    pmApproachText2: { en: "We work as an extension of your team – always focused on your long-term success.", de: "Wir arbeiten als Erweiterung Ihres Teams – immer mit Fokus auf Ihren langfristigen Erfolg." },
+    pmCtaTitle: { en: "Ready for Performance Marketing That Works?", de: "Bereit für Performance Marketing,<br>das wirkt?" },
+    pmCtaSubtitle: { en: "Let's discuss informally how we can elevate your online advertising to the next level.", de: "Lassen Sie uns unverbindlich besprechen, wie wir Ihre Online-Werbung auf das nächste Level heben können." }
 };
+
+const keysWithHTML = [
+    'aboutTitle', 'privacyTitle', 'heroHeadline',
+    'service1Title', 'service2Title', 'service3Title', 'service4Title', 'service5Title', 'service6Title',
+    'whyUsTitle',
+    'contactTitle',
+    'pmHeroHeadline', 'pmProblemTitle', 'pmApproachTitle',
+    'pmCtaTitle'
+ ];
 
 function getHeaderHeight() {
     const headerElement = document.querySelector('.main-header');
@@ -250,7 +286,7 @@ function updateBodyScrollLock() {
 }
 
 function smoothScrollToTarget(targetId) {
-    if (!targetId || targetId === '#') return;
+    if (!targetId.startsWith('#')) return false; // Only handle anchors
     try {
         const targetElement = document.getElementById(targetId.substring(1));
         if (targetElement) {
@@ -258,8 +294,15 @@ function smoothScrollToTarget(targetId) {
             const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
             const offsetPosition = elementPosition - headerHeight;
             window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-        } else console.warn(`Smooth scroll target not found: ${targetId}`);
-    } catch (e) { console.error(`Error finding element for scroll: ${targetId}`, e); }
+            return true;
+        } else {
+            console.warn(`Smooth scroll target not found on this page: ${targetId}`);
+            return false;
+        }
+    } catch (e) {
+        console.error(`Error finding element for scroll: ${targetId}`, e);
+        return false;
+    }
 }
 
 let toggleNav;
@@ -268,30 +311,41 @@ document.addEventListener('DOMContentLoaded', function () {
     try {
         const userLang = navigator.language || navigator.userLanguage;
         const lang = userLang.startsWith('de') ? 'de' : 'en';
-        document.documentElement.lang = lang; // Set detected language on HTML tag
-
-        const keysWithHTML = ['aboutTitle', 'privacyTitle', 'heroHeadline', 'service1Title', 'service2Title', 'service3Title', 'service4Title', 'service5Title', 'service6Title', 'whyUsTitle', 'contactTitle'];
+        document.documentElement.lang = lang;
 
         Object.keys(i18nStrings).forEach(key => {
             const elements = document.querySelectorAll(`[data-i18n-key="${key}"]`);
-            if (elements.length === 0 && key !== 'pageTitle') return;
+            const isLandingPage = document.querySelector('main.landingpage-content');
+
+            if (key === 'pageTitle' && !isLandingPage) {
+                document.title = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'];
+                return;
+            }
+            if (key === 'pmPageTitle' && isLandingPage) {
+                document.title = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'];
+                return;
+            }
+             if (key === 'pmMetaDescription' && isLandingPage) {
+                const metaDescTag = document.querySelector('meta[name="description"]');
+                if (metaDescTag) {
+                    metaDescTag.setAttribute('content', i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de']);
+                }
+                return;
+             }
+
+            if (elements.length === 0) return;
 
             const translation = i18nStrings[key]?.[lang]
                                 ?? i18nStrings[key]?.['en']
                                 ?? i18nStrings[key]?.['de']
-                                ?? i18nStrings[key]?.[Object.keys(i18nStrings[key])[0]];
+                                ?? elements[0].textContent;
 
             if (translation === undefined) {
                 console.warn(`Translation key "${key}" has no value for lang "${lang}" or fallbacks.`);
                 return;
             }
 
-            if (key === 'pageTitle') {
-                document.title = translation;
-            } else {
-                // Apply translation via JS, overwriting the HTML fallback if necessary
-                elements.forEach(el => el[keysWithHTML.includes(key) ? 'innerHTML' : 'textContent'] = translation);
-            }
+            elements.forEach(el => el[keysWithHTML.includes(key) ? 'innerHTML' : 'textContent'] = translation);
         });
 
         initializePage();
@@ -300,7 +354,6 @@ document.addEventListener('DOMContentLoaded', function () {
     } catch (error) { console.error("Initialization Error:", error); }
 });
 
-
 function initializePage() {
     const modalOverlay = document.getElementById('modal-overlay');
     const navToggle = document.getElementById('nav-toggle');
@@ -308,6 +361,7 @@ function initializePage() {
     const progressBar = document.getElementById('scroll-progress-bar');
     const aboutImage = document.getElementById('about-img');
     const whyUsImage = document.getElementById('why-us-img');
+    const pmProblemImage = document.getElementById('pm-problem-img'); // Specific to landing page parallax
     const contactForm = document.getElementById('contact-form');
     const emailInput = document.getElementById('email');
     const emailHiddenInput = document.getElementById('email-hidden');
@@ -352,15 +406,21 @@ function initializePage() {
 
     if (mainNav) {
         mainNav.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const link = e.target.closest('a[href^="#"]');
-            if (link?.hash && link.hash !== '#') {
-                 try {
-                     const targetElement = document.getElementById(link.hash.substring(1));
-                     if (targetElement) { e.preventDefault(); if (isNavOpen()) toggleNav(); setTimeout(() => smoothScrollToTarget(link.hash), 250); }
-                     else if (isNavOpen()) toggleNav();
-                 } catch (err) { if (isNavOpen()) toggleNav(); console.error("Nav link error:", err); }
-            } else if (isNavOpen() && e.target.closest('a')) { toggleNav(); }
+            const link = e.target.closest('a');
+            if (!link) return;
+            const href = link.getAttribute('href');
+
+            if (href && href.startsWith('#')) { // Anchor on current page
+                e.stopPropagation(); e.preventDefault();
+                if (isNavOpen()) toggleNav();
+                setTimeout(() => smoothScrollToTarget(href), isNavOpen() ? 250 : 0);
+            } else if (href && href.includes('/#')) { // Link to section on main page from subpage
+                if (isNavOpen()) { e.stopPropagation(); toggleNav(); }
+                // Allow default navigation for the link to main page
+            } else if (isNavOpen()) { // Any other link in open nav
+                e.stopPropagation(); toggleNav();
+                 // Allow default navigation
+            }
         });
     } else console.warn("Mobile navigation container not found.");
 
@@ -374,7 +434,7 @@ function initializePage() {
             if (!wasActive) clickedCard.classList.add('active-card');
         });
         document.addEventListener('click', (e) => {
-            if (!foundersGrid.contains(e.target)) {
+            if (foundersGrid && !foundersGrid.contains(e.target)) {
                 founderCards.forEach(card => card.classList.remove('active-card'));
             }
         });
@@ -382,80 +442,88 @@ function initializePage() {
 
     document.addEventListener('click', (e) => {
         const link = e.target.closest('a');
-        if (link?.hash && link.hash !== '#' && link.pathname === window.location.pathname && !link.closest('.main-nav')) {
+        if (link?.hash && link.hash !== '#' && !link.closest('.main-nav')) {
              try {
-                 if (document.getElementById(link.hash.substring(1))) {
-                     e.preventDefault();
+                const targetElement = document.getElementById(link.hash.substring(1));
+                if (targetElement) {
+                     e.preventDefault(); // Prevent default jump ONLY if target is on the current page
                      smoothScrollToTarget(link.hash);
-                 }
-             } catch (err) { console.error("Non-nav link error:", err); }
+                }
+             } catch (err) { console.error("Anchor link error:", err); }
         }
     });
+
     window.addEventListener('load', () => {
-        if (window.location.hash && window.location.hash !== '#') {
+        // Only apply initial hash scroll on the main page (index.html)
+        if (window.location.hash && window.location.hash !== '#' && !document.querySelector('main.landingpage-content')) {
             const hash = window.location.hash;
             try {
                 if (document.getElementById(hash.substring(1))) {
-                    history.replaceState(null, '', window.location.pathname + window.location.search);
+                    // Delay smooth scroll slightly after page load and potential layout shifts
+                    history.replaceState(null, '', window.location.pathname + window.location.search); // Clean URL
                     requestAnimationFrame(() => requestAnimationFrame(() => smoothScrollToTarget(hash)));
                 }
             } catch (e) {
                 console.error(`Initial hash scroll error: ${hash}`, e);
-                history.replaceState(null, '', window.location.pathname + window.location.search);
+                history.replaceState(null, '', window.location.pathname + window.location.search); // Clean URL anyway
             }
         }
     });
 
     let resizeTimer;
-    const setScrollPadding = () => document.documentElement.style.scrollPaddingTop = getHeaderHeight() + 'px';
+    const setScrollPadding = () => {
+        if(document.documentElement) {
+            document.documentElement.style.scrollPaddingTop = getHeaderHeight() + 'px';
+        }
+    };
     window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(setScrollPadding, 100); });
     setScrollPadding();
 
     function handleScroll() {
         const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const docHeight = document.documentElement ? document.documentElement.scrollHeight - window.innerHeight : 0;
         if (progressBar) progressBar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
+
         const scrollFactor = 0.08;
+        // Apply parallax only if element exists and is potentially visible
         if (aboutImage && isElementPotentiallyInViewport(aboutImage)) applyScrollTransform(aboutImage, scrollFactor);
         if (whyUsImage && isElementPotentiallyInViewport(whyUsImage)) applyScrollTransform(whyUsImage, scrollFactor);
+        if (pmProblemImage && isElementPotentiallyInViewport(pmProblemImage)) applyScrollTransform(pmProblemImage, scrollFactor); // For LP
     }
     function applyScrollTransform(el, factor) { const r = el.getBoundingClientRect(), vh = window.innerHeight; el.style.transform = `translateY(${-((r.top + r.height / 2) - vh / 2) * factor}px)`; }
     function isElementPotentiallyInViewport(el) { if (!el) return false; const r = el.getBoundingClientRect(); return r.top < window.innerHeight && r.bottom > 0; }
+
     let ticking = false;
     window.addEventListener('scroll', () => { if (!ticking) { window.requestAnimationFrame(() => { handleScroll(); ticking = false; }); ticking = true; } });
     handleScroll();
 
     let countersAnimated = false;
-    const animateCountersObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !countersAnimated && entry.target.id === 'experience') {
-                const lang = document.documentElement.lang || 'en';
-                counters.forEach(counter => {
-                    const targetAttr = counter.getAttribute('data-target');
-                    const i18nKey = counter.getAttribute('data-i18n-key');
-
-                    if (targetAttr) { // Handle numeric counters
-                        const target = +targetAttr;
-                        if (!isNaN(target)) animateCounter(counter, target, 1500);
-                        else counter.textContent = targetAttr; // Fallback if data-target isn't a number
-                    } else if (i18nKey && i18nStrings[i18nKey]) { // Handle text-based counters
-                        const textValue = i18nStrings[i18nKey]?.[lang]
-                                         ?? i18nStrings[i18nKey]?.['en']
-                                         ?? i18nStrings[i18nKey]?.['de']
-                                         ?? '';
-                         counter.textContent = textValue; // Set text directly
-                    }
-                });
-                countersAnimated = true;
-                observer.unobserve(entry.target); // Stop observing
-            }
-        });
-    }, { threshold: 0.3 });
-
     if (experienceSection) {
+        const animateCountersObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !countersAnimated && entry.target.id === 'experience') {
+                    const lang = document.documentElement.lang || 'en';
+                    counters.forEach(counter => {
+                        const targetAttr = counter.getAttribute('data-target');
+                        const i18nKey = counter.getAttribute('data-i18n-key');
+                        if (targetAttr) {
+                            const target = +targetAttr;
+                            if (!isNaN(target)) animateCounter(counter, target, 1500);
+                            else counter.textContent = targetAttr;
+                        } else if (i18nKey && i18nStrings[i18nKey]) {
+                            const textValue = i18nStrings[i18nKey]?.[lang]
+                                             ?? i18nStrings[i18nKey]?.['en']
+                                             ?? i18nStrings[i18nKey]?.['de']
+                                             ?? '';
+                             counter.textContent = textValue;
+                        }
+                    });
+                    countersAnimated = true;
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
         animateCountersObserver.observe(experienceSection);
-    } else {
-        console.warn("Experience section not found for counter observer.");
     }
 
     function animateCounter(element, target, duration) {
@@ -464,7 +532,6 @@ function initializePage() {
         let current = start;
         const startTime = performance.now();
         const isThirtyPlus = element.getAttribute('data-target') === '30';
-
         function update(timestamp) {
             const elapsed = timestamp - startTime;
             const progress = Math.min(1, elapsed / duration);

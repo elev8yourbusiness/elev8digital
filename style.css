@@ -760,10 +760,14 @@ footer p { color: rgba(255, 255, 255, 0.6); margin-bottom: 10px; }
         .offerings-grid { grid-template-columns: 1fr; }
         .content-image img { transition: none; }
     
-        #pm-approach .content-image {
+        #pm-approach .content-image,
+        #eco-approach .content-image,
+        #sa-approach .content-image {
             display: none;
         }
-        #pm-approach .content-text {
+        #pm-approach .content-text,
+        #eco-approach .content-text,
+        #sa-approach .content-image {
             flex-basis: 100%;
             max-width: 100%;
         }

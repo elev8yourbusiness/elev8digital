@@ -187,34 +187,6 @@ const i18nStrings = {
         de: "Diese Website verwendet technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Mit der Nutzung der Seite stimmen Sie dem zu."
     },
     cookieAcceptBtn: { en: "Understood", de: "Verstanden" },
-
-    pmPageTitle: { en: "Performance Marketing Agency for Growth | elev8digital", de: "Performance Marketing Agentur für Wachstum | elev8digital" },
-    pmMetaDescription: { en: "elev8digital: Your experts for data-driven performance marketing (Google Ads, Meta Ads, TikTok). Sustainably increase ROAS & conversions.", de: "elev8digital: Ihre Experten für datengetriebenes Performance Marketing (Google Ads, Meta Ads, TikTok). Steigern Sie ROAS & Conversions nachhaltig."},
-    pmHeroHeadline: { en: "Performance <span class='br-mobile'></span>Marketing<br>That Delivers Results.", de: "Performance <span class='br-mobile'></span>Marketing,<br>das Ergebnisse liefert." },
-    pmHeroSubheadline: { en: "We maximize your ROAS through data-driven campaigns on Google, Meta, TikTok & Co. – transparent, strategic, sustainable.", de: "Wir maximieren Ihren ROAS durch datengetriebene Kampagnen auf Google, Meta, TikTok & Co. – transparent, strategisch, nachhaltig." },
-    pmHeroButton: { en: "Request Analysis Now", de: "Jetzt Analyse anfordern" },
-    pmProblemTitle: { en: "Burning Budget?<br>We Bring Efficiency.", de: "Budget verbrannt?<br>Wir bringen Effizienz." },
-    pmProblemText1: { en: "Many companies invest in online advertising without seeing clear results. Lack of tracking, unclear target audience definition, and inefficient campaign structures often lead to high ad waste and low Return on Ad Spend (ROAS).", de: "Viele Unternehmen investieren in Online-Werbung, ohne klare Ergebnisse zu sehen. Fehlendes Tracking, unklare Zielgruppenansprache und ineffiziente Kampagnenstrukturen führen oft zu hohem Streuverlust und geringem Return on Ad Spend (ROAS)." },
-    pmProblemText2: { en: "elev8digital analyzes your potential, implements precise tracking, and develops tailored campaign strategies that contribute to your business goals and generate measurable growth.", de: "elev8digital analysiert Ihre Potenziale, implementiert präzises Tracking und entwickelt maßgeschneiderte Kampagnenstrategien, die auf Ihre Geschäftsziele einzahlen und messbares Wachstum generieren." },
-    pmOfferingsTitle: { en: "Our Performance Marketing Services", de: "Unsere Performance Marketing Leistungen" },
-    pmOfferingsSubtitle: { en: "A holistic approach for your success across all relevant channels.", de: "Ein ganzheitlicher Ansatz für Ihren Erfolg auf allen relevanten Kanälen." },
-    pmOffering1Title: { en: "Google Ads (SEA)", de: "Google Ads (SEA)" },
-    pmOffering1Text: { en: "Search, Shopping, Display, Video, and Performance Max campaigns to reach purchase-ready users along the entire customer journey.", de: "Such-, Shopping-, Display-, Video- und Performance Max-Kampagnen zur Erreichung kaufbereiter Nutzer entlang der gesamten Customer Journey." },
-    pmOffering2Title: { en: "Meta Ads (Facebook & Instagram)", de: "Meta Ads (Facebook & Instagram)" },
-    pmOffering2Text: { en: "Effective campaigns for lead generation, brand awareness increase, and sales through precise targeting and creative ad assets.", de: "Effektive Kampagnen zur Leadgenerierung, Steigerung der Markenbekanntheit und Abverkauf über präzises Targeting und kreative Werbemittel." },
-    pmOffering3Title: { en: "TikTok Ads & Other Channels", de: "TikTok Ads & Weitere Kanäle" },
-    pmOffering3Text: { en: "Tapping into new audiences and channels like TikTok, Pinterest, or LinkedIn Ads, based on strategic fit and potential.", de: "Erschließung neuer Zielgruppen und Kanäle wie TikTok, Pinterest oder LinkedIn Ads, basierend auf strategischer Eignung und Potenzial." },
-    pmOffering4Title: { en: "Tracking & Analytics", de: "Tracking & Analytics" },
-    pmOffering4Text: { en: "Clean implementation of tracking (GA4, Server-Side Tagging, Conversion APIs) and meaningful analyses as the basis for optimization.", de: "Saubere Implementierung von Tracking (GA4, Server-Side Tagging, Conversion APIs) und aussagekräftige Analysen als Basis für Optimierung." },
-    pmApproachTitle: { en: "Our Approach:<br>Data, Strategy, Transparency", de: "Unser Ansatz:<br>Daten, Strategie, Transparenz" },
-    pmApproachText1: { en: "We don't believe in standard solutions. Our process starts with a deep analysis of your business, goals, and data.", de: "Wir glauben nicht an Standardlösungen. Unser Prozess beginnt mit einer tiefgehenden Analyse Ihres Geschäfts, Ihrer Ziele und Ihrer Daten." },
-    pmApproachPoint1: { en: "Analysis & Strategy: Understanding your goals, target audiences, and competitors.", de: "Analyse & Strategie: Verständnis Ihrer Ziele, Zielgruppen und Wettbewerber." },
-    pmApproachPoint2: { en: "Setup & Tracking: Implementation or optimization of tracking and campaign structure.", de: "Setup & Tracking: Implementierung oder Optimierung von Tracking und Kampagnenstruktur." },
-    pmApproachPoint3: { en: "Optimization & Scaling: Continuous testing, adjustments, and data-based scaling.", de: "Optimierung & Skalierung: Kontinuierliche Tests, Anpassungen und datenbasierte Skalierung." },
-    pmApproachPoint4: { en: "Reporting & Communication: Transparent reports and regular alignment.", de: "Reporting & Austausch: Transparente Berichte und regelmäßige Abstimmung." },
-    pmApproachText2: { en: "We work as an extension of your team – always focused on your long-term success.", de: "Wir arbeiten als Erweiterung Ihres Teams – immer mit Fokus auf Ihren langfristigen Erfolg." },
-    pmCtaTitle: { en: "Ready for Performance Marketing That Works?", de: "Bereit für Performance Marketing,<br>das wirkt?" },
-    pmCtaSubtitle: { en: "Let's discuss informally how we can elevate your online advertising to the next level.", de: "Lassen Sie uns unverbindlich besprechen, wie wir Ihre Online-Werbung auf das nächste Level heben können." }
 };
 
 const keysWithHTML = [
@@ -222,8 +194,9 @@ const keysWithHTML = [
     'service1Title', 'service2Title', 'service3Title', 'service4Title', 'service5Title', 'service6Title',
     'whyUsTitle',
     'contactTitle',
-    'pmHeroHeadline', 'pmProblemTitle', 'pmApproachTitle',
-    'pmCtaTitle'
+    'pmHeroHeadline', 'pmProblemTitle', 'pmApproachTitle', 'pmCtaTitle',
+    'ecoHeroHeadline', 'ecoProblemTitle', 'ecoApproachTitle', 'ecoCtaTitle',
+    'saHeroHeadline', 'saProblemTitle', 'saApproachTitle', 'saCtaTitle'
  ];
 
 function getHeaderHeight() {
@@ -315,30 +288,62 @@ document.addEventListener('DOMContentLoaded', function () {
 
         Object.keys(i18nStrings).forEach(key => {
             const elements = document.querySelectorAll(`[data-i18n-key="${key}"]`);
-            const isLandingPage = document.querySelector('main.landingpage-content');
+            const isPmLandingPage = document.querySelector('main.landingpage-content #pm-hero') !== null;
+            const isEcoLandingPage = document.querySelector('main.landingpage-content #eco-hero') !== null;
+            const isSaLandingPage = document.querySelector('main.landingpage-content #sa-hero') !== null;
 
-            if (key === 'pageTitle' && !isLandingPage) {
-                document.title = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'];
-                return;
-            }
-            if (key === 'pmPageTitle' && isLandingPage) {
-                document.title = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'];
-                return;
-            }
-             if (key === 'pmMetaDescription' && isLandingPage) {
-                const metaDescTag = document.querySelector('meta[name="description"]');
-                if (metaDescTag) {
-                    metaDescTag.setAttribute('content', i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de']);
+            // Set page title and meta description based on which landing page it is
+            if (isSaLandingPage) {
+                 if (key === 'saPageTitle') {
+                    document.title = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'];
+                    return;
+                 }
+                 if (key === 'saMetaDescription') {
+                    const metaDescTag = document.querySelector('meta[name="description"]');
+                    if (metaDescTag) {
+                        metaDescTag.setAttribute('content', i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de']);
+                    }
+                    return;
+                 }
+            } else if (isEcoLandingPage) {
+                if (key === 'ecoPageTitle') {
+                    document.title = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'];
+                    return;
                 }
-                return;
-             }
+                if (key === 'ecoMetaDescription') {
+                    const metaDescTag = document.querySelector('meta[name="description"]');
+                    if (metaDescTag) {
+                        metaDescTag.setAttribute('content', i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de']);
+                    }
+                    return;
+                }
+            } else if (isPmLandingPage) {
+                 if (key === 'pmPageTitle') {
+                     document.title = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'];
+                     return;
+                 }
+                 if (key === 'pmMetaDescription') {
+                     const metaDescTag = document.querySelector('meta[name="description"]');
+                     if (metaDescTag) {
+                         metaDescTag.setAttribute('content', i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de']);
+                     }
+                    return;
+                 }
+            } else if (!isPmLandingPage && !isEcoLandingPage && !isSaLandingPage) { // Main page
+                 if (key === 'pageTitle') {
+                     document.title = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'];
+                     return;
+                 }
+                 // Standard meta description for main page (could be added here if needed)
+            }
 
-            if (elements.length === 0) return;
+            // Process element content translations
+             if (elements.length === 0) return;
 
             const translation = i18nStrings[key]?.[lang]
                                 ?? i18nStrings[key]?.['en']
                                 ?? i18nStrings[key]?.['de']
-                                ?? elements[0].textContent;
+                                ?? elements[0].textContent; // Fallback to existing content
 
             if (translation === undefined) {
                 console.warn(`Translation key "${key}" has no value for lang "${lang}" or fallbacks.`);
@@ -361,7 +366,14 @@ function initializePage() {
     const progressBar = document.getElementById('scroll-progress-bar');
     const aboutImage = document.getElementById('about-img');
     const whyUsImage = document.getElementById('why-us-img');
-    const pmProblemImage = document.getElementById('pm-problem-img'); // Specific to landing page parallax
+    const pmProblemImage = document.getElementById('pm-problem-img');
+    const ecoProblemImage = document.getElementById('eco-problem-img');
+    const saProblemImage = document.getElementById('sa-problem-img');
+    // --- NEU: Referenzen für Approach-Bilder ---
+    const pmApproachImage = document.getElementById('pm-approach-img');
+    const ecoApproachImage = document.getElementById('eco-approach-img');
+    const saApproachImage = document.getElementById('sa-approach-img');
+    // ------------------------------------------
     const contactForm = document.getElementById('contact-form');
     const emailInput = document.getElementById('email');
     const emailHiddenInput = document.getElementById('email-hidden');
@@ -409,18 +421,26 @@ function initializePage() {
             const link = e.target.closest('a');
             if (!link) return;
             const href = link.getAttribute('href');
+            const isExternalLink = href && (href.startsWith('http') || href.startsWith('mailto'));
+            const isAnchorLink = href && href.startsWith('#');
+            const isLinkToMainPageSection = href && href.startsWith('/#');
 
-            if (href && href.startsWith('#')) { // Anchor on current page
-                e.stopPropagation(); e.preventDefault();
+            if (isAnchorLink) { // Anchor on current page
+                e.preventDefault(); // Prevent default jump
                 if (isNavOpen()) toggleNav();
-                setTimeout(() => smoothScrollToTarget(href), isNavOpen() ? 250 : 0);
-            } else if (href && href.includes('/#')) { // Link to section on main page from subpage
-                if (isNavOpen()) { e.stopPropagation(); toggleNav(); }
-                // Allow default navigation for the link to main page
-            } else if (isNavOpen()) { // Any other link in open nav
-                e.stopPropagation(); toggleNav();
-                 // Allow default navigation
+                 // Add slight delay if nav was open to allow closing animation
+                setTimeout(() => smoothScrollToTarget(href), isNavOpen() ? 150 : 0);
+            } else if (isLinkToMainPageSection) { // Link to section on main page from subpage
+                 // Allow default navigation but close nav first if open
+                 if (isNavOpen()) toggleNav();
+                 // Let the browser handle navigation to /#section
+            } else if (!isExternalLink && isNavOpen()) { // Any other internal link in open nav
+                toggleNav(); // Close nav before navigating
+                // Allow default navigation
+            } else if (isExternalLink && isNavOpen()) {
+                 toggleNav(); // Close nav but allow external link navigation
             }
+            // For external links or other cases, default behavior is fine
         });
     } else console.warn("Mobile navigation container not found.");
 
@@ -440,9 +460,11 @@ function initializePage() {
         });
     }
 
+    // General anchor link handling for links outside the nav
     document.addEventListener('click', (e) => {
         const link = e.target.closest('a');
-        if (link?.hash && link.hash !== '#' && !link.closest('.main-nav')) {
+        // Check if it's an anchor link on the *same page* and *not* inside the main nav
+        if (link?.hash && link.hash !== '#' && !link.closest('.main-nav') && link.pathname === window.location.pathname) {
              try {
                 const targetElement = document.getElementById(link.hash.substring(1));
                 if (targetElement) {
@@ -454,14 +476,17 @@ function initializePage() {
     });
 
     window.addEventListener('load', () => {
-        // Only apply initial hash scroll on the main page (index.html)
-        if (window.location.hash && window.location.hash !== '#' && !document.querySelector('main.landingpage-content')) {
+        // Handle initial hash scroll only if hash exists and target is on the current page
+        if (window.location.hash && window.location.hash !== '#') {
             const hash = window.location.hash;
             try {
-                if (document.getElementById(hash.substring(1))) {
-                    // Delay smooth scroll slightly after page load and potential layout shifts
+                const targetElement = document.getElementById(hash.substring(1));
+                if (targetElement) {
+                    // Delay smooth scroll slightly after page load and potential layout shifts/AOS animations
                     history.replaceState(null, '', window.location.pathname + window.location.search); // Clean URL
-                    requestAnimationFrame(() => requestAnimationFrame(() => smoothScrollToTarget(hash)));
+                    setTimeout(() => {
+                        requestAnimationFrame(() => requestAnimationFrame(() => smoothScrollToTarget(hash)));
+                    }, 300); // Slightly increased delay
                 }
             } catch (e) {
                 console.error(`Initial hash scroll error: ${hash}`, e);
@@ -488,14 +513,21 @@ function initializePage() {
         // Apply parallax only if element exists and is potentially visible
         if (aboutImage && isElementPotentiallyInViewport(aboutImage)) applyScrollTransform(aboutImage, scrollFactor);
         if (whyUsImage && isElementPotentiallyInViewport(whyUsImage)) applyScrollTransform(whyUsImage, scrollFactor);
-        if (pmProblemImage && isElementPotentiallyInViewport(pmProblemImage)) applyScrollTransform(pmProblemImage, scrollFactor); // For LP
+        if (pmProblemImage && isElementPotentiallyInViewport(pmProblemImage)) applyScrollTransform(pmProblemImage, scrollFactor); // For PM LP
+        if (ecoProblemImage && isElementPotentiallyInViewport(ecoProblemImage)) applyScrollTransform(ecoProblemImage, scrollFactor); // For ECO LP
+        if (saProblemImage && isElementPotentiallyInViewport(saProblemImage)) applyScrollTransform(saProblemImage, scrollFactor); // For SA LP
+        // --- NEU: Parallax für Approach-Bilder ---
+        if (pmApproachImage && isElementPotentiallyInViewport(pmApproachImage)) applyScrollTransform(pmApproachImage, scrollFactor);
+        if (ecoApproachImage && isElementPotentiallyInViewport(ecoApproachImage)) applyScrollTransform(ecoApproachImage, scrollFactor);
+        if (saApproachImage && isElementPotentiallyInViewport(saApproachImage)) applyScrollTransform(saApproachImage, scrollFactor);
+        // ------------------------------------------
     }
     function applyScrollTransform(el, factor) { const r = el.getBoundingClientRect(), vh = window.innerHeight; el.style.transform = `translateY(${-((r.top + r.height / 2) - vh / 2) * factor}px)`; }
     function isElementPotentiallyInViewport(el) { if (!el) return false; const r = el.getBoundingClientRect(); return r.top < window.innerHeight && r.bottom > 0; }
 
     let ticking = false;
     window.addEventListener('scroll', () => { if (!ticking) { window.requestAnimationFrame(() => { handleScroll(); ticking = false; }); ticking = true; } });
-    handleScroll();
+    handleScroll(); // Initial call
 
     let countersAnimated = false;
     if (experienceSection) {
@@ -509,20 +541,20 @@ function initializePage() {
                         if (targetAttr) {
                             const target = +targetAttr;
                             if (!isNaN(target)) animateCounter(counter, target, 1500);
-                            else counter.textContent = targetAttr;
+                            else counter.textContent = targetAttr; // Handle non-numeric targets directly
                         } else if (i18nKey && i18nStrings[i18nKey]) {
                             const textValue = i18nStrings[i18nKey]?.[lang]
                                              ?? i18nStrings[i18nKey]?.['en']
                                              ?? i18nStrings[i18nKey]?.['de']
-                                             ?? '';
+                                             ?? ''; // Use key string as last resort
                              counter.textContent = textValue;
                         }
                     });
                     countersAnimated = true;
-                    observer.unobserve(entry.target);
+                    observer.unobserve(entry.target); // Stop observing once animated
                 }
             });
-        }, { threshold: 0.3 });
+        }, { threshold: 0.3 }); // Trigger when 30% visible
         animateCountersObserver.observe(experienceSection);
     }
 
@@ -531,16 +563,22 @@ function initializePage() {
         const range = target - start;
         let current = start;
         const startTime = performance.now();
-        const isThirtyPlus = element.getAttribute('data-target') === '30';
+        const isThirtyPlus = element.getAttribute('data-target') === '30'; // Special case check
+
         function update(timestamp) {
             const elapsed = timestamp - startTime;
-            const progress = Math.min(1, elapsed / duration);
-            current = start + range * progress;
+            const progress = Math.min(1, elapsed / duration); // Ensure progress doesn't exceed 1
+            // Ease-out function (cubic)
+            const easeOutProgress = 1 - Math.pow(1 - progress, 3);
+            current = start + range * easeOutProgress;
+
             const displayValue = target > 0 ? Math.ceil(current) : Math.floor(current);
-            element.textContent = displayValue.toLocaleString() + (isThirtyPlus ? "+" : "");
+            element.textContent = displayValue.toLocaleString() + (isThirtyPlus ? "+" : ""); // Add '+' if needed
+
             if (progress < 1) {
                 requestAnimationFrame(update);
             } else {
+                 // Ensure final value is exact target
                 element.textContent = target.toLocaleString() + (isThirtyPlus ? "+" : "");
             }
         }
@@ -550,7 +588,7 @@ function initializePage() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            if(emailInput && emailHiddenInput) { emailHiddenInput.value = emailInput.value; }
+            if(emailInput && emailHiddenInput) { emailHiddenInput.value = emailInput.value; } // Copy email for Formspree _replyto
 
             const formData = new FormData(contactForm);
             const submitButton = contactForm.querySelector('button[type="submit"]');
@@ -585,9 +623,10 @@ function initializePage() {
                         submitButton.textContent = i18nStrings.formSuccessMsg?.[lang] || 'Message sent!';
                         submitButton.classList.add('success');
                     }
-                    contactForm.reset();
-                    resetButton();
+                    contactForm.reset(); // Clear the form fields
+                    resetButton(); // Reset button after delay
                 } else {
+                    // Try to parse error from Formspree response
                     response.json().then(data => {
                         const errorMsg = data?.errors?.map(err => err.message).join(', ')
                                        || i18nStrings.formErrorMsg?.[lang]
@@ -595,6 +634,7 @@ function initializePage() {
                         if (submitButton) { submitButton.textContent = errorMsg; submitButton.classList.add('error'); }
                         resetButton();
                     }).catch(() => {
+                        // Fallback error message if JSON parsing fails
                         if (submitButton) { submitButton.textContent = i18nStrings.formErrorMsg?.[lang] || 'An error occurred.'; submitButton.classList.add('error'); }
                         resetButton();
                     });
@@ -602,22 +642,40 @@ function initializePage() {
             })
             .catch(error => {
                 console.error('Form submission error:', error);
+                 // Network error or other fetch issue
                 if (submitButton) { submitButton.textContent = i18nStrings.formErrorMsg?.[lang] || 'Network error.'; submitButton.classList.add('error'); }
                 resetButton();
             });
         });
     } else console.warn("Contact form not found.");
 
+    // Modal triggers
     const openImprintLink = document.getElementById('open-imprint');
     const openPrivacyLink = document.getElementById('open-privacy');
     if (openImprintLink) { openImprintLink.addEventListener('click', (e) => { e.preventDefault(); openModal('imprint-modal'); }); } else { console.warn("Imprint link not found"); }
     if (openPrivacyLink) { openPrivacyLink.addEventListener('click', (e) => { e.preventDefault(); openModal('privacy-modal'); }); } else { console.warn("Privacy link not found"); }
 
+    // Modal closing mechanisms
     document.addEventListener('click', (e) => { if (e.target.matches('.modal-close')) closeModal(); });
-    if (modalOverlay) { modalOverlay.addEventListener('click', () => { if (!modalOverlay.classList.contains('nav-open') && isModalOpen()) closeModal(); }); }
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', () => {
+            // Close modal only if overlay is clicked directly and nav is not open using the overlay
+            if (!modalOverlay.classList.contains('nav-open') && isModalOpen()) {
+                 closeModal();
+            }
+             // If nav is open, clicking overlay does nothing here (nav closing handled separately)
+        });
+    }
     else { console.warn("Modal overlay not found"); }
 
-    document.addEventListener('keydown', (e) => { if (e.key === "Escape") { if (isModalOpen()) closeModal(); else if (isNavOpen()) toggleNav(); else if (isCookiePopupOpen()) closeCookieBanner(); } });
+    // Escape key handling
+    document.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+             if (isModalOpen()) closeModal();
+             else if (isNavOpen()) toggleNav();
+             else if (isCookiePopupOpen()) closeCookieBanner();
+        }
+    });
 
 }
 
@@ -628,12 +686,20 @@ function initializeCookieBanner() {
     if (!banner || !overlay || !acceptButton) return console.warn("Cookie banner elements missing.");
 
     const CONSENT_KEY = 'elev8_cookie_consent_v1', CONSENT_VALUE = 'accepted';
-    const handleConsent = () => { try { localStorage.setItem(CONSENT_KEY, CONSENT_VALUE); } catch (e) { console.error("LS Error:", e); } closeCookieBanner(); };
+    const handleConsent = () => {
+         try { localStorage.setItem(CONSENT_KEY, CONSENT_VALUE); } catch (e) { console.error("LS Error setting consent:", e); }
+         closeCookieBanner();
+    };
     let currentConsent = null;
-    try { currentConsent = localStorage.getItem(CONSENT_KEY); } catch (e) { console.error("LS Error:", e); }
+    try { currentConsent = localStorage.getItem(CONSENT_KEY); } catch (e) { console.error("LS Error getting consent:", e); }
 
     if (currentConsent !== CONSENT_VALUE) {
-        requestAnimationFrame(() => { banner.classList.add('active'); overlay.classList.add('active'); updateBodyScrollLock(); });
+        // Use rAF to ensure styles are applied before adding class for transition
+        requestAnimationFrame(() => {
+            banner.classList.add('active');
+            overlay.classList.add('active');
+            updateBodyScrollLock();
+        });
         acceptButton.addEventListener('click', handleConsent);
     }
 }

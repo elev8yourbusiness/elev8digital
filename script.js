@@ -31,7 +31,7 @@ const i18nStrings = {
         de: "Taylan bringt langjährige Erfahrung in führenden E-Commerce- und Marketingpositionen mit. Sein Fokus liegt auf strategischem Wachstum – durch strukturierte Shop-Optimierung, gezielte Maßnahmen entlang der Customer Journey und eine nachhaltige Positionierung Ihres Online-Business."
      },
     founderContactBtn: { en: "Contact Now", de: "Jetzt kontaktieren" },
-    servicesTitle: { en: "Core Capabilities", de: "Kernkompetenzen" },
+    servicesTitle: { en: "Core Capabilities", de: "Unsere Leistungen" },
     servicesSubtitle: { en: "Tailored solutions designed to maximize your digital footprint and revenue.", de: "Maßgeschneiderte Lösungen zur Maximierung Ihrer digitalen Präsenz und Ihres Umsatzes." },
     service1Title: { en: "Performance<br>Marketing", de: "Performance<br>Marketing" },
     service1Text: { en: "Data-backed campaigns on Google, Meta, TikTok & more. With a clear focus on conversions, ROAS, and Customer Acquisition Cost (CAC).", de: "Datengestützte Kampagnen auf Google, Meta, TikTok & Co. Mit klarem Fokus auf Conversions, ROAS und Kundengewinnungskosten (CAC)." },

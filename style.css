@@ -762,12 +762,14 @@ footer p { color: rgba(255, 255, 255, 0.6); margin-bottom: 10px; }
     
         #pm-approach .content-image,
         #eco-approach .content-image,
-        #sa-approach .content-image {
+        #sa-approach .content-image,
+        #mi-approach .content-image {
             display: none;
         }
         #pm-approach .content-text,
         #eco-approach .content-text,
-        #sa-approach .content-image {
+        #sa-approach .content-text,
+        #mi-approach .content-text{
             flex-basis: 100%;
             max-width: 100%;
         }

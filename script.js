@@ -1,4 +1,7 @@
 const i18nStrings = {
+    // ================================
+    // == MAIN PAGE STRINGS           ==
+    // ================================
     pageTitle: { en: "elev8digital - We Elevate Your Business", de: "elev8digital - We Elevate Your Business" },
     navHome: { en: "Home", de: "Home" },
     navAbout: { en: "About", de: "Über Uns" },
@@ -96,6 +99,10 @@ const i18nStrings = {
     footerRights: { en: "All Rights Reserved.", de: "Alle Rechte vorbehalten." },
     footerImprint: { en: "Imprint", de: "Impressum" },
     footerPrivacy: { en: "Privacy Policy", de: "Datenschutz" },
+
+    // ================================
+    // == IMPRINT & PRIVACY STRINGS   ==
+    // ================================
     imprintTitle: { en: "Imprint", de: "Impressum" },
     imprintDSGVO: { en: "Information according to § 5 TMG", de: "Angaben gemäß § 5 TMG" },
     imprintPartners: { en: "Represented by the partners:", de: "Vertreten durch die Gesellschafter:" },
@@ -182,11 +189,165 @@ const i18nStrings = {
     privacyCookiesPurposeText: { en: "Cookies have various functions. Numerous cookies are technically necessary, as certain website functions would not work without them (e.g., the shopping cart function or the display of videos). Other cookies are used to evaluate user behavior or display advertising. Cookies that are necessary to carry out the electronic communication process, to provide certain functions you desire (e.g., for the shopping cart function) or to optimize the website (e.g., cookies for measuring the web audience) (necessary cookies) are stored on the basis of Art. 6 Para. 1 lit. f GDPR, unless another legal basis is specified. The website operator has a legitimate interest in storing necessary cookies for the technically error-free and optimized provision of their services. If consent to the storage of cookies and comparable recognition technologies has been requested, processing is carried out exclusively on the basis of this consent (Art. 6 Para. 1 lit. a GDPR and § 25 Para. 1 TTDSG); consent can be revoked at any time.", de: "Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind technisch notwendig, da bestimmte Webseitenfunktionen ohne diese nicht funktionieren würden (z.B. die Warenkorbfunktion oder die Anzeige von Videos). Andere Cookies dienen dazu, das Nutzerverhalten auszuwerten oder Werbung anzuzeigen. Cookies, die zur Durchführung des elektronischen Kommunikationsvorgangs, zur Bereitstellung bestimmter, von Ihnen erwünschter Funktionen (z. B. für die Warenkorbfunktion) oder zur Optimierung der Website (z.B. Cookies zur Messung des Webpublikums) erforderlich sind (notwendige Cookies), werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert, sofern keine andere Rechtsgrundlage angegeben wird. Der Websitebetreiber hat ein berechtigtes Interesse an der Speicherung von notwendigen Cookies zur technisch fehlerfreien und optimierten Bereitstellung seiner Dienste. Sofern eine Einwilligung zur Speicherung von Cookies und vergleichbaren Wiedererkennungstechnologien abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage dieser Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG); die Einwilligung ist jederzeit widerrufbar." },
     privacyCookiesBrowserSettingsText: { en: "You can set your browser so that you are informed about the setting of cookies and only allow cookies in individual cases, exclude the acceptance of cookies for certain cases or generally, and activate the automatic deletion of cookies when closing the browser. If cookies are deactivated, the functionality of this website may be limited.", de: "Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browsers aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein." },
     privacyCookiesWhichUsedText: { en: "Which cookies and services are used on this website can be found in this privacy policy. (Currently, no cookies are actively set by our site, except technically necessary ones by the hoster or Formspree.)", de: "Welche Cookies und Dienste auf dieser Website eingesetzt werden, können Sie dieser Datenschutzerklärung entnehmen. (Aktuell werden von unserer Seite keine Cookies aktiv gesetzt, außer technisch notwendige durch den Hoster oder Formspree.)" },
+
+    // ================================
+    // == COOKIE BANNER STRINGS       ==
+    // ================================
     cookieBannerText: {
         en: "This website uses technically necessary cookies. No tracking or analysis cookies are used. By using the site, you agree to this.",
         de: "Diese Website verwendet technisch notwendige Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Mit der Nutzung der Seite stimmen Sie dem zu."
     },
     cookieAcceptBtn: { en: "Understood", de: "Verstanden" },
+
+    // ================================
+    // == PERFORMANCE MARKETING LP    ==
+    // ================================
+    pmPageTitle: { en: "Performance Marketing Agency for Growth | elev8digital", de: "Performance Marketing Agentur für Wachstum | elev8digital" },
+    pmMetaDescription: { en: "elev8digital: Your experts for data-driven performance marketing (Google Ads, Meta Ads, TikTok). Sustainably increase ROAS & conversions.", de: "elev8digital: Ihre Experten für datengetriebenes Performance Marketing (Google Ads, Meta Ads, TikTok). Steigern Sie ROAS & Conversions nachhaltig."},
+    pmHeroHeadline: { en: "Performance <span class='br-mobile'></span>Marketing<br>That Delivers Results.", de: "Performance <span class='br-mobile'></span>Marketing,<br>das Ergebnisse liefert." },
+    pmHeroSubheadline: { en: "We maximize your ROAS through data-driven campaigns on Google, Meta, TikTok & Co. – transparent, strategic, sustainable.", de: "Wir maximieren Ihren ROAS durch datengetriebene Kampagnen auf Google, Meta, TikTok & Co. – transparent, strategisch, nachhaltig." },
+    pmHeroButton: { en: "Request Analysis Now", de: "Jetzt Analyse anfordern" },
+    pmProblemTitle: { en: "Burning Budget?<br>We Bring Efficiency.", de: "Budget verbrannt?<br>Wir bringen Effizienz." },
+    pmProblemText1: { en: "Many companies invest in online advertising without seeing clear results. Lack of tracking, unclear target audience definition, and inefficient campaign structures often lead to high ad waste and low Return on Ad Spend (ROAS).", de: "Viele Unternehmen investieren in Online-Werbung, ohne klare Ergebnisse zu sehen. Fehlendes Tracking, unklare Zielgruppenansprache und ineffiziente Kampagnenstrukturen führen oft zu hohem Streuverlust und geringem Return on Ad Spend (ROAS)." },
+    pmProblemText2: { en: "elev8digital analyzes your potential, implements precise tracking, and develops tailored campaign strategies that contribute to your business goals and generate measurable growth.", de: "elev8digital analysiert Ihre Potenziale, implementiert präzises Tracking und entwickelt maßgeschneiderte Kampagnenstrategien, die auf Ihre Geschäftsziele einzahlen und messbares Wachstum generieren." },
+    pmProblemButton: { en: "Boost Efficiency Now", de: "Jetzt Effizienz steigern" },
+    pmOfferingsTitle: { en: "Our Performance Marketing Services", de: "Unsere Performance Marketing Leistungen" },
+    pmOfferingsSubtitle: { en: "A holistic approach for your success across all relevant channels.", de: "Ein ganzheitlicher Ansatz für Ihren Erfolg auf allen relevanten Kanälen." },
+    pmOffering1Title: { en: "Google Ads (SEA)", de: "Google Ads (SEA)" },
+    pmOffering1Text: { en: "Search, Shopping, Display, Video, and Performance Max campaigns to reach purchase-ready users along the entire customer journey.", de: "Such-, Shopping-, Display-, Video- und Performance Max-Kampagnen zur Erreichung kaufbereiter Nutzer entlang der gesamten Customer Journey." },
+    pmOffering2Title: { en: "Meta Ads (Facebook & Instagram)", de: "Meta Ads (Facebook & Instagram)" },
+    pmOffering2Text: { en: "Effective campaigns for lead generation, brand awareness increase, and sales through precise targeting and creative ad assets.", de: "Effektive Kampagnen zur Leadgenerierung, Steigerung der Markenbekanntheit und Abverkauf über präzises Targeting und kreative Werbemittel." },
+    pmOffering3Title: { en: "TikTok Ads & Other Channels", de: "TikTok Ads & Weitere Kanäle" },
+    pmOffering3Text: { en: "Tapping into new audiences and channels like TikTok, Pinterest, or LinkedIn Ads, based on strategic fit and potential.", de: "Erschließung neuer Zielgruppen und Kanäle wie TikTok, Pinterest oder LinkedIn Ads, basierend auf strategischer Eignung und Potenzial." },
+    pmOffering4Title: { en: "Tracking & Analytics", de: "Tracking & Analytics" },
+    pmOffering4Text: { en: "Clean implementation of tracking (GA4, Server-Side Tagging, Conversion APIs) and meaningful analyses as the basis for optimization.", de: "Saubere Implementierung von Tracking (GA4, Server-Side Tagging, Conversion APIs) und aussagekräftige Analysen als Basis für Optimierung." },
+    pmApproachTitle: { en: "Our Approach:<br>Data, Strategy, Transparency", de: "Unser Ansatz:<br>Daten, Strategie, Transparenz" },
+    pmApproachText1: { en: "We don't believe in standard solutions. Our process starts with a deep analysis of your business, goals, and data.", de: "Wir glauben nicht an Standardlösungen. Unser Prozess beginnt mit einer tiefgehenden Analyse Ihres Geschäfts, Ihrer Ziele und Ihrer Daten." },
+    pmApproachPoint1: { en: "Analysis & Strategy: Understanding your goals, target audiences, and competitors.", de: "Analyse & Strategie: Verständnis Ihrer Ziele, Zielgruppen und Wettbewerber." },
+    pmApproachPoint2: { en: "Setup & Tracking: Implementation or optimization of tracking and campaign structure.", de: "Setup & Tracking: Implementierung oder Optimierung von Tracking und Kampagnenstruktur." },
+    pmApproachPoint3: { en: "Optimization & Scaling: Continuous testing, adjustments, and data-based scaling.", de: "Optimierung & Skalierung: Kontinuierliche Tests, Anpassungen und datenbasierte Skalierung." },
+    pmApproachPoint4: { en: "Reporting & Communication: Transparent reports and regular alignment.", de: "Reporting & Austausch: Transparente Berichte und regelmäßige Abstimmung." },
+    pmApproachText2: { en: "We work as an extension of your team – always focused on your long-term success.", de: "Wir arbeiten als Erweiterung Ihres Teams – immer mit Fokus auf Ihren langfristigen Erfolg." },
+    pmApproachButton: { en: "Discuss Your Strategy", de: "Strategie besprechen" },
+    pmCtaTitle: { en: "Ready for Performance Marketing That Works?", de: "Bereit für Performance Marketing,<br>das wirkt?" },
+    pmCtaSubtitle: { en: "Let's discuss informally how we can elevate your online advertising to the next level.", de: "Lassen Sie uns unverbindlich besprechen, wie wir Ihre Online-Werbung auf das nächste Level heben können." },
+
+    // ================================
+    // == E-COMMERCE OPTIMIZATION LP  ==
+    // ================================
+    ecoPageTitle: { en: "E-Commerce Optimization for More Revenue | elev8digital", de: "E-Commerce Optimierung für mehr Umsatz | elev8digital" },
+    ecoMetaDescription: { en: "Increase conversions & revenue with e-commerce optimization from elev8digital. Experts in shop audit, CRO, UX/UI & technical optimization.", de: "Steigern Sie Conversions & Umsatz mit E-Commerce Optimierung von elev8digital. Experten für Shop-Audit, CRO, UX/UI & technische Optimierung." },
+    ecoHeroHeadline: { en: "Your Online Shop Can Do More.<br>We Unlock Its Potential.", de: "Ihr Onlineshop kann mehr.<br>Wir holen es raus." },
+    ecoHeroSubheadline: { en: "Increase conversions, revenue, and customer satisfaction through targeted e-commerce optimization – by expert hands.", de: "Steigern Sie Conversions, Umsatz und Kundenzufriedenheit durch gezielte E-Commerce Optimierung – von Expertenhand." },
+    ecoHeroButton: { en: "Request Potential Analysis", de: "Potenzialanalyse anfordern" },
+    ecoProblemTitle: { en: "Visitors, but no Buyers?<br>We Change That.", de: "Besucher, aber keine Käufer?<br>Wir ändern das." },
+    ecoProblemText1: { en: "Many online shops struggle with high bounce rates, low conversion rates, and abandoned shopping carts. Often, the causes lie in unclear user guidance, technical hurdles, or a lack of trust.", de: "Viele Onlineshops kämpfen mit hohen Absprungraten, niedrigen Conversion Rates und vollen Warenkörben, die abgebrochen werden. Oft liegen die Ursachen in einer unklaren Nutzerführung, technischen Hürden oder einem Mangel an Vertrauen." },
+    ecoProblemText2: { en: "We identify the weak points of your shop – from the customer journey to the checkout – and develop data-based solutions that turn your visitors into satisfied customers and sustainably increase your revenue.", de: "Wir identifizieren die Schwachstellen Ihres Shops – von der Customer Journey bis zum Checkout – und entwickeln datenbasierte Lösungen, die Ihre Besucher zu zufriedenen Kunden machen und Ihren Umsatz nachhaltig steigern." },
+    ecoProblemButton: { en: "Get Shop Analysis Now", de: "Jetzt Shop analysieren lassen" },
+    ecoOfferingsTitle: { en: "Our E-Commerce Optimization Services", de: "Unsere E-Commerce Optimierungs-Services" },
+    ecoOfferingsSubtitle: { en: "Tailored solutions for every stage of your e-commerce growth.", de: "Maßgeschneiderte Lösungen für jede Phase Ihres E-Commerce-Wachstums." },
+    ecoOffering1Title: { en: "Shop Audit & Analysis", de: "Shop Audit & Analyse" },
+    ecoOffering1Text: { en: "Comprehensive review of your online shop for technical, content, and UX potential. Identification of growth levers.", de: "Umfassende Prüfung Ihres Onlineshops auf technische, inhaltliche und UX-Potenziale. Identifikation von Wachstumshebeln." },
+    ecoOffering2Title: { en: "Conversion Rate Optimization (CRO)", de: "Conversion Rate Optimierung (CRO)" },
+    ecoOffering2Text: { en: "Data-driven A/B testing and optimizations along the customer journey to maximize your sales conversions.", de: "Datengetriebene A/B-Tests und Optimierungen entlang der Customer Journey zur Maximierung Ihrer Verkaufsabschlüsse." },
+    ecoOffering3Title: { en: "UX/UI Design & Optimization", de: "UX/UI Design & Optimierung" },
+    ecoOffering3Text: { en: "Improving user experience and interface design for intuitive operation and higher customer satisfaction.", de: "Verbesserung der Nutzererfahrung und des Interface-Designs für eine intuitive Bedienung und höhere Kundenzufriedenheit." },
+    ecoOffering4Title: { en: "Technical Shop Optimization", de: "Technische Shop-Optimierung" },
+    ecoOffering4Text: { en: "Improving loading times (pagespeed), mobile friendliness, and technical SEO factors for better rankings and user experience.", de: "Verbesserung von Ladezeiten (Pagespeed), Mobile Friendliness und technischer SEO-Faktoren für bessere Rankings und Nutzererfahrung." },
+    ecoOffering5Title: { en: "Customer Journey Mapping", de: "Customer Journey Mapping" },
+    ecoOffering5Text: { en: "Analysis and optimization of all touchpoints to create a seamless and positive customer experience.", de: "Analyse und Optimierung aller Touchpoints, um ein nahtloses und positives Kundenerlebnis zu schaffen." },
+    ecoOffering6Title: { en: "Shop System & Tech Consulting", de: "Shopsystem- & Technologieberatung" },
+    ecoOffering6Text: { en: "Independent advice on selecting, migrating, or optimizing your shop system (Shopify, Shopware, etc.) and connected tools.", de: "Unabhängige Beratung bei der Auswahl, Migration oder Optimierung Ihres Shopsystems (Shopify, Shopware, etc.) und angebundener Tools." },
+    ecoApproachTitle: { en: "Our Approach:<br>Analysis, Optimization, Success", de: "Unser Ansatz:<br>Analyse, Optimierung, Erfolg" },
+    ecoApproachText1: { en: "We proceed systematically to unlock the full potential of your online shop. Our process is based on data, best practices, and continuous improvement.", de: "Wir gehen systematisch vor, um das volle Potenzial Ihres Onlineshops auszuschöpfen. Unser Prozess basiert auf Daten, bewährten Methoden und kontinuierlicher Verbesserung." },
+    ecoApproachPoint1: { en: "Deep Dive Analysis: We understand your business, your customers, and your data.", de: "Tiefenanalyse: Wir verstehen Ihr Geschäft, Ihre Kunden und Ihre Daten." },
+    ecoApproachPoint2: { en: "Strategy Development: Tailored roadmap with prioritized actions.", de: "Strategieentwicklung: Maßgeschneiderte Roadmap mit priorisierten Maßnahmen." },
+    ecoApproachPoint3: { en: "Implementation: Professional execution of optimizations.", de: "Implementierung: Fachgerechte Umsetzung der Optimierungen." },
+    ecoApproachPoint4: { en: "Testing & Validation: A/B tests to verify effectiveness.", de: "Testing & Validierung: A/B-Tests zur Überprüfung der Wirksamkeit." },
+    ecoApproachPoint5: { en: "Reporting & Iteration: Transparent success measurement and continuous adaptation.", de: "Reporting & Iteration: Transparente Erfolgsmessung und kontinuierliche Anpassung." },
+    ecoApproachText2: { en: "Consider us your external e-commerce department – focused on your sustainable success.", de: "Betrachten Sie uns als Ihre externe E-Commerce-Abteilung – fokussiert auf Ihren nachhaltigen Erfolg." },
+    ecoApproachButton: { en: "Schedule Strategy Call", de: "Strategiegespräch vereinbaren" },
+    ecoCtaTitle: { en: "Ready for a More<br>Successful Online Shop?", de: "Bereit für einen<br>erfolgreicheren Onlineshop?" },
+    ecoCtaSubtitle: { en: "Contact us for a non-binding initial consultation and find out how we can boost the performance of your e-commerce business.", de: "Kontaktieren Sie uns für eine unverbindliche Erstberatung und erfahren Sie, wie wir die Performance Ihres E-Commerce-Business steigern können." },
+
+    // ================================
+    // == STRATEGIE & ANALYTICS LP    ==
+    // ================================
+    saPageTitle: { en: "Digital Strategy & Analytics Consulting | elev8digital", de: "Digitale Strategie & Analytics Beratung | elev8digital" },
+    saMetaDescription: { en: "Data-driven digital strategies & analytics by elev8digital. More clarity, measurable success through expert consulting & clean tracking (GA4, GTM).", de: "Datenbasierte Digitalstrategien & Analytics von elev8digital. Mehr Klarheit, messbarer Erfolg durch Experten-Beratung & sauberes Tracking (GA4, GTM)." },
+    saHeroHeadline: { en: "Growth Needs a Plan.<br>Data Provides the Foundation.", de: "Wachstum braucht Plan.<br>Daten liefern die Basis." },
+    saHeroSubheadline: { en: "We develop your individual digital strategy and implement precise tracking & analytics for measurable success.", de: "Wir entwickeln Ihre individuelle Digitalstrategie und implementieren präzises Tracking & Analytics für messbaren Erfolg." },
+    saHeroButton: { en: "Start Strategy Talk", de: "Strategie-Gespräch starten" },
+    saProblemTitle: { en: "Guessing Instead of Knowing?<br>We Bring Clarity.", de: "Raten statt Wissen?<br>Wir bringen Klarheit." },
+    saProblemText1: { en: "Without a clear strategy and reliable data, companies often operate blindly. Marketing budgets vanish, potentials remain untapped, and the true ROI is unclear. Decisions are based on gut feelings instead of facts.", de: "Ohne klare Strategie und verlässliche Daten agieren Unternehmen oft im Blindflug. Marketingbudgets verpuffen, Potenziale bleiben ungenutzt und der wahre ROI ist unklar. Entscheidungen basieren auf Bauchgefühl statt auf Fakten." },
+    saProblemText2: { en: "elev8digital creates the foundation for informed decisions. We define your goals, develop a coherent strategy across all channels, and ensure full transparency of your performance with clean tracking and meaningful analyses.", de: "elev8digital schafft die Grundlage für fundierte Entscheidungen. Wir definieren Ihre Ziele, entwickeln eine kohärente Strategie über alle Kanäle hinweg und sorgen mit sauberem Tracking und aussagekräftigen Analysen für volle Transparenz über Ihre Performance." },
+    saProblemButton: { en: "Gain Clarity Now", de: "Jetzt Klarheit gewinnen" },
+    saOfferingsTitle: { en: "Our Strategy & Analytics Services", de: "Unsere Strategie & Analytics Leistungen" },
+    saOfferingsSubtitle: { en: "From vision to measurability – we build your foundation for digital growth.", de: "Von der Vision zur Messbarkeit – wir bauen Ihr Fundament für digitales Wachstum." },
+    saOffering1Title: { en: "Digital Strategy Development", de: "Digitale Strategieentwicklung" },
+    saOffering1Text: { en: "Holistic planning of your online presence, goal definition, channel strategy, and budget allocation for maximum impact.", de: "Ganzheitliche Planung Ihrer Online-Präsenz, Zieldefinition, Kanalstrategie und Budgetallokation für maximalen Impact." },
+    saOffering2Title: { en: "KPI Definition & Goal Setting", de: "KPI Definition & Zielsetzung" },
+    saOffering2Text: { en: "Defining relevant Key Performance Indicators (KPIs) for success measurement and deriving concrete, measurable goals.", de: "Festlegung relevanter Key Performance Indicators (KPIs) zur Erfolgsmessung und Ableitung konkreter, messbarer Ziele." },
+    saOffering3Title: { en: "Market & Competitor Analysis", de: "Markt- & Wettbewerbsanalyse" },
+    saOffering3Text: { en: "Analysis of your market environment, target groups, and competitors to identify opportunities and risks.", de: "Analyse Ihres Marktumfelds, Ihrer Zielgruppen und Wettbewerber zur Identifikation von Chancen und Risiken." },
+    saOffering4Title: { en: "Tracking Setup & Audit (GA4, GTM)", de: "Tracking Setup & Audit (GA4, GTM)" },
+    saOffering4Text: { en: "Implementation, configuration, and review of your web tracking (Google Analytics 4, Tag Manager, Server-Side) for valid data.", de: "Implementierung, Konfiguration und Überprüfung Ihres Web-Trackings (Google Analytics 4, Tag Manager, Serverseitig) für valide Daten." },
+    saOffering5Title: { en: "Data Analysis & Insight Generation", de: "Datenanalyse & Insight Generierung" },
+    saOffering5Text: { en: "In-depth analysis of your data to uncover trends, patterns, and concrete recommendations for action.", de: "Tiefgehende Analyse Ihrer Daten zur Aufdeckung von Trends, Mustern und konkreten Handlungsempfehlungen." },
+    saOffering6Title: { en: "Reporting & Dashboards", de: "Reporting & Dashboards" },
+    saOffering6Text: { en: "Creation of individual, understandable reports and dashboards to visualize your most important key figures.", de: "Erstellung individueller, verständlicher Berichte und Dashboards zur Visualisierung Ihrer wichtigsten Kennzahlen." },
+    saApproachTitle: { en: "Our Approach:<br>Understand, Measure, Optimize", de: "Unser Ansatz:<br>Verstehen, Messen, Optimieren" },
+    saApproachText1: { en: "We translate your business goals into a measurable digital strategy. Our process ensures transparency and lays the groundwork for data-driven decisions.", de: "Wir übersetzen Ihre Geschäftsziele in eine messbare Digitalstrategie. Unser Prozess sorgt für Transparenz und legt den Grundstein für datengetriebene Entscheidungen." },
+    saApproachPoint1: { en: "Discovery & Goal Definition: What do you want to achieve? Who is your target audience?", de: "Discovery & Zieldefinition: Was wollen Sie erreichen? Wer ist Ihre Zielgruppe?" },
+    saApproachPoint2: { en: "Strategy & Roadmap: Development of the plan and definition of KPIs.", de: "Strategie & Roadmap: Entwicklung des Fahrplans und Definition der KPIs." },
+    saApproachPoint3: { en: "Tracking Implementation: Ensuring correct data capture.", de: "Tracking Implementierung: Sicherstellung der korrekten Datenerfassung." },
+    saApproachPoint4: { en: "Analysis & Insights: Interpretation of data and derivation of measures.", de: "Analyse & Insights: Interpretation der Daten und Ableitung von Maßnahmen." },
+    saApproachPoint5: { en: "Reporting & Optimization: Continuous monitoring and adjustment.", de: "Reporting & Optimierung: Kontinuierliche Überwachung und Anpassung." },
+    saApproachText2: { en: "We are your partners for a clear view and sustainable success in the digital space.", de: "Wir sind Ihre Partner für eine klare Sicht und nachhaltigen Erfolg im digitalen Raum." },
+    saApproachButton: { en: "Request Consultation", de: "Beratung anfordern" },
+    saCtaTitle: { en: "Ready for Data-Driven<br>Success?", de: "Bereit für datengesteuerten<br>Erfolg?" },
+    saCtaSubtitle: { en: "Let's discuss how a solid strategy and precise analytics can move your business forward. Request a non-binding initial consultation now.", de: "Lassen Sie uns besprechen, wie eine fundierte Strategie und präzise Analytics Ihr Unternehmen voranbringen können. Fordern Sie jetzt eine unverbindliche Erstberatung an." },
+
+    // ================================
+    // == MARKETPLACE INTEGRATION LP  ==
+    // ================================
+    miPageTitle: { en: "Marketplace Integration: Expand Your Reach | elev8digital", de: "Marktplatz Integration: Erweitern Sie Ihre Reichweite | elev8digital" },
+    miMetaDescription: { en: "Unlock new sales channels with professional marketplace integration (Amazon, Otto, etc.) by elev8digital. Consulting, connection & optimization.", de: "Erschließen Sie neue Vertriebskanäle mit professioneller Marktplatz-Integration (Amazon, Otto, etc.) durch elev8digital. Beratung, Anbindung & Optimierung." },
+    miHeroHeadline: { en: "More Channels, More Customers.<br>Your Path to Marketplaces.", de: "Mehr Kanäle, mehr Kunden.<br>Ihr Weg auf die Marktplätze." },
+    miHeroSubheadline: { en: "We seamlessly integrate your business into relevant marketplaces like Amazon, Otto & Co., maximizing your visibility.", de: "Wir integrieren Ihr Business nahtlos in relevante Marktplätze wie Amazon, Otto & Co. und maximieren Ihre Sichtbarkeit." },
+    miHeroButton: { en: "Check Marketplace Potential", de: "Marktplatz-Potenzial prüfen" },
+    // --- ANGEPASST ---
+    miProblemTitle: { en: "Marketplace Jungle?<br>We Bring Clarity.", de: "Marktplatz-Dschungel?<br>Wir schaffen Durchblick." },
+    miProblemText1: { en: "Connecting to marketplaces is often complex: technical hurdles, different requirements, high resource effort for listing maintenance and logistics.", de: "Die Anbindung an Marktplätze ist oft komplex: technische Hürden, unterschiedliche Anforderungen, hoher Ressourcenaufwand für Listing-Pflege und Logistik." },
+    // --- ANGEPASST ---
+    miProblemText2: { en: "elev8digital simplifies the process. We analyze suitable platforms, support you with the technical connection, advise on process optimization, and help you avoid pitfalls.", de: "elev8digital vereinfacht den Prozess. Wir analysieren die passenden Plattformen, begleiten Sie bei der technischen Anbindung, beraten bei der Prozessoptimierung und helfen Ihnen, Fallstricke zu vermeiden." },
+    miProblemButton: { en: "Start Consultation Now", de: "Jetzt Beratung starten" },
+    // --- ANGEPASST ---
+    miOfferingsTitle: { en: "Your Path to Marketplace Success: Our Services", de: "Ihr Weg zum Marktplatz-Erfolg: Unsere Services" },
+    miOfferingsSubtitle: { en: "From strategy to ongoing optimization – everything from a single source.", de: "Von der Strategie bis zur laufenden Optimierung – alles aus einer Hand." },
+    miOffering1Title: { en: "Platform Strategy & Selection", de: "Plattform-Strategie & Auswahl" },
+    miOffering1Text: { en: "Analysis of the most relevant marketplaces for your products and target groups.", de: "Analyse der relevantesten Marktplätze für Ihre Produkte und Zielgruppen." },
+    miOffering2Title: { en: "Technical Connection", de: "Technische Anbindung" },
+    miOffering2Text: { en: "Seamless integration of your system (ERP, PIM, Shop) with marketplace interfaces.", de: "Nahtlose Integration Ihres Systems (ERP, PIM, Shop) mit den Marktplatz-Schnittstellen." },
+    miOffering3Title: { en: "Listing & Content Optimization", de: "Listing- & Content-Optimierung" },
+    miOffering3Text: { en: "Creation and optimization of your product listings for maximum visibility and conversion.", de: "Erstellung und Optimierung Ihrer Produktlistings für maximale Sichtbarkeit und Conversion." },
+    miOffering4Title: { en: "Process Consulting (Logistics, Fulfillment)", de: "Prozessberatung (Logistik, Fulfillment)" },
+    miOffering4Text: { en: "Advice on efficiently designing your logistics and fulfillment processes (e.g., FBA, FBM).", de: "Beratung zur effizienten Gestaltung Ihrer Logistik- und Fulfillment-Prozesse (z.B. FBA, FBM)." },
+    miOffering5Title: { en: "Marketplace Advertising", de: "Marktplatz Advertising" },
+    miOffering5Text: { en: "Planning and management of advertising campaigns directly on the marketplaces (e.g., Amazon PPC).", de: "Planung und Steuerung von Werbekampagnen direkt auf den Marktplätzen (z.B. Amazon PPC)." },
+    miOffering6Title: { en: "Monitoring & Reporting", de: "Monitoring & Reporting" },
+    miOffering6Text: { en: "Continuous monitoring of your performance and understandable reports as a basis for decisions.", de: "Laufende Überwachung Ihrer Performance und verständliche Berichte als Entscheidungsgrundlage." },
+    miApproachTitle: { en: "Our Approach:<br>Strategic, Technical, Successful", de: "Unser Ansatz:<br>Strategisch, Technisch, Erfolgreich" },
+    miApproachText1: { en: "We follow a structured process to efficiently build and optimize your marketplace presence.", de: "Wir folgen einem strukturierten Prozess, um Ihre Marktplatz-Präsenz effizient aufzubauen und zu optimieren." },
+    miApproachPoint1: { en: "Analysis & Potential: Which marketplaces suit you?", de: "Analyse & Potenzial: Welche Marktplätze passen zu Ihnen?" },
+    miApproachPoint2: { en: "Strategy & Concept: Definition of goals and integration paths.", de: "Strategie & Konzeption: Definition der Ziele und Integrationswege." },
+    miApproachPoint3: { en: "Technical Implementation: Connection and data setup.", de: "Technische Umsetzung: Anbindung und Daten-Setup." },
+    miApproachPoint4: { en: "Go-Live & Optimization: Launch, monitoring, and continuous improvement.", de: "Go-Live & Optimierung: Start, Monitoring und kontinuierliche Verbesserung." },
+    miApproachPoint5: { en: "Scaling: Expansion to further platforms and services.", de: "Skalierung: Ausbau auf weitere Plattformen und Services." },
+    miApproachText2: { en: "We accompany you from the initial idea to successful sales on the marketplaces.", de: "Wir begleiten Sie von der ersten Idee bis zum erfolgreichen Verkauf auf den Marktplätzen." },
+    miApproachButton: { en: "Plan Integration", de: "Integration planen" },
+    miCtaTitle: { en: "Ready to Conquer<br>New Markets?", de: "Bereit, neue Märkte<br>zu erobern?" },
+    miCtaSubtitle: { en: "Contact us for a non-binding discussion about your marketplace strategy and integration possibilities.", de: "Kontaktieren Sie uns für ein unverbindliches Gespräch über Ihre Marktplatz-Strategie und Integrationsmöglichkeiten." }
 };
 
 const keysWithHTML = [
@@ -196,7 +357,8 @@ const keysWithHTML = [
     'contactTitle',
     'pmHeroHeadline', 'pmProblemTitle', 'pmApproachTitle', 'pmCtaTitle',
     'ecoHeroHeadline', 'ecoProblemTitle', 'ecoApproachTitle', 'ecoCtaTitle',
-    'saHeroHeadline', 'saProblemTitle', 'saApproachTitle', 'saCtaTitle'
+    'saHeroHeadline', 'saProblemTitle', 'saApproachTitle', 'saCtaTitle',
+    'miHeroHeadline', 'miProblemTitle', 'miApproachTitle', 'miCtaTitle' // Added Marketplace Integration Keys
  ];
 
 function getHeaderHeight() {
@@ -291,59 +453,51 @@ document.addEventListener('DOMContentLoaded', function () {
             const isPmLandingPage = document.querySelector('main.landingpage-content #pm-hero') !== null;
             const isEcoLandingPage = document.querySelector('main.landingpage-content #eco-hero') !== null;
             const isSaLandingPage = document.querySelector('main.landingpage-content #sa-hero') !== null;
+            const isMiLandingPage = document.querySelector('main.landingpage-content #mi-hero') !== null;
 
-            // Set page title and meta description based on which landing page it is
-            if (isSaLandingPage) {
-                 if (key === 'saPageTitle') {
-                    document.title = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'];
+            // --- Set page title and meta description ---
+            let pageKeyPrefix = '';
+            if (isMiLandingPage) pageKeyPrefix = 'mi';
+            else if (isSaLandingPage) pageKeyPrefix = 'sa';
+            else if (isEcoLandingPage) pageKeyPrefix = 'eco';
+            else if (isPmLandingPage) pageKeyPrefix = 'pm';
+
+            if (pageKeyPrefix) { // If it's a landing page
+                if (key === `${pageKeyPrefix}PageTitle`) {
+                    document.title = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'] ?? document.title;
                     return;
                  }
-                 if (key === 'saMetaDescription') {
+                 if (key === `${pageKeyPrefix}MetaDescription`) {
                     const metaDescTag = document.querySelector('meta[name="description"]');
                     if (metaDescTag) {
-                        metaDescTag.setAttribute('content', i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de']);
+                        metaDescTag.setAttribute('content', i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'] ?? '');
                     }
                     return;
                  }
-            } else if (isEcoLandingPage) {
-                if (key === 'ecoPageTitle') {
-                    document.title = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'];
-                    return;
-                }
-                if (key === 'ecoMetaDescription') {
-                    const metaDescTag = document.querySelector('meta[name="description"]');
-                    if (metaDescTag) {
-                        metaDescTag.setAttribute('content', i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de']);
-                    }
-                    return;
-                }
-            } else if (isPmLandingPage) {
-                 if (key === 'pmPageTitle') {
-                     document.title = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'];
-                     return;
-                 }
-                 if (key === 'pmMetaDescription') {
-                     const metaDescTag = document.querySelector('meta[name="description"]');
-                     if (metaDescTag) {
-                         metaDescTag.setAttribute('content', i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de']);
-                     }
-                    return;
-                 }
-            } else if (!isPmLandingPage && !isEcoLandingPage && !isSaLandingPage) { // Main page
+            } else if (!isPmLandingPage && !isEcoLandingPage && !isSaLandingPage && !isMiLandingPage) { // If it's the main page
                  if (key === 'pageTitle') {
-                     document.title = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'];
+                     document.title = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'] ?? document.title;
                      return;
                  }
-                 // Standard meta description for main page (could be added here if needed)
+                 const mainPageMetaDescKey = 'heroSubheadline'; // Use subheadline as default meta desc
+                 if (key === mainPageMetaDescKey) {
+                     const mainPageMetaDesc = i18nStrings[key]?.[lang] ?? i18nStrings[key]?.['de'] ?? '';
+                     const metaDescTag = document.querySelector('meta[name="description"]');
+                     const defaultMetaDesc = "elev8digital – Performance Marketing und E-Commerce Beratung für messbares Wachstum."; // Default from HTML
+                     if (metaDescTag && (!metaDescTag.content || metaDescTag.content === defaultMetaDesc)) {
+                         metaDescTag.setAttribute('content', mainPageMetaDesc.replace(/<br>/g, ' '));
+                     }
+                 }
             }
+            // -----------------------------------------
 
             // Process element content translations
-             if (elements.length === 0) return;
+            if (elements.length === 0) return;
 
             const translation = i18nStrings[key]?.[lang]
                                 ?? i18nStrings[key]?.['en']
                                 ?? i18nStrings[key]?.['de']
-                                ?? elements[0].textContent; // Fallback to existing content
+                                ?? elements[0].textContent; // Fallback
 
             if (translation === undefined) {
                 console.warn(`Translation key "${key}" has no value for lang "${lang}" or fallbacks.`);
@@ -359,21 +513,24 @@ document.addEventListener('DOMContentLoaded', function () {
     } catch (error) { console.error("Initialization Error:", error); }
 });
 
+
 function initializePage() {
     const modalOverlay = document.getElementById('modal-overlay');
     const navToggle = document.getElementById('nav-toggle');
     const mainNav = document.querySelector('.main-nav');
     const progressBar = document.getElementById('scroll-progress-bar');
+    // Parallax Images
     const aboutImage = document.getElementById('about-img');
     const whyUsImage = document.getElementById('why-us-img');
     const pmProblemImage = document.getElementById('pm-problem-img');
     const ecoProblemImage = document.getElementById('eco-problem-img');
     const saProblemImage = document.getElementById('sa-problem-img');
-    // --- NEU: Referenzen für Approach-Bilder ---
+    const miProblemImage = document.getElementById('mi-problem-img');
     const pmApproachImage = document.getElementById('pm-approach-img');
     const ecoApproachImage = document.getElementById('eco-approach-img');
     const saApproachImage = document.getElementById('sa-approach-img');
-    // ------------------------------------------
+    const miApproachImage = document.getElementById('mi-approach-img');
+    // Other elements
     const contactForm = document.getElementById('contact-form');
     const emailInput = document.getElementById('email');
     const emailHiddenInput = document.getElementById('email-hidden');
@@ -513,14 +670,16 @@ function initializePage() {
         // Apply parallax only if element exists and is potentially visible
         if (aboutImage && isElementPotentiallyInViewport(aboutImage)) applyScrollTransform(aboutImage, scrollFactor);
         if (whyUsImage && isElementPotentiallyInViewport(whyUsImage)) applyScrollTransform(whyUsImage, scrollFactor);
-        if (pmProblemImage && isElementPotentiallyInViewport(pmProblemImage)) applyScrollTransform(pmProblemImage, scrollFactor); // For PM LP
-        if (ecoProblemImage && isElementPotentiallyInViewport(ecoProblemImage)) applyScrollTransform(ecoProblemImage, scrollFactor); // For ECO LP
-        if (saProblemImage && isElementPotentiallyInViewport(saProblemImage)) applyScrollTransform(saProblemImage, scrollFactor); // For SA LP
-        // --- NEU: Parallax für Approach-Bilder ---
+        // Problem Images
+        if (pmProblemImage && isElementPotentiallyInViewport(pmProblemImage)) applyScrollTransform(pmProblemImage, scrollFactor);
+        if (ecoProblemImage && isElementPotentiallyInViewport(ecoProblemImage)) applyScrollTransform(ecoProblemImage, scrollFactor);
+        if (saProblemImage && isElementPotentiallyInViewport(saProblemImage)) applyScrollTransform(saProblemImage, scrollFactor);
+        if (miProblemImage && isElementPotentiallyInViewport(miProblemImage)) applyScrollTransform(miProblemImage, scrollFactor);
+        // Approach Images
         if (pmApproachImage && isElementPotentiallyInViewport(pmApproachImage)) applyScrollTransform(pmApproachImage, scrollFactor);
         if (ecoApproachImage && isElementPotentiallyInViewport(ecoApproachImage)) applyScrollTransform(ecoApproachImage, scrollFactor);
         if (saApproachImage && isElementPotentiallyInViewport(saApproachImage)) applyScrollTransform(saApproachImage, scrollFactor);
-        // ------------------------------------------
+        if (miApproachImage && isElementPotentiallyInViewport(miApproachImage)) applyScrollTransform(miApproachImage, scrollFactor);
     }
     function applyScrollTransform(el, factor) { const r = el.getBoundingClientRect(), vh = window.innerHeight; el.style.transform = `translateY(${-((r.top + r.height / 2) - vh / 2) * factor}px)`; }
     function isElementPotentiallyInViewport(el) { if (!el) return false; const r = el.getBoundingClientRect(); return r.top < window.innerHeight && r.bottom > 0; }

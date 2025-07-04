@@ -36,7 +36,23 @@
   <!-- Landingpage: Marktplatz-Integration -->
   <url>
     <loc>https://elev8digital.de/leistungen/marktplatz-integration/</loc>
-    <lastmod>2024-07-28</lastmod> <!-- Datum anpassen, wann du es hochlädst -->
+    <lastmod>2024-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Landingpage: Technologieberatung -->
+  <url>
+    <loc>https://elev8digital.de/leistungen/technologieberatung/</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Landingpage: Webentwicklung -->
+  <url>
+    <loc>https://elev8digital.de/leistungen/webentwicklung/</loc>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

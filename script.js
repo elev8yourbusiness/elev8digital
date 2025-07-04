@@ -526,10 +526,14 @@ function initializePage() {
     const ecoProblemImage = document.getElementById('eco-problem-img');
     const saProblemImage = document.getElementById('sa-problem-img');
     const miProblemImage = document.getElementById('mi-problem-img');
+    const techProblemImage = document.getElementById('tech-problem-img');
+    const webProblemImage = document.getElementById('web-problem-img');
     const pmApproachImage = document.getElementById('pm-approach-img');
     const ecoApproachImage = document.getElementById('eco-approach-img');
     const saApproachImage = document.getElementById('sa-approach-img');
     const miApproachImage = document.getElementById('mi-approach-img');
+    const techApproachImage = document.getElementById('tech-approach-img');
+    const webApproachImage = document.getElementById('web-approach-img');
     // Other elements
     const contactForm = document.getElementById('contact-form');
     const emailInput = document.getElementById('email');
@@ -675,11 +679,15 @@ function initializePage() {
         if (ecoProblemImage && isElementPotentiallyInViewport(ecoProblemImage)) applyScrollTransform(ecoProblemImage, scrollFactor);
         if (saProblemImage && isElementPotentiallyInViewport(saProblemImage)) applyScrollTransform(saProblemImage, scrollFactor);
         if (miProblemImage && isElementPotentiallyInViewport(miProblemImage)) applyScrollTransform(miProblemImage, scrollFactor);
+        if (techProblemImage && isElementPotentiallyInViewport(techProblemImage)) applyScrollTransform(techProblemImage, scrollFactor);
+        if (webProblemImage && isElementPotentiallyInViewport(webProblemImage)) applyScrollTransform(webProblemImage, scrollFactor);
         // Approach Images
         if (pmApproachImage && isElementPotentiallyInViewport(pmApproachImage)) applyScrollTransform(pmApproachImage, scrollFactor);
         if (ecoApproachImage && isElementPotentiallyInViewport(ecoApproachImage)) applyScrollTransform(ecoApproachImage, scrollFactor);
         if (saApproachImage && isElementPotentiallyInViewport(saApproachImage)) applyScrollTransform(saApproachImage, scrollFactor);
         if (miApproachImage && isElementPotentiallyInViewport(miApproachImage)) applyScrollTransform(miApproachImage, scrollFactor);
+        if (techApproachImage && isElementPotentiallyInViewport(techApproachImage)) applyScrollTransform(techApproachImage, scrollFactor);
+        if (webApproachImage && isElementPotentiallyInViewport(webApproachImage)) applyScrollTransform(webApproachImage, scrollFactor);
     }
     function applyScrollTransform(el, factor) { const r = el.getBoundingClientRect(), vh = window.innerHeight; el.style.transform = `translateY(${-((r.top + r.height / 2) - vh / 2) * factor}px)`; }
     function isElementPotentiallyInViewport(el) { if (!el) return false; const r = el.getBoundingClientRect(); return r.top < window.innerHeight && r.bottom > 0; }
